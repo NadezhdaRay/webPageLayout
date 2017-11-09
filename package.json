@@ -1,0 +1,31 @@
+{
+  "name": "page-layouts",
+  "version": "1.0.0",
+  "description": "\u0016Необходимо создать web-сайт, который бы являлся списком разработанных и сверстанных макетов по конкретным технологиям (flex, grid), где в каждом присутствует различный препроцессор стилей (sass, le�ess, stylus).",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadezhdaRay/webPageLayout.git"
+  },
+  "author": "NadezhdaRay",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-fs": "0.0.2",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-less": "^3.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.49",
+    "imagemin-pngquant": "^5.0.1"
+  }
+}
