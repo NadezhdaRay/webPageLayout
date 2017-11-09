@@ -5,19 +5,19 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 
 let cleanCSS = require('gulp-clean-css');
+let uglify = require('gulp-uglify');
+let pump = require('pump');
+let pngquant = require('imagemin-pngquant');
+let eslint = require( 'gulp-eslint' );
+let fs = require( 'gulp-fs' );
+let rimraf = require('rimraf');
 
-var uglify = require('gulp-uglify');
-var pump = require('pump');
-var pngquant = require('imagemin-pngquant');
-var eslint = require( 'gulp-eslint' );
-var fs = require( 'gulp-fs' );
-
-var sass = require('gulp-sass');
-var less = require('gulp-less');
+let sass = require('gulp-sass');
+let less = require('gulp-less');
 
 /* Add browsers' prefixes */
 gulp.task('autoprefixer', () =>
-  gulp.src('css/*.css')
+  gulp.src('app/css/*.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
@@ -25,24 +25,29 @@ gulp.task('autoprefixer', () =>
     .pipe(gulp.dest('build/css'))
 );
 
-/* Checking for validation */
-gulp.task( 'lint', () => {
-  return gulp.src([ 'app/**/*.js' ])
-    .pipe(eslint({
-      extends : 'eslint:recommended'
-    }))
+// /* Checking for validation */
+// gulp.task( 'lint', () => {
+//   return gulp.src([ 'app/**/*.js' ])
+//     .pipe(eslint({
+//       extends : 'eslint:recommended'
+//     }))
+// });
+
+/* Clean the assembly */
+gulp.task('clean', function (cb) {
+  rimraf('./build', cb);
 });
 
 /* Compress *.css files */
 gulp.task('css-min', ['autoprefixer'], () => {
-  return gulp.src('css/*.css')
+  return gulp.src('app/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('build/css'));
 });
 
 /* Compress *.jpeg/*.png files */
 gulp.task('image-min', () =>
-  gulp.src('images/*')
+  gulp.src('app/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
@@ -53,18 +58,18 @@ gulp.task('image-min', () =>
 );
 
 /* Compress *.js files */
-gulp.task('js-min', function (cb) {
-  pump([
-      gulp.src('lib/*.js'),
-      uglify(),
-      gulp.dest('build/js')
-    ], cb
-  );
-});
+// gulp.task('js-min', function (cb) {
+//   pump([
+//       gulp.src('libs/*.js'),
+//       uglify(),
+//       gulp.dest('build/js')
+//     ], cb
+//   );
+// });
 
 /* Sass/SCSS -> CSS */
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('app/pages/*./sass/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('build/css'))
 });
