@@ -40,30 +40,30 @@ a, a:hover {
   left: @zero;
   right: @zero;
   width: 100%;
-}
 
-.logo {
-  float: left;
-  padding: 60px 0 0 35px;
-}
-
-.nav {
-  float: right;
-  padding-top: 60px;
-
-  li {
+  .logo {
     float: left;
-    margin-right: 55px;
-    list-style: @none;
+    padding: 60px 0 0 35px;
   }
 
-  a {
-    font: 0.886em 'Lato-Medium';
-    color: @white-color;
-    .uppercase;
+  .nav {
+    float: right;
+    padding-top: 60px;
 
-    &:hover {
-      color: #ccc;
+    li {
+      float: left;
+      margin-right: 55px;
+      list-style: @none;
+    }
+
+    a {
+      font: 0.886em 'Lato-Medium';
+      color: @white-color;
+      .uppercase;
+
+      &:hover {
+        color: #ccc;
+      }
     }
   }
 }
@@ -86,14 +86,16 @@ a, a:hover {
     .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
   }
 
-  span { .span-shape(block, 0 auto, 86px, 45px); }
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
 
-  span.white-shape {
-    background: url(../images/shape-white.png) no-repeat;
-  }
+    &.white-shape {
+      background: url(../images/shape-white.png) no-repeat;
+    }
 
-  span.black-shape {
-    background: url(../images/shape-black.png) no-repeat;
+    &.black-shape {
+      background: url(../images/shape-black.png) no-repeat;
+    }
   }
 
   p.p-text {
@@ -122,10 +124,12 @@ a, a:hover {
     padding-bottom: 120px;
   }
 
-  span { .span-shape(block, 0 auto, 86px, 45px); }
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
 
-  span.black-shape {
-    background: url(../images/shape-black.png) no-repeat;
+    &.black-shape {
+      background: url(../images/shape-black.png) no-repeat;
+    }
   }
 }
 
@@ -148,6 +152,11 @@ a, a:hover {
   p {
     .p-text-function(1.375em 'Lato-Thin', left);
     padding-bottom: 75px;
+
+    &.iphone {
+      display: block;
+      padding-bottom: 0;
+    }
   }
 
   a {
@@ -156,9 +165,96 @@ a, a:hover {
     display: inline-block;
     margin-bottom: 115px;
   }
+}
 
-  p.iphone {
-    display: block;
-    padding-bottom: 0;
+/* Our Work */
+#our-work {
+  background-color: @white-color;
+
+  h3.h3-title {
+    .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
   }
+
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
+
+    &.black-shape {
+      background: url(../images/shape-black.png) no-repeat;
+    }
+  }
+
+  ul {
+    list-style: @none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      padding: 0 40px 85px;
+
+      a {
+        color: #767676;
+        font: 1.188em 'Lato-Heavy';
+        .uppercase;
+      }
+
+      &.current a {
+        color: #000;
+      }
+    }
+  }
+
+  .our-work-gallery {
+    .our-work-gallery-item {
+      position: relative;
+      float: left;
+      width: 370px;
+      height: 355px;
+      margin: @zero 9px;
+      vertical-align: middle;
+
+      &.item1 {
+        background: url("../images/our-work-item-one.png") no-repeat center center;
+      }
+
+      &.item2 {
+        background: url("../images/our-work-item-two.png") no-repeat center center;
+      }
+
+      &.item3 {
+        background: url("../images/our-work-item-three.png") no-repeat center center;
+      }
+
+      span.hover-effect {
+        position: absolute;
+        top: @zero;
+        left: @zero;
+        width: 100%;
+        height: 100%;
+        opacity: @zero;
+        background: rgba(58, 58, 58, 0.9);
+        padding-bottom: 0;
+        -webkit-transition: all .35s;
+        transition: all .35s;
+
+        button {
+          .uppercase;
+          text-align: center;
+          font: 1.125em 'Lato-Regular';
+          padding: 25px 40px;
+          background: rgba(0,0,0,0);
+          margin: 140px 82px;
+          color: #fff;
+          outline: @none;
+          border: @none;
+        }
+      }
+
+      &:hover span.hover-effect {
+          opacity: 1;
+      }
+    }
+  }
+
+
+
 }
