@@ -1,0 +1,37 @@
+/* Variables */
+@white-color: #fff;
+@zero: 0;
+@none: none;
+@uppercase: .uppercase;
+
+/* Classes */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Functions */
+.span-shape(  @display: block,
+              @margin: 0 auto,
+              @width: 86px,
+              @padding-bottom: 45px) {
+  display: @display;
+  margin: @margin;
+  width: @width;
+  padding-bottom: @padding-bottom;
+}
+
+.h3-title-function( @padding: 120px 0 75px,
+                    @font: 2.188em 'Raleway-Bold',
+                    @text-align:center,
+                    @uppercase) {
+  padding: @padding;
+  font: @font;
+  text-align: @text-align;
+  .uppercase
+}
+
+.p-text-function( @font: 1.375em 'Lato-Regular',
+                  @text-align: center) {
+  font: @font;
+  text-align: @text-align;
+}

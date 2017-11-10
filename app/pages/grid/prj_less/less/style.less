@@ -1,9 +1,6 @@
+@import "general";
 @import "import-fonts";
 @import "media-queries";
-
-@header-text-color: #fff;
-@zero: 0;
-@none: none;
 
 /* General */
 * {
@@ -49,6 +46,7 @@ a, a:hover {
   float: left;
   padding: 60px 0 0 35px;
 }
+
 .nav {
   float: right;
   padding-top: 60px;
@@ -61,8 +59,8 @@ a, a:hover {
 
   a {
     font: 0.886em 'Lato-Medium';
-    color: @header-text-color;
-    text-transform: uppercase;
+    color: @white-color;
+    .uppercase;
 
     &:hover {
       color: #ccc;
@@ -75,26 +73,31 @@ a, a:hover {
   background: #333 url(../images/bg-header.png) no-repeat top center fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  color: @header-text-color;
+  color: @white-color;
 
-  h1{
+  h1 {
     padding: 350px 50px 53px;
     font: 3em 'Raleway-Bold';
-    text-transform: uppercase;
+    .uppercase;
     text-align: center;
   }
 
-  span {
-    background: url(../images/shape.png) no-repeat;
-    display: block;
-    margin: 0 auto;
-    width: 86px;
-    padding-bottom: 45px;
+  h3.h3-title {
+    .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
   }
 
-  p {
-    font: 1.5em 'Lato-Regular';
-    text-align: center;
+  span { .span-shape(block, 0 auto, 86px, 45px); }
+
+  span.white-shape {
+    background: url(../images/shape-white.png) no-repeat;
+  }
+
+  span.black-shape {
+    background: url(../images/shape-black.png) no-repeat;
+  }
+
+  p.p-text {
+    .p-text-function(1.375em 'Lato-Regular', center);
   }
 
   button {
@@ -103,5 +106,25 @@ a, a:hover {
     display: block;
     margin: @zero auto;
     padding: 255px 0 45px;
+  }
+}
+
+/* About Us */
+#about {
+  background-color: @white-color;
+
+  h3.h3-title {
+    .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
+  }
+
+  p.p-text {
+    .p-text-function(1.375em 'Lato-Regular', center);
+    padding-bottom: 120px;
+  }
+
+  span { .span-shape(block, 0 auto, 86px, 45px); }
+
+  span.black-shape {
+    background: url(../images/shape-black.png) no-repeat;
   }
 }
