@@ -1,0 +1,33 @@
+@import "style";
+
+@media screen and (max-width: 820px) {
+  #wrapper { min-width: 350px; }
+
+  .nav {
+    li {
+      display: @none;
+      margin: @zero;
+    }
+
+    a { padding-right: 35px; }
+
+    .hamburger {
+      display: block;
+    }
+
+    &:hover {
+      li {
+        display: block;
+        float: @none;
+        padding-bottom: 15px;
+        text-align: right;
+
+        a { text-align: right; }
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}

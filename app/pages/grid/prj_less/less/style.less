@@ -1,4 +1,5 @@
 @import "import-fonts";
+@import "media-queries";
 
 @header-text-color: #fff;
 @zero: 0;
@@ -46,7 +47,7 @@ a, a:hover {
 
 .logo {
   float: left;
-  //padding: 68px 0 0 215px;
+  padding: 60px 0 0 35px;
 }
 .nav {
   float: right;
@@ -59,8 +60,9 @@ a, a:hover {
   }
 
   a {
-    font: 1.5em 'Lato-Medium';
+    font: 0.886em 'Lato-Medium';
     color: @header-text-color;
+    text-transform: uppercase;
 
     &:hover {
       color: #ccc;
@@ -76,10 +78,18 @@ a, a:hover {
   color: @header-text-color;
 
   h1{
-    padding: 350px 50px 100px;
+    padding: 350px 50px 53px;
     font: 3em 'Raleway-Bold';
     text-transform: uppercase;
     text-align: center;
+  }
+
+  span {
+    background: url(../images/shape.png) no-repeat;
+    display: block;
+    margin: 0 auto;
+    width: 86px;
+    padding-bottom: 45px;
   }
 
   p {
@@ -91,7 +101,7 @@ a, a:hover {
     background: @none;
     border: @none;
     display: block;
-    margin: 0 auto;
-    padding-top: 255px;
+    margin: @zero auto;
+    padding: 255px 0 45px;
   }
 }
