@@ -128,3 +128,37 @@ a, a:hover {
     background: url(../images/shape-black.png) no-repeat;
   }
 }
+
+/* Jumbotron */
+#jumbotron {
+  background: #333 url(../images/bg-jumbotron.png) no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  color: @white-color;
+  padding: 0 20px;
+  position: relative;
+
+  h2 {
+    font: 2.817em 'Lato-Regular';
+    padding: 170px 0 20px;
+    text-align: left;
+    .uppercase;
+  }
+
+  p {
+    .p-text-function(1.375em 'Lato-Thin', left);
+    padding-bottom: 75px;
+  }
+
+  a {
+    font: 1.125em 'Lato-Regular';
+    border-bottom: 2px solid @white-color;
+    display: inline-block;
+    margin-bottom: 115px;
+  }
+
+  p.iphone {
+    display: block;
+    padding-bottom: 0;
+  }
+}
