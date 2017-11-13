@@ -18,7 +18,7 @@
     &:hover {
       li {
         display: block;
-        float: @none;
+        float: @none !important;
         padding-bottom: 15px;
         text-align: right;
 
@@ -44,6 +44,7 @@
   #jumbotron {
     p.iphone {
       margin-top: -286px;
+      margin-bottom: -5px;
       float: right;
     }
   }
@@ -54,6 +55,17 @@
     p.iphone {
       margin-top: -70px;
       float: none;
+      margin-bottom: -5px;
     }
   }
+}
+
+@media screen and (min-width: 45em) and (max-width: 60em) {
+  :root { --width: calc( (60vw - 2rem) / 2 ); }
+  .our-work-gallery { grid-template-columns: repeat( 3, var(--width) ); }
+}
+
+@media screen and (min-width: 60em) {
+  :root { --width: calc( (65em) / 3 ); }
+  .our-work-gallery { grid-template-columns: repeat( 3, var(--width) ); }
 }
