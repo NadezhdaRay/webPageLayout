@@ -1,5 +1,5 @@
 @import "general";
-
+/* Nav */
 @media screen and (max-width: 820px) {
   #wrapper { min-width: 350px; }
 
@@ -32,6 +32,7 @@
   }
 }
 
+/* Jumbotron */
 @media screen and (min-width: 1000px) {
   #jumbotron {
     p.iphone {
@@ -60,12 +61,69 @@
   }
 }
 
+/* Our clients */
+@media screen and (max-width: 45em) {
+  .our-clients-gallery {
+    grid-template-columns: repeat( 1, calc(60vw / 2));
+    grid-auto-rows: calc(170 * (60vw / 2) / 530);
+    justify-content: center;
+    grid-row-gap: 25px;
+    padding-bottom: 30px;
+
+    .our-clients-gallery-item {
+      margin: 0 auto;
+    }
+  }
+  .our-work-gallery {
+    grid-template-columns: repeat(1, calc(90vw / 2));
+  }
+}
+
+/* Our clients & Our work */
+@media screen and (min-width: 45em) {
+  .our-clients-gallery {
+    grid-template-columns: repeat(5, calc(36vw / 2));
+    grid-auto-rows: calc(170 * (30vw / 2) / 530);
+    padding-top: 75px;
+    padding-bottom: 130px;
+  }
+  .our-work-gallery {
+    grid-template-columns: repeat(3, calc(56vw / 2));
+    grid-auto-rows: var(--height);
+  }
+}
+
 @media screen and (min-width: 45em) and (max-width: 60em) {
   :root { --width: calc( (60vw - 2rem) / 2 ); }
-  .our-work-gallery { grid-template-columns: repeat( 3, var(--width) ); }
 }
 
 @media screen and (min-width: 60em) {
   :root { --width: calc( (65em) / 3 ); }
-  .our-work-gallery { grid-template-columns: repeat( 3, var(--width) ); }
+}
+
+/* Our services */
+@media screen and (max-width: 72.5em) {
+  :root { --width: calc((50em) / 2 ); }
+  .our-services-gallery {
+    grid-template-columns: repeat(1, calc(100vw / 2));
+
+    .our-services-gallery-item {
+      &.item1 { background-size: 25%; }
+      &.item2 { background-size: 55%; }
+      &.item3 { background-size: 45%; }
+    }
+  }
+}
+
+@media screen and (min-width: 72.5em) {
+  .our-services-gallery {
+    grid-template-columns: repeat(3, calc(45vw / 2));
+    grid-auto-rows: calc(116 * ((65vw) / 2) / 132);
+
+    .our-services-gallery-item {
+      &.item1 { background-size: 10%; }
+      &.item2 { background-size: 22%; }
+      &.item3 { background-size: 18%; }
+    }
+  }
 }

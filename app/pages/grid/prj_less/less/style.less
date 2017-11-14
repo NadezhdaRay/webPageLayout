@@ -209,13 +209,14 @@ a, a:hover {
 
   .our-work-gallery {
     display: grid;
+    justify-content: center;
+    justify-items: center;
     grid-gap: 2rem;
     padding-top: 75px;
-    grid-template-columns: repeat(3, var(--width));
-    grid-auto-rows: var(--height);
 
     .our-work-gallery-item {
       position: relative;
+      width: 100%;
 
       &.item1 {
         background: url("../images/our-work-item-one.png") no-repeat center center;
@@ -303,4 +304,131 @@ a, a:hover {
     }
   }
 
+}
+
+/* Our Clients*/
+#our-clients {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: #f4f4f4;
+
+  h3.h3-title {
+    .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
+  }
+
+  p.p-text {
+    .p-text-function(1.375em 'Lato-Regular', center);
+    padding-bottom: 120px;
+  }
+
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
+
+    &.black-shape {
+      background: url(../images/shape-black.png) no-repeat;
+    }
+  }
+
+  .our-clients-gallery {
+    display: grid;
+    grid-column-gap: 15px;
+    justify-items: center;
+
+    .our-clients-gallery-item {
+      width: 75%;
+      &.item1 {
+        background: url("../images/google-logo.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.item2 {
+        background: url("../images/samsung-logo.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.item3 {
+        background: url("../images/flickr-logo.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.item4 {
+        background: url("../images/foursquare-logo.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.item5 {
+        background: url("../images/pinterest-logo.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/* Review */
+#review {
+  background: #333 url(../images/bg-review.png) no-repeat top center fixed;
+  background-size: cover;
+  color: @white-color;
+  padding: 0 20px;
+  position: relative;
+
+  p {
+    &.p-text {
+      .p-text-function(150% 'Lato-Thin', center);
+      padding-top: 130px;
+    }
+    &.name {
+      .p-text-function(90% 'Raleway-Bold', right);
+      padding: 70px 0 60px;
+      .uppercase;
+    }
+  }
+}
+
+/* Our Services */
+#our-services {
+  background-color: @white-color;
+
+  h3.h3-title {
+    .h3-title-function(90px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
+  }
+
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
+
+    &.black-shape {
+      background: url(../images/shape-black.png) no-repeat;
+    }
+  }
+
+  .our-services-gallery {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 2rem;
+    padding-top: 40px;
+
+    .our-services-gallery-item {
+      border: 1px dotted #000000;
+      padding: 0 20px;
+      height: auto;
+
+      &.item1 {
+        background: url("../images/icon-iphone.png") no-repeat top center;
+      }
+      &.item2 {
+        background: url("../images/icon-pc.png") no-repeat top center;
+      }
+      &.item3 {
+        background: url("../images/icon-ok.png") no-repeat top center;
+      }
+
+      h4.h3-title {
+        .h3-title-function(170px 0 45px, 1.5em 'Lato-Regular', center, null);
+        text-transform: capitalize;
+      }
+
+      p.p-text {
+        .p-text-function(1em 'Lato-Regular', center);
+        padding-bottom: 20px;
+      }
+    }
+  }
 }
