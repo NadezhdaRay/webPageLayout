@@ -462,3 +462,48 @@ a, a:hover {
     }
   }
 }
+
+/* Our Skills */
+#our-skills {
+  background-color: @white-color;
+  h3.h3-title { .h3-title-function(90px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase); }
+  span {
+    .span-shape(block, 0 auto, 86px, 45px);
+    &.black-shape { background: url(../images/shape-black.png) no-repeat; }
+  }
+
+  .our-skills-gallery {
+    display: grid;
+    grid-column-gap: 5%;
+    justify-items: center;
+    justify-content: center;
+    padding: 0 20px 120px 20px ;
+
+    .our-skills-gallery-block {
+      display: inline-block;
+
+      &.block1 {
+        color: #3d3d3d;
+        h4 { .h3-title-function(40px 0 25px, 2em 'Lato-Semibold', left, @uppercase); }
+        p { .p-text-function(1.438em 'Lato-Thin', left); }
+      }
+
+      &.block2 {
+        div {
+          width: 100%;
+          margin: 0 auto;
+
+          picture, img {
+            width: 100%;
+          }
+          p {
+            .p-text-function(0.841em 'Lato-Semibold', left);
+            padding: 30px 0 10px;
+            color: #a4a4a4;
+            .uppercase;
+          }
+        }
+      }
+    }
+  }
+}
