@@ -82,7 +82,7 @@
 /* Our clients & Our work */
 @media screen and (min-width: 45em) {
   .our-clients-gallery {
-    grid-template-columns: repeat(5, calc(36vw / 2));
+    grid-template-columns: repeat(5, calc(26vw / 2));
     grid-auto-rows: calc(170 * (30vw / 2) / 530);
     padding-top: 75px;
     padding-bottom: 130px;
@@ -90,6 +90,12 @@
   .our-work-gallery {
     grid-template-columns: repeat(3, calc(56vw / 2));
     grid-auto-rows: var(--height);
+  }
+  #statistics {
+    .container {
+      grid-template-columns: repeat(5, calc(30vw / 2));
+      padding: 105px 0;
+    }
   }
 }
 

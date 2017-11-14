@@ -406,7 +406,6 @@ a, a:hover {
     padding-top: 40px;
 
     .our-services-gallery-item {
-      border: 1px dotted #000000;
       padding: 0 20px;
       height: auto;
 
@@ -428,6 +427,37 @@ a, a:hover {
       p.p-text {
         .p-text-function(1em 'Lato-Regular', center);
         padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* Statistics */
+#statistics {
+  background: #333 url(../images/bg-statistic.png) no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+
+  .container {
+    color: @white-color;
+    margin: @zero;
+    padding: @zero 20px;
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 5%;
+
+    .statistics-item {
+      display: inline-block;
+      margin: 20px 0;
+      p {
+        &.number {
+          .p-text-function(375% 'Lato-Thin', center);
+        }
+        &.p-text {
+          .p-text-function(150% 'Lato-Semibold', center);
+          .uppercase;
+        }
       }
     }
   }
