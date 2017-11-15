@@ -1,0 +1,46 @@
+@import "general";
+@import "import-fonts";
+
+/* General */
+* {
+  padding: $zero;
+  margin: $zero;
+  outline: $none;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+html, body {
+  height: 100%;
+  background: #ccc;
+}
+a, a:hover {
+  text-decoration: $none;
+  color: inherit;
+}
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  max-width: 1170px;
+  margin: $zero auto;
+}
+
+/* Header */
+#header {
+  display: grid;
+
+  #logo {
+    p {
+      @extend %uppercase;
+      font: 100% 'Montserrat-SemiBold';
+      span { font: 100% 'Montserrat-Light'; }
+    }
+  }
+}
