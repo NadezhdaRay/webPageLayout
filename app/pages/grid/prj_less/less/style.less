@@ -303,7 +303,6 @@ a, a:hover {
       }
     }
   }
-
 }
 
 /* Our Clients*/
@@ -503,6 +502,106 @@ a, a:hover {
             .uppercase;
           }
         }
+      }
+    }
+  }
+}
+
+/* Get in Touch */
+#footer {
+  background: #333 url(../images/bg-footer.png) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: @white-color;
+
+  h3.h3-title {
+    .h3-title-function(120px 0 75px, 2.188em 'Raleway-Bold', center, @uppercase);
+  }
+
+  span {
+    .span-shape(block, 0 auto, 86px, 65px);
+
+    &.white-shape {
+      background: url(../images/shape-white.png) no-repeat;
+    }
+  }
+
+  #social-media {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    padding-bottom: 80px;
+    width: 230px;
+    margin: 0 auto;
+
+    p {
+      display: inline-grid;
+      align-content: end;
+    }
+  }
+
+  #footer-input {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    p {
+      &#name {
+        min-width: 100px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      &#email {
+        min-width: 150px;
+        grid-column-start: 2;
+        grid-column-end: 2;
+      }
+      &#msg {
+        padding-top: 100px;
+        min-width: 200px;
+        grid-column: 1 / span 2;
+      }
+
+      input {
+        background: transparent;
+        border-top: @none;
+        border-left: @none;
+        border-right: @none;
+        border-bottom: 2px solid #afafaf;
+        .p-text-function(112.5% 'Lato-Regular');
+        font-style: italic;
+        color: #afafaf;
+        padding: 10px 15px;
+        width: 100%;
+
+        &[placeholder] { text-align: left; }
+
+        &:focus, &:active { color: #afafaf; }
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+
+    button {
+      color: @white-color;
+      margin: 80px 0 125px;
+      padding: 2% 8%;
+      background: @none;
+      outline: none;
+      cursor: pointer;
+      border: 2px solid @white-color;
+      .p-text-function(150% 'Lato-Regular');
+      .uppercase;
+
+      &:hover {
+        background: @white-color;
+        color: @dark-gray;
+        border-color: @dark-gray;
       }
     }
   }
