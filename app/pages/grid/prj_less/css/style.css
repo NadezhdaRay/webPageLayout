@@ -84,6 +84,8 @@
   .our-clients-gallery {
     grid-template-columns: repeat(1, calc(30vw));
     grid-auto-rows: calc(9.62264151vw);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     grid-row-gap: 25px;
     padding-bottom: 30px;
@@ -177,6 +179,7 @@
   margin: 0;
   outline: none;
   @include box-sizing(border-box);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 html,
@@ -233,7 +236,6 @@ a:hover {
 /* Home */
 #home {
   background: #333 url(../images/bg-header.png) no-repeat top center fixed;
-  -webkit-background-size: cover;
   background-size: cover;
   color: #fff;
 }
@@ -302,8 +304,7 @@ a:hover {
 /* Jumbotron */
 #jumbotron {
   background: #333 url(../images/bg-jumbotron.png) no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  background-size: cover;
   color: #fff;
   padding: 0 20px;
   position: relative;
@@ -366,6 +367,8 @@ a:hover {
 }
 #our-work .our-work-gallery {
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   justify-items: center;
   grid-gap: 2rem;
@@ -542,6 +545,8 @@ a:hover {
 }
 #our-services .our-services-gallery {
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   justify-items: center;
   grid-gap: 2rem;
@@ -564,7 +569,6 @@ a:hover {
   padding: 170px 0 45px;
   font: 1.5em 'Lato-Regular';
   text-align: center;
-  text-transform: uppercase;
   text-transform: capitalize;
 }
 #our-services .our-services-gallery .our-services-gallery-item p.p-text {
@@ -623,6 +627,8 @@ a:hover {
   display: grid;
   grid-column-gap: 5%;
   justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 0 20px 120px 20px ;
 }
@@ -660,7 +666,6 @@ a:hover {
 /* Get in Touch */
 #footer {
   background: #333 url(../images/bg-footer.png) no-repeat top center fixed;
-  -webkit-background-size: cover;
   background-size: cover;
   color: #fff;
 }
@@ -682,6 +687,8 @@ a:hover {
 #footer #social-media {
   display: grid;
   justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
@@ -691,6 +698,7 @@ a:hover {
 }
 #footer #social-media p {
   display: inline-grid;
+  -ms-flex-line-pack: end;
   align-content: end;
 }
 #footer #footer-input {
