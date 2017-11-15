@@ -69,7 +69,7 @@ gulp.task('image-min', () =>
 
 /* Sass/SCSS -> CSS */
 gulp.task('sass', function () {
-  return gulp.src('app/pages/*./sass/**/*.scss')
+  return gulp.src('app/pages/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('build/css'))
 });
