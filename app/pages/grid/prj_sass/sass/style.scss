@@ -5,7 +5,9 @@
   padding: $zero;
   margin: $zero;
   outline: $none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
@@ -15,6 +17,7 @@ html, body {
 }
 
 a, a:hover {
+  -webkit-text-decoration: $none;
   text-decoration: $none;
   color: inherit;
 }
@@ -39,6 +42,8 @@ a, a:hover {
 #header {
   display: grid;
   grid-template-columns: repeat(2, calc(97vw / 2));
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   justify-items: center;
   grid-gap: 2rem;
@@ -48,6 +53,14 @@ a, a:hover {
   left: $zero;
   right: $zero;
   width: 100%;
+
+  @media screen and (max-width: 62.5em) {
+    grid-auto-rows: calc(20 * (16vw / 2) / 20);
+  }
+
+  @media screen and (min-width: 62.5em) {
+    grid-auto-rows: calc(20 * (10vw / 2) / 20);
+  }
 
   #logo {
     display: inline-grid;
@@ -67,8 +80,26 @@ a, a:hover {
     justify-items: center;
     padding-right: 30px;
 
+    @media screen and (max-width: 62.5em) {
+      grid-template-columns: repeat(1, calc(18vw / 2));
+      justify-self: end;
+      grid-row-gap: 15px;
+      grid-template-rows: repeat(5, 25px);
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 62.5em) {
+      grid-template-columns: repeat(5, calc(13vw / 2));
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+
     li {
       list-style: $none;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
 
       a {
@@ -88,7 +119,6 @@ a, a:hover {
 #home {
   background: #333 url(../images/bg-header.png)
               no-repeat top center;
-  -webkit-background-size: cover;
   background-size: cover;
   color: $dark-gray-color;
   text-align: center;
@@ -121,5 +151,75 @@ a, a:hover {
   }
 }
 
+/* Second Part */
+#second-part {
+  padding: 105px 20px;
+  background: $white-color url(../images/bg-second-part.png)
+              no-repeat;
+
+  @media all and (min-width: 55.625em) {
+    background-position: 20% 50%;
+    padding-left: 50px;
+  }
+
+  @media all and (max-width: 55.625em) {
+    background-position: 40% 5%;
+    background-size: auto;
+    padding-left: 50px;
+  }
+
+  @media all and (max-width: 53.125em) {
+    background-color: $white-color;
+    background-image: $none;
+    background-position: 40% 10%;
+  }
+
+  .container {
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 2rem;
+
+    @media all and (min-width: 55.625em) {
+      grid-template-columns: repeat(2, calc(87vw / 2));
+    }
+    @media all and (max-width: 55.625em) {
+      grid-template-columns: repeat(1, calc(120vw / 2));
+    }
+
+    .second-part-block {
+      display: inline-grid;
+      justify-items: left;
+
+      &#block1 {
+
+        h4 {
+          @include uppercase;
+          font: 1.875em 'Montserrat-SemiBold';
+          -ms-flex-item-align: end;
+          align-self: end;
+          padding-bottom: 40px;
+        }
+
+        p { font: 0.875em/2em 'Montserrat-Light'; }
+      }
+
+      &#block2 {
+        justify-self: start;
+        -ms-flex-line-pack: end;
+        align-content: end;
+
+        picture, img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+
+  }
+}
+
 @import "import-fonts";
-@import "media-queries";
