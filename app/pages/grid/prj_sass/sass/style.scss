@@ -1,5 +1,4 @@
 @import "general";
-@import "import-fonts";
 
 /* General */
 * {
@@ -9,14 +8,17 @@
   box-sizing: border-box;
   transition: all .3s ease-in-out;
 }
+
 html, body {
   height: 100%;
   background: #ccc;
 }
+
 a, a:hover {
   text-decoration: $none;
   color: inherit;
 }
+
 .clearfix {
   &:before, &:after {
     content: "";
@@ -30,17 +32,94 @@ a, a:hover {
 .container {
   max-width: 1170px;
   margin: $zero auto;
+  padding: $zero 20px;
 }
 
 /* Header */
 #header {
   display: grid;
+  grid-template-columns: repeat(2, calc(97vw / 2));
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 2rem;
+
+  position: absolute;
+  top: $zero;
+  left: $zero;
+  right: $zero;
+  width: 100%;
 
   #logo {
+    display: inline-grid;
+    justify-self: start;
+    align-self: center;
+    padding-left: 30px;
+
     p {
-      @extend %uppercase;
+      @include uppercase;
       font: 100% 'Montserrat-SemiBold';
-      span { font: 100% 'Montserrat-Light'; }
+      span { font: 100% 'Montserrat-Regular'; }
+    }
+  }
+
+  #nav {
+    display: inline-grid;
+    justify-items: center;
+    padding-right: 30px;
+
+    li {
+      list-style: $none;
+      justify-content: space-evenly;
+
+      a {
+        font: 100% 'Montserrat-Regular';
+        padding-bottom: 10%;
+        color: $dark-gray-color;
+
+        &:hover {
+          border-bottom: 1px solid $dark-gray-color;
+        }
+      }
     }
   }
 }
+
+/* Home */
+#home {
+  background: #333 url(../images/bg-header.png)
+              no-repeat top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $dark-gray-color;
+  text-align: center;
+
+  h1 {
+    padding: 330px 0 40px;
+    font: 3.875em 'Montserrat-SemiBold';
+  }
+
+  p {
+    padding: 0 0 80px;
+    font: 1.25em/1.5em 'Montserrat-Regular';
+  }
+
+  a {
+    font: 1em 'Montserrat-Light' { weight: bold; }
+    background: transparent;
+    border: 1.5px solid $dark-gray-color;
+    border-radius: 35px;
+    padding: 1% 6%;
+    display: inline-block;
+    margin-bottom: 330px;
+
+    &:hover {
+      color: $white-color;
+      border-color: $dark-gray-color;
+      background: $dark-gray-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@import "import-fonts";
+@import "media-queries";

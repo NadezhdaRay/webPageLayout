@@ -1,10 +1,20 @@
 /* Variables */
 $white-color: #fff;
-$dark-gray: #222;
+$dark-gray-color: #26272d;
 $zero: 0;
 $none: none;
 
 /* Classes */
-%uppercase {
+@mixin uppercase {
   text-transform: uppercase;
+}
+
+@mixin span-shape(  $display: block,
+                    $margin: 0 auto,
+                    $width: 86px,
+                    $padding-bottom: 45px) {
+  display: $display;
+  margin: $margin;
+  width: $width;
+  padding-bottom: $padding-bottom;
 }
