@@ -18,3 +18,35 @@ $none: none;
   width: 50px;
   background: url(../images/blue-shape.png) no-repeat;
 }
+
+@mixin h2-title-function( $font: 2.625em 'Montserrat-Regular',
+                          $padding: 105px 0 0 0) {
+  font: $font;
+  padding: $padding;
+}
+
+@mixin p-text-function( $font: 1.25em 'Lato-LightItalic') {
+  font: $font { style: italic };
+}
+
+@mixin a-link-function ($text-color: $white-color, $bg-color: $dark-gray-color, $margin: 0 0 330px 0) {
+  font: 1em 'Montserrat-Light' { weight: bold; }
+  background: transparent;
+  border: 1.5px solid $bg-color;
+  border-radius: 35px;
+  padding: 1% 6%;
+  display: inline-block;
+  margin: $margin;
+
+  &:hover {
+    color: $text-color;
+    border-color: $bg-color;
+    background: $bg-color;
+    cursor: pointer;
+  }
+}
+
+h2.h2-title { @include h2-title-function; }
+a.a-link { @include a-link-function; }
+p.p-text { @include p-text-function; }
+span.blue-shape { @include span-shape(block, 50px auto 0, 0 0 25px 0); }

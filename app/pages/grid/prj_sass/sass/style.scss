@@ -132,23 +132,6 @@ a, a:hover {
     padding: 0 0 80px;
     font: 1.25em/1.5em 'Montserrat-Regular';
   }
-
-  a {
-    font: 1em 'Montserrat-Light' { weight: bold; }
-    background: transparent;
-    border: 1.5px solid $dark-gray-color;
-    border-radius: 35px;
-    padding: 1% 6%;
-    display: inline-block;
-    margin-bottom: 330px;
-
-    &:hover {
-      color: $white-color;
-      border-color: $dark-gray-color;
-      background: $dark-gray-color;
-      cursor: pointer;
-    }
-  }
 }
 
 /* Second Part */
@@ -225,14 +208,6 @@ a, a:hover {
   text-align: center;
   background-color: #f5f5f8;
 
-  h2 {
-    font: 2.625em 'Montserrat-Regular';
-    padding-top: 105px;
-  }
-
-  span { @include span-shape(block, 50px auto 0, 0 0 25px 0); }
-  p { font: 1.25em 'Lato-LightItalic' { style: italic }; }
-
   .our-services-gallery {
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, 1fr));
@@ -270,6 +245,61 @@ a, a:hover {
       &.item6 { background: url("../images/services-item-rocket.png") no-repeat top center; }
       &.item7 { background: url("../images/services-item-basket.png") no-repeat top center; }
       &.item8 { background: url("../images/services-item-chemestry.png") no-repeat top center; }
+    }
+  }
+}
+
+/* Map Feature */
+#map-feature {
+  text-align: center;
+  color: $white-color;
+  background: #ededee url('../images/bg-map-feature.png') no-repeat top center;
+  background-size: cover;
+
+  p.p-text { color: #878a90; }
+  a.a-link { @include a-link-function($white-color, #267df4, 100px 0 220px); }
+  h2.h2-title {
+    padding-top: 250px;
+    margin-bottom: 30px;
+  }
+
+  #statistics {
+    display: grid;
+    padding-bottom: 120px;
+    grid-gap: 3.5rem 2rem;
+
+    @media all and (min-width: 1136px) {
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
+    }
+    @media all and (max-width: 1135px) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .statistics-item {
+      display: inline-grid;
+
+      p {
+        color: #0960d7;
+        @include p-text-function( 1em 'Montserrat-Light' );
+        font-style: normal;
+
+        &.number {
+          @include p-text-function(3.077em 'Montserrat-Light');
+          font-style: normal;
+          color: $white-color;
+        }
+
+        span {
+          display: inline-block;
+          margin: 0 0 0 -15px;
+          
+          &:before {
+            content: ".";
+            color: #0851b6;
+            font-size: 1.5em;
+          }
+        }
+      }
     }
   }
 }
