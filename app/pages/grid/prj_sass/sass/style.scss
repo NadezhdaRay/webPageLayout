@@ -217,8 +217,60 @@ a, a:hover {
         }
       }
     }
+  }
+}
 
+/* Our services */
+#our-services {
+  text-align: center;
+  background-color: #f5f5f8;
 
+  h2 {
+    font: 2.625em 'Montserrat-Regular';
+    padding-top: 105px;
+  }
+
+  span { @include span-shape(block, 50px auto 0, 0 0 25px 0); }
+  p { font: 1.25em 'Lato-LightItalic' { style: italic }; }
+
+  .our-services-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-gap: 3.5rem 2rem;
+    padding: 95px 20px 150px;
+
+    @media all and (min-width: 1136px) {
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
+    }
+
+    @media all and (max-width: 1135px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .our-services-gallery-item {
+      display: inline-grid;
+      padding-top: 90px;
+
+      h3 {
+        font: 0.813em 'Montserrat-Regular';
+        @include uppercase;
+        margin-bottom: 27px;
+        letter-spacing: 2px;
+      }
+
+      div {
+        p { font: 0.813em/1.7em 'Montserrat-Light' { style: normal }; }
+      }
+
+      &.item1 { background: url("../images/services-item-anchor.png") no-repeat top center; }
+      &.item2 { background: url("../images/services-item-bike.png") no-repeat top center; }
+      &.item3 { background: url("../images/services-item-paper-plane.png") no-repeat top center; }
+      &.item4 { background: url("../images/services-item-camera.png") no-repeat top center; }
+      &.item5 { background: url("../images/services-item-microphone.png") no-repeat top center; }
+      &.item6 { background: url("../images/services-item-rocket.png") no-repeat top center; }
+      &.item7 { background: url("../images/services-item-basket.png") no-repeat top center; }
+      &.item8 { background: url("../images/services-item-chemestry.png") no-repeat top center; }
+    }
   }
 }
 

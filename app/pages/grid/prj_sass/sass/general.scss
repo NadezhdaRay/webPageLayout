@@ -11,10 +11,10 @@ $none: none;
 
 @mixin span-shape(  $display: block,
                     $margin: 0 auto,
-                    $width: 86px,
-                    $padding-bottom: 45px) {
+                    $padding: 0) {
   display: $display;
   margin: $margin;
-  width: $width;
-  padding-bottom: $padding-bottom;
+  padding: $padding;
+  width: 50px;
+  background: url(../images/blue-shape.png) no-repeat;
 }
