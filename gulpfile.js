@@ -17,12 +17,12 @@ let less = require('gulp-less');
 
 /* Add browsers' prefixes */
 gulp.task('autoprefixer', () =>
-  gulp.src('app/css/*.css')
+  gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('./app/pages/grid/prj_sass/sass'))
 );
 
 // /* Checking for validation */
@@ -40,21 +40,21 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', ['autoprefixer'], () => {
-  return gulp.src('app/css/*.css')
+  return gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('./app/pages/grid/prj_sass/css'));
 });
 
 /* Compress *.jpeg/*.png files */
 gulp.task('image-min', () =>
-  gulp.src('app/images/*')
+  gulp.src('./app/pages/grid/prj_less/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
       interlaced: true
     }))
-    .pipe(gulp.dest('build/images'))
+    .pipe(gulp.dest('./app/pages/grid/prj_less/images/v1'))
 );
 
 /* Compress *.js files */
@@ -68,8 +68,8 @@ gulp.task('image-min', () =>
 // });
 
 /* Sass/SCSS -> CSS */
-gulp.task('sass', function () {
-  return gulp.src('app/pages/**/*.scss')
+gulp.task('sass', ['autoprefixer'], () => {
+  return gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
     .pipe(sass())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('./app/pages/grid/prj_sass/css'))
 });
