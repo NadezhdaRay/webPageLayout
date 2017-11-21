@@ -1,0 +1,82 @@
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+html,
+body {
+  height: 100%;
+  background: #000;
+}
+html .container,
+body .container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+html a,
+body a,
+html a:hover,
+body a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  display: grid;
+  margin: 0 auto;
+  padding: 70px 40px 20px;
+  color: #fff;
+  grid-column-gap: 7rem;
+  grid-row-gap: 2rem;
+  background: #000;
+}
+@media all and (min-width: 680px) {
+  header {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+header .header-block {
+  display: inline-grid;
+}
+header .header-block.block1 {
+  grid-row-end: span 2;
+  justify-self: right;
+}
+@media all and (max-width: 680px) {
+  header .header-block.block1 {
+    justify-self: center;
+  }
+}
+header .header-block.block2 h3 {
+  font-size: 3em;
+  line-height: 1.5em;
+  font-family: 'Abel-Rugular';
+}
+header .header-block.block2 p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-family: 'Abel-Rugular';
+}
+header .header-block.block3 h3 {
+  font-size: 2em;
+  line-height: 1.2em;
+  font-family: 'Abel-Rugular';
+  font-weight: 100;
+}
+header .header-block.block3 h3:before {
+  content: '``';
+  margin-left: -25px;
+}
+@font-face {
+  font-family: 'Abel-Rugular';
+  src: url("../fonts/Abel-Regular.ttf");
+}

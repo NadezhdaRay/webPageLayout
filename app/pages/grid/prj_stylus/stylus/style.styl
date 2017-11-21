@@ -1,0 +1,67 @@
+@import "nib"
+@import "general.styl"
+
+/* General */
+*
+  padding: $zero
+  margin: $zero
+  outline: $none
+  box-sizing: border-box
+  transition: all .3s ease-in-out
+
+
+html, body
+  height: 100%
+  background $black-color
+
+  .container
+    max-width: 1170px
+    margin: $zero auto
+    padding: $zero 20px
+
+  a, a:hover
+    text-decoration: $none
+    color: inherit
+
+
+header
+  display grid
+  margin $zero auto
+  padding 70px 40px 20px
+  color $white-color
+  grid-column-gap 7rem
+  grid-row-gap: 2rem;
+  background $black-color
+
+  @media all and (min-width 680px)
+    grid-template-columns repeat(2, minmax(150px, 1fr))
+
+  .header-block
+    display inline-grid
+
+    &.block1
+      grid-row-end span 2
+      justify-self right
+
+      @media all and (max-width 680px)
+        justify-self center
+
+    &.block2
+      h3
+        font( 3em )
+      p
+        font( 1.5em )
+
+    &.block3
+      h3
+        font( 2em, 1.2em )
+        font-weight 100
+
+        &:before
+          content: '``'
+          margin-left -25px
+
+@font-face {
+  font-family: 'Abel-Rugular';
+  src: url('../fonts/Abel-Regular.ttf');
+}
