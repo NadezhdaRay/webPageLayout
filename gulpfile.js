@@ -47,14 +47,14 @@ gulp.task('css-min', ['autoprefixer'], () => {
 
 /* Compress *.jpeg/*.png files */
 gulp.task('image-min', () =>
-  gulp.src('./app/pages/grid/prj_less/images/*')
+  gulp.src('./app/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
       interlaced: true
     }))
-    .pipe(gulp.dest('./app/pages/grid/prj_less/images/v1'))
+    .pipe(gulp.dest('./app/images/v1'))
 );
 
 /* Compress *.js files */
