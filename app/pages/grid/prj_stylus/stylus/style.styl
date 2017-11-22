@@ -61,6 +61,157 @@ header
           content: '``'
           margin-left -25px
 
+main
+  font( 1.5em )
+  background-color $white-color
+
+  section
+    @media all and (max-width 909px)
+      padding 0 40px 20px
+    @media all and (min-width 909px)
+      padding 50px 150px 0
+
+    h4
+      padding-top 10px
+      border-bottom 0.5px solid $black-color
+
+    article
+      display grid
+      grid-gap: 2rem
+      justify-content: center
+      justify-items: center
+      grid-template-columns repeat(auto-fit, minmax(250px, 1fr))
+      padding 30px
+      padding-bottom 0
+
+      &#skills
+        display grid
+        justify-items center;
+        grid-template-columns repeat(auto-fit, minmax(148px, 1fr))
+
+        @media all and (min-width 1425px)
+          grid-template-columns repeat(5, minmax(148px, 1fr))
+
+      &#personal-skill
+        grid-template-columns repeat(2, minmax(500px, 1fr))
+
+        @media all and (max-width 1370px)
+          grid-template-columns repeat(auto-fit, minmax(500px, 1fr))
+
+      &#social
+        display grid
+        justify-items center;
+        grid-template-columns repeat(auto-fit, minmax(130px, 1fr))
+        padding-bottom 50px
+        max-width: 1000px;
+        margin: 0 auto;
+
+        div
+          p
+            padding-top 65px
+            text-align: center;
+
+      div
+        display inline-grid
+
+        &#photoshop
+          skills-function()
+          background-image url('../images/icon-adobe-photoshop.png')
+
+        &#illustrator
+          skills-function()
+          background-image url('../images/icon-adobe-illustrator.png')
+
+        &#muse
+          skills-function()
+          background-image url('../images/icon-adobe-muse.png')
+
+        &#indesign
+          skills-function()
+          background-image url('../images/icon-adobe-indesign.png')
+
+        &#dreamviewer
+          skills-function( 150px )
+          background-image url('../images/icon-adobe-dreamviewer.png')
+
+        &#html
+          skills-function()
+          background-image url('../images/icon-code-html.png')
+
+        &#css
+          skills-function()
+          background-image url('../images/icon-code-css.png')
+
+        &#javacript
+          skills-function()
+          background-image url('../images/icon-code-javascript.png')
+
+        &#php
+          skills-function()
+          background-image url('../images/icon-code-php.png')
+
+        &#python
+          skills-function( 150px )
+          background-image url('../images/icon-code-python.png')
+
+        &#personal-skills
+          justify-items right
+
+          @media all and (min-width 910px) and (max-width 1370px)
+            justify-items left
+            justify-self left
+
+          p
+            &:nth-child(1)
+              skills-function( 500px, 50px )
+              background-image url('../images/progress-bar-creativity.png')
+              @media all and (max-width 590px)
+                width 300px
+
+            &:nth-child(2)
+              skills-function( 500px, 50px )
+              background-image url('../images/progress-bar-social.png')
+              @media all and (max-width 590px)
+                width 300px
+
+            &:nth-child(3)
+              skills-function( 500px, 50px )
+              background-image url('../images/progress-bar-leadership.png')
+              @media all and (max-width 590px)
+                width 300px
+
+            &:nth-child(4)
+              skills-function( 500px, 50px )
+              background-image url('../images/progress-bar-passion.png')
+              @media all and (max-width 590px)
+                width 300px
+
+        &#facebook
+          social-function()
+          background-image url('../images/icon-facebook.png')
+        &#twitter
+          social-function()
+          background-image url('../images/icon-twitter.png')
+        &#instagram
+          social-function()
+          background-image url('../images/icon-instagram.png')
+        &#behance
+          social-function()
+          background-image url('../images/icon-behance.png')
+        &#dribble
+          social-function()
+          background-image url('../images/icon-dribble.png')
+        &#pinterest
+          social-function()
+          background-image url('../images/icon-pinterest.png')
+        &.last-child
+          justify-self left
+
+      @media all and (max-width 909px)
+        justify-content left
+        justify-items left
+        padding-left 0
+
 @font-face {
   font-family: 'Abel-Rugular';
   src: url('../fonts/Abel-Regular.ttf');
