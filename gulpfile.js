@@ -31,7 +31,7 @@ gulp.task('clean', function (cb) {
 });
 
 /* Compress *.css files */
-gulp.task('css-min', ['autoprefixer'], () => {
+gulp.task('css-min', () => {
   return gulp.src('./app/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./app/css/v1'));
