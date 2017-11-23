@@ -25,14 +25,6 @@ gulp.task('autoprefixer', () =>
     .pipe(gulp.dest('./app/pages/grid/prj_sass/sass'))
 );
 
-// /* Checking for validation */
-// gulp.task( 'lint', () => {
-//   return gulp.src([ 'app/**/*.js' ])
-//     .pipe(eslint({
-//       extends : 'eslint:recommended'
-//     }))
-// });
-
 /* Clean the assembly */
 gulp.task('clean', function (cb) {
   rimraf('./build', cb);
@@ -40,9 +32,9 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', ['autoprefixer'], () => {
-  return gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
+  return gulp.src('./app/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./app/pages/grid/prj_sass/css'));
+    .pipe(gulp.dest('./app/css/v1'));
 });
 
 /* Compress *.jpeg/*.png files */
@@ -56,16 +48,6 @@ gulp.task('image-min', () =>
     }))
     .pipe(gulp.dest('./app/images/v1'))
 );
-
-/* Compress *.js files */
-// gulp.task('js-min', function (cb) {
-//   pump([
-//       gulp.src('libs/*.js'),
-//       uglify(),
-//       gulp.dest('build/js')
-//     ], cb
-//   );
-// });
 
 /* Sass/SCSS -> CSS */
 gulp.task('sass', ['autoprefixer'], () => {
