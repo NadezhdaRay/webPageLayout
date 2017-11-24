@@ -6,7 +6,7 @@
   padding: @zero;
   margin: @zero;
   outline: @none;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   transition: all .3s ease-in-out;
 }
 html, body {
@@ -79,82 +79,275 @@ a, a:hover {
       @media all and (max-width: 1000px) {
         flex-direction: column-reverse;
       }
-      aside {
-        margin-left: 50px;
-        @media all and (max-width: 1000px) {
-          margin-left: 0;
-          margin-bottom: 50px;
-        }
-        p {
-          font-size: 0.75em;
-          line-height: 2em;
-          margin-bottom: 25px;
-          &.beige { font-size: 0.875em; }
-        }
-        h2 {
-          margin: 30px 0 20px;
-        }
-        ul {
-          li {
-            line-height: 2.5em;
-            padding-bottom: 10px;
-            list-style-type: none;
-            p.beige {
-              font-size: 0.75em;
-              padding-left: 35px;
+      &#main {
+        aside {
+          margin-left: 50px;
+          @media all and (max-width: 1000px) {
+            margin-left: 0;
+            margin-bottom: 50px;
+          }
+          p {
+            font-size: 0.75em;
+            line-height: 2em;
+            margin-bottom: 25px;
+            &.beige { font-size: 0.875em; }
+          }
+          h2 {
+            margin: 30px 0 20px;
+          }
+          ul {
+            li {
+              line-height: 2.5em;
+              padding-bottom: 10px;
+              list-style-type: none;
+              p.beige {
+                font-size: 0.75em;
+                padding-left: 35px;
+              }
+              &:before {
+                content: "•";
+                color: @beige;
+                padding-right: 30px;
+              }
             }
-            &:before {
-              content: "•";
-              color: @beige;
-              padding-right: 30px;
+          }
+          div.social {
+            display: inline-flex;
+            p:nth-child(1) {
+              width: 25px;
+              height: 20px;
+              background: url("../images/icon-facebook.png") no-repeat top center;
+            }
+            p:nth-child(2) {
+              width: 25px;
+              height: 20px;
+              padding-left: 7px;
+              background: url("../images/icon-instagram.png") no-repeat top center;
+            }
+            p:nth-child(3) {
+              width: 25px;
+              height: 20px;
+              padding-left: 7px;
+              background: url("../images/icon-pinterest.png") no-repeat top center;
             }
           }
         }
+        article {
+          margin-left: 70px;
+          margin-bottom: 30px;
+          @media all and (max-width: 1000px) {
+            margin-left: 0;
+            margin-bottom: 50px;
+          }
+          p {
+            font-size: 0.875em;
+            line-height: 2em;
+            &.top {
+              display: inline-flex;
+              padding-right: 30px;
+              margin: 0;
+            }
+          }
+          h1 {
+            font-size: 1.875em;
+            margin-bottom: 40px;
+          }
+          img {
+            width: 100%;
+            max-width: 950px;
+            padding-bottom: 50px;
+          }
+          div {
+            display: flex;
+            padding-top: 40px;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: flex-end;
+            @media all and (max-width: 1000px) {
+              margin-bottom: 0;
+            }
+            div.social {
+              padding-top: 0;
+              margin-bottom: 0;
+              display: inline-flex;
+              p:nth-child(1) {
+                width: 25px;
+                height: 20px;
+                background: url("../images/icon-facebook.png") no-repeat top center;
+              }
+              p:nth-child(2) {
+                width: 25px;
+                height: 20px;
+                padding-left: 7px;
+                background: url("../images/icon-twitter.png") no-repeat top center;
+              }
+              p:nth-child(3) {
+                width: 25px;
+                height: 20px;
+                padding-left: 7px;
+                background: url("../images/icon-google.png") no-repeat top center;
+              }
+              p:nth-child(4) {
+                width: 25px;
+                height: 20px;
+                padding-left: 7px;
+                background: url("../images/icon-tumblr.png") no-repeat top center;
+              }
+              p:nth-child(5) {
+                width: 25px;
+                height: 20px;
+                padding-left: 7px;
+                background: url("../images/icon-pinterest.png") no-repeat top center;
+              }
+            }
+          }
+          blockquote {
+            margin: 0 30px 40px;
+            font-style: italic;
+            line-height: 1.5em;
+          }
+        }
+      }
+      &#comments {
+        display: block;
+        margin-left: 150px;
+        @media all and (max-width: 1000px) {
+          margin-left: 70px;
+        }
+        div {
+          &.comment {
+            display: flex;
+            margin-bottom: 25px;
+            figure { flex: @none; }
+            div.comment-text {
+              flex: auto;
+              padding-left: 35px;
+              p {
+                line-height: 2em;
+                font-size: 0.875em;
+                margin: 10px 0 20px;
+              }
+              h4 {
+                font: 0.875em 'PlayfairDisplay-Bold', sans-serif;
+              }
+              input {
+                &#text {
+                  width: 90%;
+                  color: @dark-gray;
+                  padding: 30px 35px;
+                  border-radius: 10px;
+                  border: 1px solid #c8c8c8;
+                }
+                &::placeholder {
+                  .uppercase;
+                  color: #d8d8d8;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    div {
+      &#gallery {
+        margin: 0;
+        padding: 70px 150px 40px;
+        background-color: #f5f5f5;
+        @media all and (max-width: 1000px) { padding: 70px 70px 40px; }
+      }
+      &#like-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        @media all and (max-width: 1000px) { flex-direction: column; }
+        h1 {
+          font-weight: 100;
+          color: @dark-gray;
+          font-size: 1.25em;
+          margin-bottom: 40px;
+          font-family: 'PlayfairDisplay-Regular', sans-serif;
+        }
+        figure {
+          padding: 0 40px;
+          max-width: 600px;
+          @media all and (max-width: 1000px) { padding: 0; }
+          img {
+            width: 100%;
+            padding-bottom: 25px;
+          }
+          &:first-child { padding-left: 0 }
+          &:last-child { padding-right: 0 }
+        }
+      }
+      &#media {
+        display: flex;
+        justify-content: flex-end;
+        margin: 35px 105px 70px 150px;
+        @media all and (max-width: 1000px) {
+          margin-right: 50px;
+        }
         div.social {
+          margin-left: 35px;
           display: inline-flex;
           p:nth-child(1) {
             width: 25px;
             height: 20px;
-            background: url("../images/icon-facebook.png") no-repeat top center;
+            background: url("../images/icon-twitter.png") no-repeat top center;
           }
           p:nth-child(2) {
             width: 25px;
             height: 20px;
             padding-left: 7px;
-            background: url("../images/icon-instagram.png") no-repeat top center;
-          }
-          p:nth-child(3) {
-            width: 25px;
-            height: 20px;
-            padding-left: 7px;
-            background: url("../images/icon-pinterest.png") no-repeat top center;
+            background: url("../images/icon-facebook-dark.png") no-repeat top center;
           }
         }
       }
-      article {
-        margin-left: 70px;
-        margin-bottom: 75px;
+    }
+  }
+  footer {
+    display: flex;
+    color: #3d3d3d;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 40px 70px 40px 150px;
+    justify-content: space-between;
+    font-family: 'PlayfairDisplay-Regular', sans-serif;
+    @media all and (max-width: 1000px) {
+      padding-left: 70px;
+      flex-direction: column;
+    }
+    div {
+      &#rights {
+        display: inline-flex;
+        p:first-child { margin-right: 20px; }
+      }
+      &#follow {
+        display: inline-flex;
         @media all and (max-width: 1000px) {
-          margin-left: 0;
-          margin-bottom: 50px;
+          padding-top: 20px;
         }
-        p {
-          font-size: 0.875em;
-          line-height: 2em;
-        }
-        h1 {
-          font-size: 1.875em;
-          margin-bottom: 40px;
-        }
-        img {
-          width: 100%;
-          max-width: 950px;
-          padding-bottom: 50px;
-        }
-        blockquote {
-          margin: 0 30px 40px;
-          font-style: italic;
-          line-height: 1.5em;
+        div.social {
+          padding-top: 4px;
+          padding-left: 25px;
+          display: inline-flex;
+          p {
+            padding: 0 5px;
+            &:nth-child(1) {
+              width: 25px;
+              height: 20px;
+              background: url("../images/icon-facebook-dark.png") no-repeat top center;
+            }
+            &:nth-child(2) {
+              width: 25px;
+              height: 20px;
+              background: url("../images/icon-twitter-dark.png") no-repeat top center;
+            }
+            &:nth-child(3) {
+              width: 25px;
+              height: 20px;
+              background: url("../images/icon-instagram-dark.png") no-repeat top center;
+            }
+          }
         }
       }
     }

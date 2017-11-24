@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet/less" href="./less/style.less">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>Minimo</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
       <img src="./images/image-header.png" alt="">
     </header>
     <main>
-      <section>
+      <section id="main">
         <aside>
           <img src="./images/avatar-aside.png" alt="avatar">
           <h2>About me</h2>
@@ -106,10 +106,91 @@
             quia non numquam eius modi tempora incidunt ut
             labore et dolore magnam aliquam quaerat voluptatem.
           </p>
+          <div>
+            <p class="beige top">share</p>
+            <div class="social">
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
         </article>
       </section>
+      <div id="gallery">
+        <div id="beige-text">
+          <p class="beige">you may also like</p>
+        </div>
+        <div id="like-images">
+          <figure>
+            <img src="./images/like-image1.png" alt="">
+            <figcaption>
+              <h1>Cold winter days</h1>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="./images/like-image2.png" alt="">
+            <figcaption>
+              <h1>A day exploring the Alps</h1>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="./images/like-image3.png" alt="">
+            <figcaption>
+              <h1>American dream</h1>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <section id="comments">
+        <p class="beige">2 comments</p>
+        <div class="comment">
+          <figure><img src="./images/profile-picture-john-doe.png" alt=""></figure>
+          <div class="comment-text">
+            <h4>John Doe</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo!</p>
+            <p class="beige">Reply</p>
+          </div>
+        </div>
+        <div class="comment">
+          <figure><img src="./images/profile-picture-jane-doe1.png" alt=""></figure>
+          <div class="comment-text">
+            <h4>Jane Doe</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+            <p class="beige">Reply</p>
+          </div>
+        </div>
+        <div class="comment">
+          <figure><img src="./images/profile-picture-jane-doe2.png" alt=""></figure>
+          <div class="comment-text">
+            <label for="text"></label>
+            <input id="text" type="text" placeholder="join the discussion">
+          </div>
+        </div>
+      </section>
+      <div id="media">
+        <p class="beige top">Connected with</p>
+        <div class="social">
+          <p></p>
+          <p></p>
+        </div>
+      </div>
     </main>
+    <footer>
+      <div id="rights">
+        <p>Terms and conditions</p>
+        <p>Privacy</p>
+      </div>
+      <div id="follow">
+        <p>Follow</p>
+        <div class="social">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </footer>
   </div>
-  <script src="../../../../libs/js/less.min.js" type="text/javascript"></script>
 </body>
 </html>
