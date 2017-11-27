@@ -49,6 +49,11 @@ div.block3 {
 }
 
 div.block4 {
+  background: url("../images/flex-sass.jpg") no-repeat top center;
+  background-size: cover;
+}
+
+div.block5 {
   background: url("../images/grid-stylus.png") no-repeat top center;
   background-size: cover;
 }
