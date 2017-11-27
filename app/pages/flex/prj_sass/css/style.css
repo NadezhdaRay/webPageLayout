@@ -1,5 +1,8 @@
-.uppercase, header nav #nav .nav-item a, header #buttons button {
+.uppercase, header nav #nav .nav-item a, header #buttons button, main section#about-voila div button {
   text-transform: uppercase; }
+
+.orange-button, header #buttons button.orange-button, main section#about-voila div button {
+  background-color: #ff6633; }
 
 /* General */
 * {
@@ -11,6 +14,7 @@
 
 html, body {
   height: 100%;
+  min-width: 400px;
   background: #ccc; }
 
 a, a:hover {
@@ -87,8 +91,109 @@ header {
     margin: 0 10px 145px;
     font: 0.813em 'PTSans-Bold';
     background-color: rgba(0, 0, 0, 0.8); }
+    header #buttons button.orange-button:hover, header #buttons main section#about-voila div button:hover, main section#about-voila div header #buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
     header #buttons button:hover {
       background-color: #ff6633; }
+
+main {
+  padding: 70px 0 100px 10px;
+  background-color: #f7f7f7; }
+  main section#about-voila {
+    display: flex; }
+    @media all and (max-width: 850px) {
+      main section#about-voila {
+        flex-direction: column; } }
+    main section#about-voila div {
+      flex-shrink: 1;
+      padding-left: 100px;
+      padding-right: 40px; }
+      @media all and (max-width: 1130px) {
+        main section#about-voila div {
+          padding-left: 30px; } }
+      main section#about-voila div button {
+        float: right;
+        border: none;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 5px;
+        color: #fff;
+        margin: 40px 0 45px;
+        font: 0.813em 'PTSans-Bold'; }
+        main section#about-voila div button:hover {
+          background-color: rgba(0, 0, 0, 0.8); }
+      main section#about-voila div h4 {
+        margin-bottom: 20px;
+        font: 1.625em 'PTSerif-Bold'; }
+      main section#about-voila div p {
+        margin: 25px 0;
+        font: 1em 'PTSans-Regular'; }
+        main section#about-voila div p span {
+          color: #ff6633; }
+      main section#about-voila div:last-child {
+        width: 635px;
+        height: 497px;
+        flex-shrink: 0;
+        padding-left: 0;
+        padding-right: 0;
+        background: url("../images/glass-of-wine.png") no-repeat top right; }
+        @media all and (max-width: 1000px) and (min-width: 850px) {
+          main section#about-voila div:last-child {
+            width: 435px;
+            height: auto;
+            background-size: contain; } }
+        @media all and (max-width: 850px) {
+          main section#about-voila div:last-child {
+            width: 100%;
+            height: 500px; } }
+  main section#gallery {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 100px;
+    align-items: flex-end; }
+    @media all and (min-width: 850px) and (max-width: 1000px) {
+      main section#gallery {
+        margin-top: 50px;
+        margin-left: 15px; } }
+    @media all and (max-width: 850px) {
+      main section#gallery {
+        margin-top: 0;
+        margin-left: 0;
+        flex-direction: column; } }
+    main section#gallery div {
+      margin: 0 15px; }
+      main section#gallery div:nth-child(1) {
+        width: 50%;
+        height: 300px;
+        margin-top: -100px;
+        background: url("../images/Eric-McGregor-flickr.png") no-repeat top right; }
+        @media all and (max-width: 850px) {
+          main section#gallery div:nth-child(1) {
+            width: 97%;
+            margin: 20px 15px;
+            background-size: cover;
+            background-position: center; } }
+      main section#gallery div:nth-child(2) {
+        width: 284px;
+        height: 226px;
+        background: url("../images/restaurant-kitchen.png") no-repeat top right; }
+        @media all and (max-width: 850px) {
+          main section#gallery div:nth-child(2) {
+            width: 97%;
+            margin: 20px 15px;
+            background-size: cover;
+            background-position: top; } }
+      main section#gallery div:nth-child(3) {
+        width: 335px;
+        height: 229px;
+        margin-right: 0;
+        background: url("../images/photo-holder.png") no-repeat top right; }
+        @media all and (max-width: 850px) {
+          main section#gallery div:nth-child(3) {
+            width: 97%;
+            margin: 20px 15px;
+            background-size: cover;
+            background-position: center; } }
 
 @font-face {
   font-family: 'FontAwesome';
