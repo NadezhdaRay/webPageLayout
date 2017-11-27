@@ -1,0 +1,112 @@
+.uppercase, header nav #nav .nav-item a, header #buttons button {
+  text-transform: uppercase; }
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out; }
+
+html, body {
+  height: 100%;
+  background: #ccc; }
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+/* Header */
+header {
+  text-align: center;
+  color: #fff;
+  background: url("../images/bg-header.png") no-repeat top center;
+  background-size: cover; }
+  header nav {
+    display: flex;
+    padding: 40px 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; }
+    @media all and (max-width: 940px) {
+      header nav {
+        padding: 40px; } }
+    header nav #logo {
+      color: #ff6633;
+      font: 2.250em 'PTSerif-Bold'; }
+    header nav #nav {
+      display: inline-flex; }
+      @media all and (max-width: 940px) {
+        header nav #nav {
+          flex-direction: column; } }
+      header nav #nav .nav-item {
+        margin-right: 25px; }
+        header nav #nav .nav-item:last-child {
+          margin-right: 0; }
+        @media all and (max-width: 940px) {
+          header nav #nav .nav-item {
+            margin-right: 0;
+            text-align: right;
+            margin-bottom: 10px; } }
+        header nav #nav .nav-item a {
+          letter-spacing: 2px;
+          font: 0.875em 'PTSerif-Bold'; }
+          header nav #nav .nav-item a:hover {
+            color: #ff6633; }
+        @media all and (max-width: 940px) {
+          header nav #nav .nav-item div {
+            display: none; } }
+        header nav #nav .nav-item div p {
+          padding-top: 20px;
+          font: 0.813em 'PTSans-Italic'; }
+  header h1 {
+    margin: 165px 10px 0;
+    font: 3.250em 'PTSerif-Bold'; }
+  header h2 {
+    margin: 25px 10px 55px;
+    font: 2.250em 'PTSerif-Regular'; }
+    header h2 span {
+      text-decoration: solid; }
+  header a span {
+    display: block;
+    margin: 0 auto;
+    font: 0.938em 'PTSans-Regular'; }
+    header a span:last-child {
+      width: 25px;
+      height: 25px;
+      margin-top: 10px;
+      padding-bottom: 50px;
+      background: url("../images/icon-arrow-down.png") no-repeat top center; }
+  header #buttons button {
+    border: none;
+    cursor: pointer;
+    padding: 1.5% 3%;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 10px 145px;
+    font: 0.813em 'PTSans-Bold';
+    background-color: rgba(0, 0, 0, 0.8); }
+    header #buttons button:hover {
+      background-color: #ff6633; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/FontAwesome.otf"); }
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url("../fonts/PTSans-Regular.ttf"); }
+@font-face {
+  font-family: 'PTSans-Bold';
+  src: url("../fonts/PTSans-Bold.ttf"); }
+@font-face {
+  font-family: 'PTSans-Italic';
+  src: url("../fonts/PTSans-Italic.ttf"); }
+@font-face {
+  font-family: 'PTSerif-Regular';
+  src: url("../fonts/PTSerif-Regular.ttf"); }
+@font-face {
+  font-family: 'PTSerif-Bold';
+  src: url("../fonts/PTSerif-Bold.ttf"); }
+
+/*# sourceMappingURL=style.css.map */

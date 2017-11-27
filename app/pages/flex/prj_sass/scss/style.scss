@@ -1,0 +1,107 @@
+@import "general";
+
+/* General */
+* {
+  margin: $zero;
+  padding: $zero;
+  outline: $none;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+html, body {
+  height: 100%;
+  background: #ccc;
+}
+
+a, a:hover {
+  text-decoration: $none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: $white-color;
+  background: url("../images/bg-header.png") no-repeat top center;
+  background-size: cover;
+  nav {
+    display: flex;
+    padding: 40px 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media all and (max-width: 940px) { padding: 40px; }
+    #logo {
+      color: $orange-color;
+      font: 2.250em 'PTSerif-Bold';
+    }
+    #nav {
+      display: inline-flex;
+      @media all and (max-width: 940px) {
+        flex-direction: column;
+      }
+      .nav-item {
+        margin-right: 25px;
+        &:last-child { margin-right: 0; }
+        @media all and (max-width: 940px) {
+          margin-right: 0;
+          text-align: right;
+          margin-bottom: 10px;
+        }
+        a {
+          @extend .uppercase;
+          letter-spacing: 2px;
+          font: 0.875em 'PTSerif-Bold';
+          &:hover { color: $orange-color; }
+        }
+        div {
+          @media all and (max-width: 940px) { display: none; }
+          p {
+            padding-top: 20px;
+            font: 0.813em 'PTSans-Italic';
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    margin: 165px 10px 0;
+    font: 3.250em 'PTSerif-Bold';
+  }
+  h2 {
+    margin: 25px 10px 55px;
+    font: 2.250em 'PTSerif-Regular';
+    span { text-decoration: solid; }
+  }
+  a {
+    span {
+      display: block;
+      margin: 0 auto;
+      font: 0.938em 'PTSans-Regular';
+      &:last-child {
+        width: 25px;
+        height: 25px;
+        margin-top: 10px;
+        padding-bottom: 50px;
+        background: url("../images/icon-arrow-down.png") no-repeat top center;
+      }
+    }
+  }
+  #buttons {
+    button {
+      border: $none;
+      cursor: pointer;
+      padding: 1.5% 3%;
+      @extend .uppercase;
+      border-radius: 5px;
+      color: $white-color;
+      margin: 0 10px 145px;
+      font: 0.813em 'PTSans-Bold';
+      background-color: rgba($zero, $zero, $zero, 0.8);
+      &:hover { background-color: $orange-color; }
+    }
+  }
+}
+
+@import "import-fonts";
