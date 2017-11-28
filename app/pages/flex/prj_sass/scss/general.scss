@@ -11,4 +11,14 @@ $light-gray-color: #f7f7f7;
 
 .orange-button {
   background-color: $orange-color;
+  border: $none;
+  cursor: pointer;
+  padding: 15px 30px;
+  @extend .uppercase;
+  border-radius: 5px;
+  color: $white-color;
+  margin: 40px 0 45px;
+  @extend .orange-button;
+  font: 0.813em 'PTSans-Bold';
+  &:hover { background-color: rgba($zero, $zero, $zero, 0.8); }
 }

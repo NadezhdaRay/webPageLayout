@@ -20,7 +20,6 @@ a, a:hover {
   color: inherit;
 }
 
-/* Header */
 header {
   text-align: center;
   color: $white-color;
@@ -102,7 +101,7 @@ header {
       background-color: rgba($zero, $zero, $zero, 0.8);
       &.orange-button {
         @extend .orange-button;
-        &:hover { background-color: rgba($zero, $zero, $zero, 0.8); }
+        padding: 1.5% 3%;
       }
       &:hover { background-color: $orange-color; }
     }
@@ -110,6 +109,7 @@ header {
 }
 
 main {
+  color: $dark-gray-color;
   padding: 70px 0 100px 10px;
   background-color: $light-gray-color;
   section {
@@ -125,16 +125,6 @@ main {
         @media all and (max-width: 1130px) { padding-left: 30px; }
         button {
           float: right;
-          border: $none;
-          cursor: pointer;
-          padding: 15px 30px;
-          @extend .uppercase;
-          border-radius: 5px;
-          color: $white-color;
-          margin: 40px 0 45px;
-          @extend .orange-button;
-          font: 0.813em 'PTSans-Bold';
-          &:hover { background-color: rgba($zero, $zero, $zero, 0.8); }
         }
         h4 {
           margin-bottom: 20px;
@@ -218,6 +208,73 @@ main {
             background-size: cover;
             background-position: center;
           }
+        }
+      }
+    }
+  }
+}
+
+#cupcake {
+  display: flex;
+  color: $dark-gray-color;
+  padding: 70px 0 100px 10px;
+  flex-direction: row-reverse;
+  background-color: $white-color;
+  @media all and (max-width: 1015px) {
+    flex-direction: column;
+  }
+  article {
+    div {
+      &:nth-of-type(1) { padding: 0 100px 0 50px; }
+      button {
+        float: right;
+      }
+      h4 {
+        margin-bottom: 20px;
+        font: 1.625em 'PTSerif-Bold';
+      }
+      p {
+        margin: 25px 0;
+        font: 1em 'PTSans-Regular';
+        span {
+          color: $orange-color;
+        }
+      }
+    }
+    &#cakes {
+      margin-left: 100px;
+      flex-direction: column;
+      @media all and (max-width: 1015px) {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      div {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 25px 0;
+        justify-content: space-between;
+        @media all and (max-width: 1015px) { margin: 0 auto; }
+        &:nth-child(1) {
+          div {
+            &:nth-child(1) {
+              width: 212px;
+              height: 213px;
+              background: url("../images/steak-vegetables.png")
+                no-repeat top center;
+            }
+            &:nth-child(2) {
+              width: 213px;
+              height: 213px;
+              background: url("../images/beef-steak-potatoes.png")
+                no-repeat top center;
+            }
+          }
+        }
+        &:nth-child(2) {
+          width: 455px;
+          height: 213px;
+          background: url("../images/cupcakes.png")
+              no-repeat top center;
         }
       }
     }

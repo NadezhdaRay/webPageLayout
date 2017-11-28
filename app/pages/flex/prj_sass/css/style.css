@@ -1,8 +1,17 @@
-.uppercase, header nav #nav .nav-item a, header #buttons button, main section#about-voila div button {
+.uppercase, .orange-button, header #buttons button.orange-button, header nav #nav .nav-item a, header #buttons button {
   text-transform: uppercase; }
 
-.orange-button, header #buttons button.orange-button, main section#about-voila div button {
-  background-color: #ff6633; }
+.orange-button, header #buttons button.orange-button {
+  background-color: #ff6633;
+  border: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 40px 0 45px;
+  font: 0.813em 'PTSans-Bold'; }
+  .orange-button:hover, header #buttons button.orange-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
 
 /* General */
 * {
@@ -21,7 +30,6 @@ a, a:hover {
   text-decoration: none;
   color: inherit; }
 
-/* Header */
 header {
   text-align: center;
   color: #fff;
@@ -91,12 +99,13 @@ header {
     margin: 0 10px 145px;
     font: 0.813em 'PTSans-Bold';
     background-color: rgba(0, 0, 0, 0.8); }
-    header #buttons button.orange-button:hover, header #buttons main section#about-voila div button:hover, main section#about-voila div header #buttons button:hover {
-      background-color: rgba(0, 0, 0, 0.8); }
+    header #buttons button.orange-button {
+      padding: 1.5% 3%; }
     header #buttons button:hover {
       background-color: #ff6633; }
 
 main {
+  color: #3b3b3b;
   padding: 70px 0 100px 10px;
   background-color: #f7f7f7; }
   main section#about-voila {
@@ -112,16 +121,7 @@ main {
         main section#about-voila div {
           padding-left: 30px; } }
       main section#about-voila div button {
-        float: right;
-        border: none;
-        cursor: pointer;
-        padding: 15px 30px;
-        border-radius: 5px;
-        color: #fff;
-        margin: 40px 0 45px;
-        font: 0.813em 'PTSans-Bold'; }
-        main section#about-voila div button:hover {
-          background-color: rgba(0, 0, 0, 0.8); }
+        float: right; }
       main section#about-voila div h4 {
         margin-bottom: 20px;
         font: 1.625em 'PTSerif-Bold'; }
@@ -194,6 +194,55 @@ main {
             margin: 20px 15px;
             background-size: cover;
             background-position: center; } }
+
+#cupcake {
+  display: flex;
+  color: #3b3b3b;
+  padding: 70px 0 100px 10px;
+  flex-direction: row-reverse;
+  background-color: #fff; }
+  @media all and (max-width: 1015px) {
+    #cupcake {
+      flex-direction: column; } }
+  #cupcake article div:nth-of-type(1) {
+    padding: 0 100px 0 50px; }
+  #cupcake article div button {
+    float: right; }
+  #cupcake article div h4 {
+    margin-bottom: 20px;
+    font: 1.625em 'PTSerif-Bold'; }
+  #cupcake article div p {
+    margin: 25px 0;
+    font: 1em 'PTSans-Regular'; }
+    #cupcake article div p span {
+      color: #ff6633; }
+  #cupcake article#cakes {
+    margin-left: 100px;
+    flex-direction: column; }
+    @media all and (max-width: 1015px) {
+      #cupcake article#cakes {
+        margin: 0 auto;
+        max-width: 500px; } }
+    #cupcake article#cakes div {
+      display: flex;
+      flex-direction: row;
+      padding: 0 0 25px 0;
+      justify-content: space-between; }
+      @media all and (max-width: 1015px) {
+        #cupcake article#cakes div {
+          margin: 0 auto; } }
+      #cupcake article#cakes div:nth-child(1) div:nth-child(1) {
+        width: 212px;
+        height: 213px;
+        background: url("../images/steak-vegetables.png") no-repeat top center; }
+      #cupcake article#cakes div:nth-child(1) div:nth-child(2) {
+        width: 213px;
+        height: 213px;
+        background: url("../images/beef-steak-potatoes.png") no-repeat top center; }
+      #cupcake article#cakes div:nth-child(2) {
+        width: 455px;
+        height: 213px;
+        background: url("../images/cupcakes.png") no-repeat top center; }
 
 @font-face {
   font-family: 'FontAwesome';
