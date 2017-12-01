@@ -1,4 +1,4 @@
-.uppercase, .orange-button, header #buttons button.orange-button, header nav #nav .nav-item a, header #buttons button, #events div#reservation div#form button {
+.uppercase, .orange-button, header #buttons button.orange-button, header nav #nav .nav-item a, header #buttons button, #events div#reservation div#form button, footer h4, footer #nav-footer {
   text-transform: uppercase; }
 
 .orange-button, header #buttons button.orange-button {
@@ -24,7 +24,7 @@
 html, body {
   height: 100%;
   min-width: 400px;
-  background: #ccc; }
+  background: #fff; }
 
 a, a:hover {
   text-decoration: none;
@@ -37,7 +37,9 @@ header {
   background-size: cover; }
   header nav {
     display: flex;
-    padding: 40px 100px;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1150px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between; }
@@ -109,7 +111,9 @@ main {
   padding: 70px 0 100px 10px;
   background-color: #f7f7f7; }
   main section#about-voila {
-    display: flex; }
+    display: flex;
+    margin: 0 auto;
+    max-width: 1150px; }
     @media all and (max-width: 850px) {
       main section#about-voila {
         flex-direction: column; } }
@@ -149,8 +153,8 @@ main {
             height: 500px; } }
   main section#gallery {
     display: flex;
-    margin-top: 30px;
-    margin-left: 100px;
+    max-width: 1150px;
+    margin: 30px auto 0;
     align-items: flex-end; }
     @media all and (min-width: 850px) and (max-width: 1000px) {
       main section#gallery {
@@ -198,6 +202,8 @@ main {
 
 #cupcake {
   display: flex;
+  margin: 0 auto;
+  max-width: 1150px;
   color: #3b3b3b;
   padding: 70px 0 100px 10px;
   flex-direction: row-reverse;
@@ -342,6 +348,105 @@ main {
               content: url("../images/date-icon.png"); }
             #events div#upcoming-events #comments div.comment div.comment-text span.time::before {
               content: url("../images/time-icon.png"); }
+
+#feedback {
+  display: flex;
+  padding: 90px 0;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  color: #3b3b3b;
+  background-color: #fff; }
+  @media all and (max-width: 720px) {
+    #feedback {
+      flex-direction: column; } }
+  #feedback div {
+    margin: 15px 30px; }
+    @media all and (max-width: 720px) {
+      #feedback div {
+        margin: 15px auto; } }
+    #feedback div button {
+      margin: 20px 0 0; }
+    #feedback div a {
+      width: 61px;
+      height: 20px;
+      margin: 15px 5px 0;
+      display: inline-flex; }
+      #feedback div a#fb {
+        background: url("../images/share-facebook.png") no-repeat; }
+      #feedback div a#tw {
+        background: url("../images/share-twitter.png") no-repeat; }
+    #feedback div h4 {
+      text-align: center;
+      margin-bottom: 20px;
+      font: 1.625em 'PTSerif-Bold'; }
+    #feedback div p {
+      margin: 25px 0;
+      font: 1em/1.5em 'PTSans-Regular'; }
+    #feedback div#or-block {
+      width: 30px;
+      height: 185px;
+      background: url("../images/or-divider.png") no-repeat; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  padding: 40px 0 60px;
+  background-color: #222;
+  justify-content: space-evenly; }
+  @media all and (max-width: 700px) {
+    footer {
+      flex-direction: column; } }
+  footer h4 {
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font: 1em 'PTSerif-Bold'; }
+  footer p {
+    margin-bottom: 20px;
+    font: 0.938em/1.5em 'PTSans-Regular'; }
+    footer p a {
+      color: #ff6633; }
+  footer #logo-footer {
+    color: #ff6633;
+    font: 2.250em 'PTSerif-Bold'; }
+    @media all and (max-width: 700px) {
+      footer #logo-footer {
+        min-width: 260px;
+        margin: 0 auto 25px; } }
+  footer #nav-footer {
+    flex-direction: column; }
+    @media all and (max-width: 700px) {
+      footer #nav-footer {
+        min-width: 250px;
+        margin: 0 auto 15px; } }
+    footer #nav-footer a {
+      display: block;
+      margin-bottom: 10px;
+      font: 0.875em 'PTSans-Regular'; }
+  @media all and (max-width: 700px) {
+    footer #visit-us {
+      margin: 0 auto 15px; } }
+  footer #visit-us a {
+    margin: 10px 15px;
+    display: inline-flex; }
+    footer #visit-us a:nth-child(4) {
+      width: 9px;
+      height: 16px;
+      margin-left: 0;
+      background: url("../images/facebook-icon.png") no-repeat; }
+    footer #visit-us a:nth-child(5) {
+      width: 15px;
+      height: 12px;
+      background: url("../images/twitter-icon.png") no-repeat; }
+    footer #visit-us a:nth-child(6) {
+      width: 14px;
+      height: 15px;
+      background: url("../images/instagram-icon.png") no-repeat; }
+    footer #visit-us a:nth-child(7) {
+      width: 22px;
+      height: 13px;
+      background: url("../images/trip-advisor-icon.png") no-repeat; }
 
 @font-face {
   font-family: 'FontAwesome';
