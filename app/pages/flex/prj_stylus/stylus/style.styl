@@ -1,6 +1,5 @@
 @import "general.styl"
 
-/* General */
 *
   margin: $zero
   padding: $zero
@@ -8,9 +7,9 @@
   box-sizing: border-box
   transition: all .3s ease-in-out
 
-
 html, body
   height: 100%
+  min-width 450px
   background $darker-white-color
 
   a, a:hover
@@ -61,5 +60,45 @@ header
         font 0.875em 'Helvetica 65 Medium'
       }
     }
+
+
+#tools
+  display flex
+  text-align center
+  flex-direction column
+  justify-content center
+  h2
+    title()
+  p
+    p-text( 20px, $gray-color, 1.125em 'Lato-Regular' )
+  #tool-gallery
+    display flex
+    margin 0 auto
+    margin-top 90px
+    flex-direction row
+    justify-content center
+    @media all and (max-width 840px)
+      margin-top 20px
+      flex-direction column-reverse
+    div
+      margin 16px
+      width: 100%
+      max-width 360px
+      padding-top 130px
+      @media all and (max-width 840px)
+        margin 16px auto
+      h4
+        h4-tool-title()
+      p
+        margin-bottom: 90px;
+        p-text( 20px, $gray-color, 1em 'Lato-Regular' )
+        @media all and (max-width 840px)
+          margin-bottom: 10px;
+      &:nth-child(1)
+        background url("../images/calendar-icon.png") no-repeat top center
+      &:nth-child(2)
+        background url("../images/time-icon.png") no-repeat top center
+      &:nth-child(3)
+        background url("../images/users-icon.png") no-repeat top center
 
 @import "import-fonts.styl"
