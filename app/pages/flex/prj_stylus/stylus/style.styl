@@ -1,0 +1,65 @@
+@import "general.styl"
+
+/* General */
+*
+  margin: $zero
+  padding: $zero
+  outline: $none
+  box-sizing: border-box
+  transition: all .3s ease-in-out
+
+
+html, body
+  height: 100%
+  background $darker-white-color
+
+  a, a:hover
+    text-decoration $none
+    color inherit
+
+header
+  display flex
+  margin 0 auto
+  flex-direction row
+  justify-content center
+  background url("../images/bg-header.png") no-repeat top center
+  background-size cover
+
+  @media all and (max-width 940px) { flex-direction column-reverse }
+
+  div
+    margin 100px 30px 0
+    &:first-child {
+      width 413px
+      height 538px
+      background url("../images/logo-iphone.png") no-repeat top center
+      @media all and (max-width 940px) {
+        width: 213px;
+        height: 277px;
+        margin: 30px auto 0;
+        background-size: contain;
+      }
+    }
+    &:last-child {
+      padding-top 75px
+      @media all and (max-width 940px) {
+        padding-top 0
+        margin 30px auto 0
+      }
+      h1 {
+        color $white-color
+        font 2em 'Lato-Light'
+      }
+      h2 {
+        color $white-color
+        margin-bottom 75px
+        font 1.875em 'Open-Sans-Condensed-Bold'
+      }
+      p {
+        margin-top 25px
+        color $almost-black
+        font 0.875em 'Helvetica 65 Medium'
+      }
+    }
+
+@import "import-fonts.styl"

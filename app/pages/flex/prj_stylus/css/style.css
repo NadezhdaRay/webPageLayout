@@ -1,0 +1,84 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+html,
+body {
+  height: 100%;
+  background: #fafafa;
+}
+html a,
+body a,
+html a:hover,
+body a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  background: url("../images/bg-header.png") no-repeat top center;
+  background-size: cover;
+}
+@media all and (max-width: 940px) {
+  header {
+    flex-direction: column-reverse;
+  }
+}
+header div {
+  margin: 100px 30px 0;
+}
+header div:first-child {
+  width: 413px;
+  height: 538px;
+  background: url("../images/logo-iphone.png") no-repeat top center;
+}
+@media all and (max-width: 940px) {
+  header div:first-child {
+    width: 213px;
+    height: 277px;
+    margin: 30px auto 0;
+    background-size: contain;
+  }
+}
+header div:last-child {
+  padding-top: 75px;
+}
+@media all and (max-width: 940px) {
+  header div:last-child {
+    padding-top: 0;
+    margin: 30px auto 0;
+  }
+}
+header div:last-child h1 {
+  color: #fff;
+  font: 2em 'Lato-Light';
+}
+header div:last-child h2 {
+  color: #fff;
+  margin-bottom: 75px;
+  font: 1.875em 'Open-Sans-Condensed-Bold';
+}
+header div:last-child p {
+  margin-top: 25px;
+  color: #383838;
+  font: 0.875em 'Helvetica 65 Medium';
+}
+@font-face {
+  font-family: 'HelveticaNeueLTStd-BdCn';
+  src: url("../fonts/HelveticaNeueLTStd-BdCn.otf");
+}
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../fonts/Lato-Light.ttf");
+}
+@font-face {
+  font-family: 'Open-Sans-Condensed-Bold';
+  src: url("../fonts/Open-Sans-Condensed-Bold.ttf");
+}
