@@ -58,6 +58,11 @@ div.block5 {
   background-size: cover;
 }
 
+div.block6 {
+  background: url("../images/flex-stylus.png") no-repeat top center;
+  background-size: cover;
+}
+
 div.main-block:hover a.hover-effect {
   opacity: 0.2;
 }
