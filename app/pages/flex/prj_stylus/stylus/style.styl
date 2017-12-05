@@ -70,7 +70,7 @@ header
   h2
     title()
   p
-    p-text( 20px, $gray-color, 1.125em 'Lato-Regular' )
+    p-text( 20px, $gray-color, 1.125em 'Lato-Semibold' )
   #tool-gallery
     display flex
     margin 0 auto
@@ -91,7 +91,7 @@ header
         h4-tool-title()
       p
         margin-bottom: 90px;
-        p-text( 20px, $gray-color, 1em 'Lato-Regular' )
+        p-text( 20px, $gray-color, 1em 'Lato-Semibold' )
         @media all and (max-width 840px)
           margin-bottom: 10px;
       &:nth-child(1)
@@ -101,4 +101,70 @@ header
       &:nth-child(3)
         background url("../images/users-icon.png") no-repeat top center
 
+figure#three-iphone
+  display flex
+  justify-content center
+  img
+    width 100%
+    height 100%
+    max-width 687px
+    @media all and (max-width 840px)
+      width 50%
+      margin-top 20px
+
+#features
+  display flex
+  text-align center
+  flex-direction column
+  justify-content center
+  h2
+    title()
+  p
+    margin-bottom 60px
+    p-text( 20px, $gray-color, 1.125em 'Lato-Semibold' )
+  #features-gallery
+    display flex
+    text-align center
+    flex-direction row
+    margin-bottom: 150px;
+    justify-content center
+    @media all and (max-width 840px)
+      margin: 0 auto;
+      flex-direction column
+    .container
+      flex-direction column
+      .feature-item
+        display flex
+        text-align left
+        max-width 500px
+        margin 0 20px
+        figure
+          flex none
+          width 67px
+          height 67px
+        .feature-item-text
+          flex auto
+          margin-left 15px
+          h5
+            p-text( 0, $almost-black, 1.125em 'Lato-Semibold' )
+          p
+            margin-bottom 30px
+            p-text( 0, $gray-color, 1em 'Lato-Semibold' )
+
+#jumbotron
+  display flex
+  height 320px
+  justify-content center
+  background url("../images/jumbotron.png") no-repeat center center
+  background-size cover
+  #shadow-text
+    margin auto
+    padding: 20px
+    max-width 555px
+    background-color rgba(0, 0, 0, 0.8)
+    p
+      display inline
+      p-text( 0, $white-color, 1.125em 'Lato-Semibold' )
+    span
+      p-text( 0, $gray-color, 0.75em 'Lato-Semibold' )
 @import "import-fonts.styl"
