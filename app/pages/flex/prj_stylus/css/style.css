@@ -246,6 +246,132 @@ figure#three-iphone img {
   font: 0.75em 'Lato-Semibold';
   line-height: 1.5em;
 }
+#our-team h2 {
+  font-size: 2.25em;
+  padding-top: 92px;
+  text-align: center;
+  color: #1b1b1b;
+  text-transform: capitalize;
+  font-family: 'Lato-Light', sans-serif;
+}
+#our-team p {
+  text-align: center;
+  margin-bottom: 45px;
+  margin-top: 15px;
+  color: #999;
+  font: 1.125em 'Lato-Semibold';
+  line-height: 1.5em;
+}
+#our-team #team-gallery {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+@media all and (max-width: 1030px) {
+  #our-team #team-gallery {
+    flex-direction: column;
+  }
+}
+#our-team #team-gallery .team-item {
+  display: flex;
+  margin: 0 40px;
+  flex-direction: row;
+}
+@media all and (max-width: 1190px) {
+  #our-team #team-gallery .team-item {
+    margin: 0 10px;
+  }
+}
+@media all and (max-width: 1030px) {
+  #our-team #team-gallery .team-item {
+    margin: 10px auto;
+  }
+}
+#our-team #team-gallery .team-item figure {
+  flex: none;
+}
+#our-team #team-gallery .team-item .team-item-text {
+  flex: auto;
+  margin: auto;
+  margin-left: 15px;
+}
+#our-team #team-gallery .team-item .team-item-text h5 {
+  margin-top: 0;
+  color: #383838;
+  font: 1.125em 'Lato-Semibold';
+  line-height: 1.5em;
+}
+#our-team #team-gallery .team-item .team-item-text p {
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: #999;
+  font: 1em 'Lato-Semibold';
+  line-height: 1.5em;
+}
+#our-team hr {
+  height: 2px;
+  border: none;
+  color: #d7d7d7;
+  background: #d7d7d7;
+}
+footer {
+  display: flex;
+  padding: 50px 0;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media all and (max-width: 780px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+footer #logo {
+  color: #d6d6d6;
+  font: 2em 'HelveticaNeueLTStd-BdCn';
+}
+@media all and (max-width: 780px) {
+  footer #logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+footer nav {
+  flex-direction: row;
+}
+@media all and (max-width: 780px) {
+  footer nav {
+    justify-content: center;
+    display: inline-flex;
+  }
+}
+footer nav ul {
+  display: inline-flex;
+}
+footer nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+footer nav ul li a {
+  margin-top: 0;
+  color: #999;
+  font: 1.25em 'Lato-Semibold';
+  line-height: 1.5em;
+}
+footer nav ul li:hover {
+  color: #999;
+}
+@media all and (max-width: 780px) {
+  footer #social {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+footer #social a {
+  margin: 0 10px;
+}
 @font-face {
   font-family: 'HelveticaNeueLTStd-BdCn';
   src: url("../fonts/HelveticaNeueLTStd-BdCn.otf");
