@@ -92,6 +92,7 @@
           padding: 1.5em;
           background-color: @white-color;
           .link-text(@light-gray-text-color);
+          font-size: 1em;
           font-family: 'Karla-Bold', sans-serif;
           border-bottom: 1px solid @light-gray-text-color;
           &:last-child { border-left: 1px solid @light-gray-text-color;}
@@ -106,9 +107,10 @@
       margin: auto;
       outline: @none;
       display: inherit;
-      padding: 0.5em 1.5em;
+      padding: 0.7em 1.8em;
       background-color: @white-color;
       .link-text(@light-gray-text-color);
+      font-size: 1em;
       border: 1px solid @light-gray-text-color;
       &:last-child { margin: 100px auto; }
     }
@@ -177,6 +179,49 @@
         @media (max-width: 911px) {
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
+      }
+    }
+  }
+  #real-talk {
+    padding: 80px 40px;
+    background-color: @dark-gray-color;
+    .container {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      @media (max-width: 1120px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    .container-item1 {
+      width: 100%;
+      height: 470px;
+      position: relative;
+      grid-column-end: span 2;
+      background: url("../images/real-talk-img.png") no-repeat top center;
+      background-size: cover;
+      a {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+      }
+    }
+    .container-item2 {
+      align-self: center;
+      @media (max-width: 1120px) { align-self: start; }
+      a {
+        margin: 30px 0;
+        display: block;
+      }
+      button {
+        outline: @none;
+        margin: 60px 0 0;
+        display: inherit;
+        padding: 0.7em 1.8em;
+        background-color: inherit;
+        .link-text(@light-gray-text-color);
+        font-size: 1em;
+        border: 1px solid @light-gray-text-color;
       }
     }
   }
