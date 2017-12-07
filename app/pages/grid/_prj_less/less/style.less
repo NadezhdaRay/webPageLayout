@@ -4,6 +4,8 @@
 #wrapper {
   min-width: 450px;
   nav {
+    top: 0;
+    z-index: 1;
     width: 100%;
     height: 100px;
     display: grid;
@@ -91,7 +93,89 @@
           background-color: @white-color;
           .link-text(@light-gray-text-color);
           font-family: 'Karla-Bold', sans-serif;
+          border-bottom: 1px solid @light-gray-text-color;
           &:last-child { border-left: 1px solid @light-gray-text-color;}
+        }
+      }
+    }
+  }
+  #latest-stories-gallery {
+    padding: 60px 40px 0;
+    h3 { font: 2em 'Karla-Bold'; margin-bottom: 20px; }
+    button {
+      margin: auto;
+      outline: @none;
+      display: inherit;
+      padding: 0.5em 1.5em;
+      background-color: @white-color;
+      .link-text(@light-gray-text-color);
+      border: 1px solid @light-gray-text-color;
+      &:last-child { margin: 100px auto; }
+    }
+    .container {
+      width: 100%;
+      display: grid;
+      margin: 0 auto;
+      max-width: 1300px;
+      grid-column-gap: 2em;
+      .latest-stories-gallery-item {
+        margin: 45px auto 0;
+        figure {
+          img {
+            width: 100%;
+          }
+        }
+        a {
+          display: block;
+          margin-top: 15px;
+          .link-text(@dark-gray-color);
+        }
+        .date {
+          display: block;
+          margin-top: 15px;
+          .link-text(@light-gray-text-color);
+        }
+        &.item3, &.item5 {
+          @media (max-width: 911px) and (min-width: 629px) { grid-column-end: span 2; }
+        }
+        &.item4 {
+          width: 100%;
+          height: 93%;
+          padding-left: 30px;
+          position: relative;
+          grid-column: 1 / span 2;
+          background: url("../images/lastest-stories-gallery-item4.png") no-repeat top center;
+          background-size: cover;
+          h2 {
+            @media (max-width: 530px) { font-size: 2em; }
+          }
+          h5 {
+            color: #8e8b80;
+            margin: 20px 0 0;
+          }
+          img {
+            width: 20px;
+            &#camera-gallery {
+              width: 40px;
+              margin-top: 48%;//400px;
+            }
+          }
+          a {
+            right: 30px;
+            bottom: 55px;
+            margin-top: 0;
+            position: absolute;
+            .link-text(@white-color);
+          }
+        }
+      }
+      &.first {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      &.second {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        @media (max-width: 911px) {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
       }
     }
