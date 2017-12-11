@@ -17,12 +17,12 @@ let less = require('gulp-less');
 
 /* Add browsers' prefixes */
 gulp.task('autoprefixer', () =>
-  gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
+  gulp.src('./app/pages/grid/_prj_less/css/style.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('./app/pages/grid/prj_sass/sass'))
+    .pipe(gulp.dest('./app/pages/grid/_prj_less/css'))
 );
 
 /* Clean the assembly */
@@ -32,9 +32,9 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', () => {
-  return gulp.src('./app/css/style.css')
+  return gulp.src('./app/pages/grid/_prj_less/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./app/css/v1'));
+    .pipe(gulp.dest('./app/pages/grid/_prj_less/css/v1'));
 });
 
 /* Compress *.jpeg/*.png files */
@@ -54,4 +54,10 @@ gulp.task('sass', ['autoprefixer'], () => {
   return gulp.src('./app/pages/grid/prj_sass/sass/style.scss')
     .pipe(sass())
     .pipe(gulp.dest('./app/pages/grid/prj_sass/css'))
+});
+
+gulp.task('less', () => {
+  return gulp.src('./app/pages/grid/_prj_less/less/style.less')
+    .pipe(less())
+    .pipe(gulp.dest('./app/pages/grid/_prj_less/css'));
 });
