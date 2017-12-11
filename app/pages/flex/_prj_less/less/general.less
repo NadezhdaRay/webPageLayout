@@ -1,0 +1,43 @@
+@zero: 0;
+@none: none;
+@white-color: #fff;
+@bg-color: #f7f7f7;
+@text-color: #8d9092;
+@title-color: #353738;
+
+.uppercase() {
+  text-transform: uppercase;
+}
+
+h4.title {
+  .uppercase;
+  margin: 40px auto;
+  text-align: center;
+  color: @title-color;
+  letter-spacing: 2px;
+  font: 1.125em/1.5em 'Lato-Bold';
+}
+p {
+  &.title-icon {
+    text-align: center;
+    margin: 100px auto 0;
+    span {
+      margin: auto;
+      display: block;
+    }
+  }
+  &.description {
+    text-align: center;
+    color: @text-color;
+    font: 1.125em/2em 'Lato-Regular';
+  }
+}
+hr {
+  width: 20%;
+  height: 2px;
+  border: @none;
+  display: block;
+  color: @text-color;
+  margin: 45px auto 70px;
+  background: @text-color;
+}
