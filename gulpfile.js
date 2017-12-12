@@ -32,9 +32,9 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', () => {
-  return gulp.src('./app/pages/flex/_prj_less/css/style.css')
+  return gulp.src('./app/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./app/pages/flex/_prj_less/css/v1'));
+    .pipe(gulp.dest('./app/css/v1'));
 });
 
 /* Compress *.jpeg/*.png files */
