@@ -1,0 +1,695 @@
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background: #f7f7f7;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+h4.title {
+  text-transform: uppercase;
+  margin: 40px auto;
+  text-align: center;
+  color: #353738;
+  letter-spacing: 2px;
+  font: 1.125em/1.5em 'Lato-Bold';
+}
+p.title-icon {
+  text-align: center;
+  margin: 100px auto 0;
+}
+p.title-icon span {
+  margin: auto;
+  display: block;
+}
+p.description {
+  text-align: center;
+  color: #8d9092;
+  font: 1.125em/2em 'Lato-Regular';
+}
+hr {
+  width: 20%;
+  height: 2px;
+  border: none;
+  display: block;
+  color: #8d9092;
+  margin: 45px auto 70px;
+  background: #8d9092;
+}
+span.hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 0;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  background: rgba(88, 165, 137, 0.8);
+}
+span.hover a {
+  text-transform: uppercase;
+  outline: 0;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  font: 0.875em 'Lato-Bold';
+}
+span.hover a img {
+  display: inline-block;
+  padding: 7em 0 15px;
+}
+#wrapper {
+  min-width: 500px;
+}
+#wrapper header {
+  width: 100%;
+  height: 800px;
+  min-height: 600px;
+  background: url("../images/bg-header.png") no-repeat top center;
+  background-size: cover;
+}
+#wrapper header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 35px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#wrapper header nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 630px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#wrapper header nav ul li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+#wrapper header nav ul li a {
+  text-transform: uppercase;
+  color: #4d4959;
+  font: 0.813em 'Lato-Bold';
+}
+#wrapper section#about-us {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 40px;
+  min-height: 470px;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+#wrapper section#about-us p.title-icon span {
+  width: 52px;
+  height: 43px;
+  background: url("../images/about-us-title-icon.png") no-repeat center;
+}
+#wrapper section#about-us p.description {
+  margin-bottom: 140px;
+}
+#wrapper section#gallery {
+  width: 100%;
+  min-height: 600px;
+}
+#wrapper section#gallery div#gallery-row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#wrapper section#gallery div#gallery-row1 p.title-icon {
+  margin-top: 70px;
+}
+#wrapper section#gallery div#gallery-row1 p.title-icon span {
+  width: 41px;
+  height: 30px;
+  background: url("../images/gallery-title-icon1.png") no-repeat center;
+}
+#wrapper section#gallery div#gallery-row1 div.bg-image {
+  width: 100%;
+  position: relative;
+  background: url("../images/bike-gallery-image1.png") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row1 div.bg-image {
+    height: 400px;
+  }
+}
+#wrapper section#gallery div#gallery-row1 div.bg-image img.brooch-logo {
+  top: 40%;
+  left: 45%;
+  width: 113px;
+  height: 118px;
+  position: absolute;
+}
+#wrapper section#gallery div#gallery-row1 div.gallery-description {
+  -ms-flex-preferred-size: 1000px;
+  flex-basis: 1000px;
+  background-color: #fff;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row1 div.gallery-description {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+#wrapper section#gallery div#gallery-row1 div.gallery-description div.gallery-description {
+  padding: 0 50px 0;
+}
+#wrapper section#gallery div#gallery-row1 div.gallery-description div.bg-image {
+  width: 100%;
+  height: 200px;
+  background: url("../images/bike-gallery-image2.png") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row1 div.gallery-description div.bg-image {
+    height: 400px;
+    background-size: contain;
+  }
+}
+#wrapper section#gallery div#gallery-row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#wrapper section#gallery div#gallery-row2 p.title-icon {
+  margin-top: 70px;
+}
+#wrapper section#gallery div#gallery-row2 p.title-icon span {
+  width: 32px;
+  height: 32px;
+  background: url("../images/gallery-title-icon2.png") no-repeat center;
+}
+#wrapper section#gallery div#gallery-row2 div.bg-image {
+  width: 100%;
+  position: relative;
+  background: url("../images/bike-gallery-image3.png") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row2 div.bg-image {
+    height: 400px;
+  }
+}
+#wrapper section#gallery div#gallery-row2 div.bg-image img.brooch-logo {
+  top: 40%;
+  left: 40%;
+  width: 177px;
+  height: 152px;
+  position: absolute;
+}
+#wrapper section#gallery div#gallery-row2 div.gallery-description {
+  -ms-flex-preferred-size: 1000px;
+  flex-basis: 1000px;
+  background-color: #fff;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row2 div.gallery-description {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+#wrapper section#gallery div#gallery-row2 div.gallery-description div.gallery-description {
+  padding: 0 50px 0;
+}
+#wrapper section#gallery div#gallery-row2 div.gallery-description div.bg-image {
+  width: 100%;
+  height: 200px;
+  background: url("../images/bike-gallery-image4.png") no-repeat center;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  #wrapper section#gallery div#gallery-row2 div.gallery-description div.bg-image {
+    height: 400px;
+    background-size: contain;
+  }
+}
+#wrapper section#gallery div#gallery-row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@media (max-width: 1300px) {
+  #wrapper section#gallery div#gallery-row3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#wrapper section#gallery div#gallery-row3 p.title-icon {
+  margin-top: 70px;
+}
+#wrapper section#gallery div#gallery-row3 p.title-icon span {
+  width: 23px;
+  height: 41px;
+  background: url("../images/gallery-title-icon3.png") no-repeat center;
+}
+#wrapper section#gallery div#gallery-row3 div.bg-image {
+  width: 100%;
+  position: relative;
+}
+#wrapper section#gallery div#gallery-row3 div.bg-image:first-child {
+  background: url("../images/bike-gallery-image5.png") no-repeat;
+  background-size: cover;
+}
+#wrapper section#gallery div#gallery-row3 div.bg-image:last-child {
+  background: url("../images/bike-gallery-image6.png") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1300px) {
+  #wrapper section#gallery div#gallery-row3 div.bg-image {
+    height: 400px;
+  }
+}
+#wrapper section#gallery div#gallery-row3 div.bg-image img.brooch-logo {
+  top: 40%;
+  left: 28%;
+  width: 208px;
+  height: 67px;
+  position: absolute;
+}
+@media (max-width: 1300px) {
+  #wrapper section#gallery div#gallery-row3 div.bg-image img.brooch-logo {
+    left: 40%;
+  }
+}
+@media (min-width: 500px) and (max-width: 900px) {
+  #wrapper section#gallery div#gallery-row3 div.bg-image img.brooch-logo {
+    left: 33%;
+  }
+}
+#wrapper section#gallery div#gallery-row3 div.gallery-description {
+  background-color: #fff;
+}
+#wrapper section#gallery div#gallery-row3 div.gallery-description div.gallery-description {
+  padding: 0 50px 0;
+}
+#wrapper section#gallery div#gallery-row3 div.gallery-description div.bg-image {
+  width: 100%;
+  height: 200px;
+  background: url("../images/bike-gallery-image7.png") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1300px) {
+  #wrapper section#gallery div#gallery-row3 div.gallery-description div.bg-image {
+    height: 400px;
+  }
+}
+#wrapper section#opinion p.title-icon span {
+  width: 32px;
+  height: 27px;
+  background: url("../images/opinion-icon.png") no-repeat center;
+}
+#wrapper section#opinion p.description {
+  padding: 0 30px;
+  max-width: 950px;
+  font-style: italic;
+  margin: 0 auto 140px;
+}
+#wrapper section#opinion h5 {
+  margin: 40px auto 25px;
+  text-align: center;
+  font: 1.125em 'Lato-Bold';
+}
+#wrapper section#opinion h5 span {
+  color: #8d9092;
+  font-family: 'Lato-Light', sans-serif;
+}
+#wrapper section#second-gallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@media (max-width: 1000px) {
+  #wrapper section#second-gallery {
+    margin: 0 auto;
+    max-width: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#wrapper section#second-gallery .gallery-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#wrapper section#second-gallery .gallery-item.item1 {
+  width: 100%;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item1 div:first-child {
+  width: 100%;
+  height: 267px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: url(../images/second-gallery-image1.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item1 div:first-child:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item1 div:last-child {
+  width: 100%;
+  height: 267px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: url(../images/second-gallery-image2.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item1 div:last-child:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item2 {
+  width: 100%;
+  height: 267px;
+  position: relative;
+  background: url(../images/second-gallery-image3.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item1 div.gallery-item2:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item2 {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item1 {
+  width: 100%;
+  height: 534px;
+  position: relative;
+  background: url(../images/second-gallery-image4.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item1 span.hover a img {
+  padding: 17em 0 15px;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item1:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item2 {
+  width: 100%;
+  height: 534px;
+  position: relative;
+  background: url(../images/second-gallery-image5.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item2 span.hover a img {
+  padding: 17em 0 15px;
+}
+#wrapper section#second-gallery .gallery-item.item2 div.gallery-item2:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item3 {
+  width: 100%;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item1 div:first-child {
+  width: 100%;
+  height: 267px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: url(../images/second-gallery-image7.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item1 div:first-child:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item1 div:last-child {
+  width: 100%;
+  height: 267px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: url(../images/second-gallery-image8.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item1 div:last-child:hover span {
+  opacity: 1;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item2 {
+  width: 100%;
+  height: 267px;
+  position: relative;
+  background: url(../images/second-gallery-image6.png) no-repeat center;
+  background-size: cover;
+}
+#wrapper section#second-gallery .gallery-item.item3 div.gallery-item2:hover span {
+  opacity: 1;
+}
+#wrapper section#discover {
+  text-align: center;
+  background-color: #282f35;
+}
+#wrapper section#discover button {
+  text-transform: uppercase;
+  padding: 1em 4em;
+  margin: 75px auto;
+  color: #fff;
+  letter-spacing: 2px;
+  font: 0.875em 'Lato-Bold';
+  background-color: inherit;
+  border: 1px solid #fff;
+}
+#wrapper section#feedback {
+  background-color: #fff;
+}
+#wrapper section#feedback p {
+  text-align: center;
+}
+#wrapper section#feedback p img {
+  margin: 100px auto 35px;
+}
+#wrapper section#feedback p.description {
+  font-style: italic;
+}
+#wrapper section#feedback div#form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 35px auto 0;
+  padding-bottom: 110px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#wrapper section#feedback div#form button {
+  text-transform: uppercase;
+  border: none;
+  padding: 1em 2em;
+  color: #fff;
+  font: 1.2em 'Lato-Light';
+  background-color: #64c29e;
+}
+#wrapper section#feedback div#form input {
+  padding: 20px;
+  margin: 0 7px;
+  color: #8d9092;
+  border: 1px solid #d3d7d9;
+  font: italic 1em 'Lato-Regular';
+}
+#wrapper section#feedback div#form input::-webkit-input-placeholder {
+  color: #8d9092;
+}
+#wrapper section#feedback div#form input:-ms-input-placeholder {
+  color: #8d9092;
+}
+#wrapper section#feedback div#form input::-ms-input-placeholder {
+  color: #8d9092;
+}
+#wrapper section#feedback div#form input::placeholder {
+  color: #8d9092;
+}
+#wrapper footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+  #wrapper footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#wrapper footer p.description {
+  text-align: left;
+  font-size: 0.875em;
+  font-style: italic;
+}
+@media (max-width: 800px) {
+  #wrapper footer #address {
+    margin: 20px auto 50px;
+  }
+}
+#wrapper footer #address p {
+  color: #848789;
+  margin: 3px auto;
+  font: 1em 'Lato-Bold';
+}
+#wrapper footer #address p.description {
+  text-align: left;
+  font-size: 0.875em;
+  font-style: italic;
+}
+@media (max-width: 800px) {
+  #wrapper footer #social {
+    margin-left: -110px;
+  }
+}
+#wrapper footer #social a {
+  width: 35px;
+  height: 34px;
+  margin: auto 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#wrapper footer #social a[href*="twitter"] {
+  background: url("../images/twitter-icon.png") no-repeat center;
+}
+#wrapper footer #social a[href*="facebook"] {
+  background: url("../images/facebook-icon.png") no-repeat center;
+}
+#wrapper footer #social a[href*="pinterest"] {
+  background: url("../images/pinterest-icon.png") no-repeat center;
+}
+#wrapper footer #copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 800px) {
+  #wrapper footer #copyright {
+    margin: 50px 0 0 -95px;
+  }
+}
+#wrapper footer #copyright a {
+  width: 55px;
+  height: 36px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/yebo-logo.png") no-repeat center;
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular.ttf');
+}
