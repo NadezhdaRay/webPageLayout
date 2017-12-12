@@ -355,6 +355,53 @@
         }
       }
     }
+    &#discover {
+      text-align: center;
+      background-color: #282f35;
+      button {
+        .uppercase;
+        padding: 1em 4em;
+        margin: 75px auto;
+        color: @white-color;
+        letter-spacing: 2px;
+        font: 0.875em 'Lato-Bold';
+        background-color: inherit;
+        border: 1px solid @white-color;
+      }
+    }
+    &#feedback {
+      background-color: @white-color;
+      p {
+        text-align: center;
+        img { margin: 100px auto 35px; }
+        &.description { font-style: italic; }
+      }
+      div#form {
+        display: flex;
+        flex-direction: row;
+        margin: 35px auto 0;
+        padding-bottom: 110px;
+        justify-content: center;
+        button {
+          .uppercase;
+          border: @none;
+          padding: 1em 2em;
+          color: @white-color;
+          font: 1.2em 'Lato-Light';
+          background-color: #64c29e;
+        }
+        input {
+          padding: 20px;
+          margin: 0 7px;
+          color: @text-color;
+          border: 1px solid #d3d7d9;
+          font: italic 1em 'Lato-Regular';
+          &::placeholder {
+            color: @text-color;
+          }
+        }
+      }
+    }
   }
 }
 
