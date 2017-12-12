@@ -17,12 +17,12 @@ let less = require('gulp-less');
 
 /* Add browsers' prefixes */
 gulp.task('autoprefixer', () =>
-  gulp.src('./app/pages/grid/_prj_less/css/style.css')
+  gulp.src('./app/pages/flex/_prj_less/css/style.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('./app/pages/grid/_prj_less/css'))
+    .pipe(gulp.dest('./app/pages/flex/_prj_less/css'))
 );
 
 /* Clean the assembly */
@@ -32,21 +32,21 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', () => {
-  return gulp.src('./app/pages/grid/_prj_less/css/style.css')
+  return gulp.src('./app/pages/flex/_prj_less/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./app/pages/grid/_prj_less/css/v1'));
+    .pipe(gulp.dest('./app/pages/flex/_prj_less/css/v1'));
 });
 
 /* Compress *.jpeg/*.png files */
 gulp.task('image-min', () =>
-  gulp.src('./app/images/*')
+  gulp.src('./app/pages/flex/_prj_less/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
       interlaced: true
     }))
-    .pipe(gulp.dest('./app/images/v1'))
+    .pipe(gulp.dest('./app/pages/flex/_prj_less/images/v1'))
 );
 
 /* Sass/SCSS -> CSS */
@@ -57,7 +57,7 @@ gulp.task('sass', ['autoprefixer'], () => {
 });
 
 gulp.task('less', () => {
-  return gulp.src('./app/pages/grid/_prj_less/less/style.less')
+  return gulp.src('./app/pages/flex/_prj_less/less/style.less')
     .pipe(less())
-    .pipe(gulp.dest('./app/pages/grid/_prj_less/css'));
+    .pipe(gulp.dest('./app/pages/flex/_prj_less/css'));
 });
