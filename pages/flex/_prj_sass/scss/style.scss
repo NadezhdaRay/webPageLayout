@@ -1,0 +1,110 @@
+@import "general";
+@import "import-fonts";
+
+#wrapper {
+  margin: 0 auto;
+  min-width: 500px;
+  nav {
+    background-color: $nav-bg-color;
+    div.container {
+      padding: 20px 25px;
+      flex-direction: row;
+      color: $white-color;
+      justify-content: space-between;
+      ul {
+        justify-self: flex-start;
+        li {
+          list-style: $none;
+          display: inline-flex;
+          margin-right: 25px;
+          a {
+            @extend .nav-ul-li;
+          }
+        }
+      }
+      #call-us {
+        justify-self: flex-end;
+        @extend .nav-ul-li;
+        align-self: flex-end;
+        &::before {
+          content: url("../images/telephone-icon.png");
+        }
+      }
+    }
+  }
+  header {
+    .container {
+      padding: 25px;
+      flex-direction: row;
+      color: $white-color;
+      justify-content: space-between;
+      #header-logo {
+        width: 182px;
+        height: 43px;
+        align-self: center;
+        background: url("../images/header-logo.png") no-repeat center;
+      }
+      #profile-data {
+        max-width: 510px;
+        justify-self: flex-end;
+        flex-direction: column;
+        div#register {
+          display: flex;
+          margin-bottom: 15px;
+          align-items: center;
+          justify-content: space-evenly;
+          @media (max-width: 800px) {
+            align-items: flex-end;
+            flex-direction: column;
+          }
+          a {
+            margin-right: 50px;
+            @media (max-width: 800px) {
+              margin: 10px 0;
+            }
+            &:nth-child(1) {
+              @include link-text($text-color);
+            }
+            &:nth-child(2) {
+              @include link-text($text-color);
+            }
+            &:nth-child(4) {
+              margin-right: 0;
+              padding: 0.5em 1em;
+              background-color: #000;
+              @include link-text($white-color);
+            }
+          }
+          span {
+            margin-right: 20px;
+            @include link-text($text-color);
+            @media (max-width: 800px) {
+              margin: 0;
+            }
+            &:before {
+              content: url("../images/shopping-icon.png");
+            }
+          }
+        }
+        div#search-container {
+          padding: 15px;
+          border: 1px solid $border-color;
+          input {
+            &[type="search"] {
+              width: 100%;
+              border: $none;
+              outline: $none;
+              min-height: 25px;
+              vertical-align: middle;
+              background: url(../images/search-icon.png) no-repeat right center;
+              &::placeholder {
+                letter-spacing: 1px;
+                font: 0.938em 'Roboto-Light';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

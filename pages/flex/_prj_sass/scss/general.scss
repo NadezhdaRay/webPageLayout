@@ -1,0 +1,45 @@
+$zero: 0;
+$none: none;
+$white-color: #fff;
+$text-color: #3d3d3d;
+$border-color: #e4e4e4;
+$nav-bg-color: #252525;
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+* {
+  margin: $zero;
+  padding: $zero;
+  outline: $none;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: $white-color;
+}
+
+a, a:hover {
+  text-decoration: $none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.nav-ul-li {
+  letter-spacing: 1px;
+  font: 0.75em 'Roboto-Light';
+}
+
+@mixin link-text($color) {
+  color: $color;
+  @extend .uppercase;
+  letter-spacing: 1px;
+  font: 0.875em 'Roboto-Light';
+}
