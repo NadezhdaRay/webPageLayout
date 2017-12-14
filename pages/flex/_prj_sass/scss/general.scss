@@ -32,10 +32,55 @@ a, a:hover {
   max-width: 940px;
 }
 
+.gallery-container {
+  height: 250px;
+  padding-top: 150px;
+  @extend .uppercase;
+  text-align: center;
+  position: relative;
+  h3 {
+    color: #f9f9f9;
+    font: 1.375em 'PlayfairDisplay-Bold';
+  }
+  h4 {
+    left: 10px;
+    bottom: 20px;
+    color: #f9f9f9;
+    position: absolute;
+    text-transform: capitalize;
+    font: 1.125em 'PlayfairDisplay-Bold';
+    @media (max-width: 560px) { font-size: 1em; }
+  }
+  img {
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    position: absolute;
+  }
+  p {
+    color: #e1e1e1;
+    margin: 20px auto;
+    font: 0.75em 'Roboto-Light';
+  }
+  a {
+    padding: 9px 13px;
+    color: $white-color;
+    transition: all 0.25s ease-in-out;
+    font: 0.875em 'Roboto-Light';
+    border: 1px solid $white-color;
+    &:hover {
+      color: $nav-bg-color;
+      background-color: $white-color;
+    }
+  }
+}
+
 .nav-ul-li {
   letter-spacing: 1px;
   font: 0.75em 'Roboto-Light';
 }
+
+.active { background-color: $border-color; }
 
 @mixin link-text($color) {
   color: $color;

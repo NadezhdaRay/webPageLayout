@@ -1,4 +1,4 @@
-.uppercase, #wrapper header .container #profile-data div#register a:nth-child(1), #wrapper header .container #profile-data div#register a:nth-child(2), #wrapper header .container #profile-data div#register a:nth-child(4), #wrapper header .container #profile-data div#register span {
+.uppercase, .gallery-container, #wrapper header div.container #profile-data div#register a:nth-child(1), #wrapper header div.container #profile-data div#register a:nth-child(2), #wrapper header div.container #profile-data div#register a:nth-child(4), #wrapper header div.container #profile-data div#register span, #wrapper div#nav div.container ul li a {
   text-transform: uppercase; }
 
 * {
@@ -20,9 +20,49 @@ a, a:hover {
   margin: 0 auto;
   max-width: 940px; }
 
+.gallery-container {
+  height: 250px;
+  padding-top: 150px;
+  text-align: center;
+  position: relative; }
+  .gallery-container h3 {
+    color: #f9f9f9;
+    font: 1.375em 'PlayfairDisplay-Bold'; }
+  .gallery-container h4 {
+    left: 10px;
+    bottom: 20px;
+    color: #f9f9f9;
+    position: absolute;
+    text-transform: capitalize;
+    font: 1.125em 'PlayfairDisplay-Bold'; }
+    @media (max-width: 560px) {
+      .gallery-container h4 {
+        font-size: 1em; } }
+  .gallery-container img {
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    position: absolute; }
+  .gallery-container p {
+    color: #e1e1e1;
+    margin: 20px auto;
+    font: 0.75em 'Roboto-Light'; }
+  .gallery-container a {
+    padding: 9px 13px;
+    color: #fff;
+    transition: all 0.25s ease-in-out;
+    font: 0.875em 'Roboto-Light';
+    border: 1px solid #fff; }
+    .gallery-container a:hover {
+      color: #252525;
+      background-color: #fff; }
+
 .nav-ul-li, #wrapper nav div.container ul li a, #wrapper nav div.container #call-us {
   letter-spacing: 1px;
   font: 0.75em 'Roboto-Light'; }
+
+.active {
+  background-color: #e4e4e4; }
 
 @font-face {
   font-family: 'OpenSans-Light';
@@ -60,71 +100,177 @@ a, a:hover {
         align-self: flex-end; }
         #wrapper nav div.container #call-us::before {
           content: url("../images/telephone-icon.png"); }
-  #wrapper header .container {
+  #wrapper header div.container {
     padding: 25px;
     flex-direction: row;
     color: #fff;
     justify-content: space-between; }
-    #wrapper header .container #header-logo {
+    #wrapper header div.container #header-logo {
       width: 182px;
       height: 43px;
       align-self: center;
       background: url("../images/header-logo.png") no-repeat center; }
-    #wrapper header .container #profile-data {
+    #wrapper header div.container #profile-data {
       max-width: 510px;
       justify-self: flex-end;
       flex-direction: column; }
-      #wrapper header .container #profile-data div#register {
+      #wrapper header div.container #profile-data div#register {
         display: flex;
         margin-bottom: 15px;
         align-items: center;
         justify-content: space-evenly; }
         @media (max-width: 800px) {
-          #wrapper header .container #profile-data div#register {
+          #wrapper header div.container #profile-data div#register {
             align-items: flex-end;
             flex-direction: column; } }
-        #wrapper header .container #profile-data div#register a {
+        #wrapper header div.container #profile-data div#register a {
           margin-right: 50px; }
           @media (max-width: 800px) {
-            #wrapper header .container #profile-data div#register a {
+            #wrapper header div.container #profile-data div#register a {
               margin: 10px 0; } }
-          #wrapper header .container #profile-data div#register a:nth-child(1) {
+          #wrapper header div.container #profile-data div#register a:nth-child(1) {
             color: #3d3d3d;
             letter-spacing: 1px;
             font: 0.875em 'Roboto-Light'; }
-          #wrapper header .container #profile-data div#register a:nth-child(2) {
+          #wrapper header div.container #profile-data div#register a:nth-child(2) {
             color: #3d3d3d;
             letter-spacing: 1px;
             font: 0.875em 'Roboto-Light'; }
-          #wrapper header .container #profile-data div#register a:nth-child(4) {
+          #wrapper header div.container #profile-data div#register a:nth-child(4) {
             margin-right: 0;
             padding: 0.5em 1em;
             background-color: #000;
             color: #fff;
             letter-spacing: 1px;
             font: 0.875em 'Roboto-Light'; }
-        #wrapper header .container #profile-data div#register span {
+        #wrapper header div.container #profile-data div#register span {
           margin-right: 20px;
           color: #3d3d3d;
           letter-spacing: 1px;
           font: 0.875em 'Roboto-Light'; }
           @media (max-width: 800px) {
-            #wrapper header .container #profile-data div#register span {
+            #wrapper header div.container #profile-data div#register span {
               margin: 0; } }
-          #wrapper header .container #profile-data div#register span:before {
+          #wrapper header div.container #profile-data div#register span:before {
             content: url("../images/shopping-icon.png"); }
-      #wrapper header .container #profile-data div#search-container {
+      #wrapper header div.container #profile-data div#search-container {
         padding: 15px;
         border: 1px solid #e4e4e4; }
-        #wrapper header .container #profile-data div#search-container input[type="search"] {
+        #wrapper header div.container #profile-data div#search-container input[type="search"] {
           width: 100%;
           border: none;
           outline: none;
           min-height: 25px;
           vertical-align: middle;
           background: url(../images/search-icon.png) no-repeat right center; }
-          #wrapper header .container #profile-data div#search-container input[type="search"]::placeholder {
+          #wrapper header div.container #profile-data div#search-container input[type="search"]::placeholder {
             letter-spacing: 1px;
             font: 0.938em 'Roboto-Light'; }
+  #wrapper div#nav {
+    padding: 0 25px 0; }
+    #wrapper div#nav div.container {
+      margin: auto;
+      max-width: 890px;
+      background-color: #f5f5f5; }
+      #wrapper div#nav div.container ul li {
+        list-style: none;
+        padding: 18px 20px;
+        display: inline-flex; }
+        #wrapper div#nav div.container ul li a {
+          color: #3d3d3d;
+          letter-spacing: 1px;
+          font: 0.875em 'Roboto-Light'; }
+  #wrapper div#row1 div.container {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 25px 0;
+    justify-content: center; }
+    #wrapper div#row1 div.container div {
+      width: 100%;
+      height: 321px;
+      transition: all 1s ease; }
+    #wrapper div#row1 div.container div#row1-item1 {
+      max-width: 450px;
+      margin-right: 20px;
+      background: url("../images/gallery-image1.png") no-repeat center;
+      background-size: cover; }
+    #wrapper div#row1 div.container div#row1-item2 {
+      max-width: 450px;
+      background: url("../images/gallery-image2.png") no-repeat center;
+      background-size: cover; }
+  #wrapper div#row2 div.container {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 25px 0;
+    justify-content: center; }
+    #wrapper div#row2 div.container div {
+      width: 100%;
+      height: 250px;
+      transition: all 1s ease; }
+    #wrapper div#row2 div.container div#row2-item1 {
+      flex-basis: 640px;
+      margin-right: 20px;
+      background: url("../images/gallery-image3.png") no-repeat center;
+      background-size: cover; }
+      #wrapper div#row2 div.container div#row2-item1 .gallery-container {
+        padding-top: 120px; }
+    #wrapper div#row2 div.container div#row2-item2 {
+      max-width: 280px;
+      background: url("../images/gallery-image4.png") no-repeat center;
+      background-size: cover; }
+  #wrapper div#row3 {
+    margin-bottom: 70px; }
+    #wrapper div#row3 div.container {
+      display: flex;
+      margin-top: 20px;
+      padding: 0 25px 0;
+      justify-content: center; }
+      @media (max-width: 780px) {
+        #wrapper div#row3 div.container {
+          flex-direction: column; } }
+      #wrapper div#row3 div.container div:not(div.container) {
+        width: 100%;
+        height: 250px;
+        transition: all 1s ease; }
+      #wrapper div#row3 div.container div#row3-item1 {
+        flex-basis: 280px;
+        margin-right: 20px;
+        background: url("../images/gallery-image5.png") no-repeat center;
+        background-size: cover; }
+        @media (max-width: 780px) {
+          #wrapper div#row3 div.container div#row3-item1 {
+            margin-right: 0;
+            margin-bottom: 20px; } }
+        #wrapper div#row3 div.container div#row3-item1 .gallery-container {
+          padding-top: 120px; }
+          @media (max-width: 780px) {
+            #wrapper div#row3 div.container div#row3-item1 .gallery-container {
+              height: 280px; } }
+      #wrapper div#row3 div.container div#row3-item2 {
+        flex-basis: 340px;
+        margin-right: 20px;
+        background: url("../images/gallery-image6.png") no-repeat center;
+        background-size: cover; }
+        @media (max-width: 780px) {
+          #wrapper div#row3 div.container div#row3-item2 {
+            margin-right: 0;
+            margin-bottom: 20px; } }
+        @media (max-width: 780px) {
+          #wrapper div#row3 div.container div#row3-item2 .gallery-container {
+            height: 280px; } }
+        #wrapper div#row3 div.container div#row3-item2 h3 {
+          margin-bottom: 20px; }
+      #wrapper div#row3 div.container div#row3-item3 {
+        flex-basis: 280px;
+        background: url("../images/gallery-image7.png") no-repeat center;
+        background-size: cover; }
+        @media (max-width: 780px) {
+          #wrapper div#row3 div.container div#row3-item3 {
+            margin-bottom: 20px; } }
+        #wrapper div#row3 div.container div#row3-item3 .gallery-container {
+          padding-top: 120px; }
+          @media (max-width: 780px) {
+            #wrapper div#row3 div.container div#row3-item3 .gallery-container {
+              height: 280px; } }
 
 /*# sourceMappingURL=style.css.map */
