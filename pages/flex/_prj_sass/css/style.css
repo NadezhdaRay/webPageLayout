@@ -1,4 +1,4 @@
-.uppercase, .gallery-container, #wrapper header div.container #profile-data div#register a:nth-child(1), #wrapper header div.container #profile-data div#register a:nth-child(2), #wrapper header div.container #profile-data div#register a:nth-child(4), #wrapper header div.container #profile-data div#register span, #wrapper div#nav div.container ul li a {
+.uppercase, .gallery-container, #wrapper header div.container #profile-data div#register a:nth-child(1), #wrapper header div.container #profile-data div#register a:nth-child(2), #wrapper header div.container #profile-data div#register a:nth-child(4), #wrapper header div.container #profile-data div#register span, #wrapper div#nav div.container ul li a, #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:last-child {
   text-transform: uppercase; }
 
 * {
@@ -272,5 +272,47 @@ a, a:hover {
           @media (max-width: 780px) {
             #wrapper div#row3 div.container div#row3-item3 .gallery-container {
               height: 280px; } }
+  #wrapper div#special-offers-gallery {
+    margin-bottom: 115px; }
+    #wrapper div#special-offers-gallery h4 {
+      text-align: center;
+      color: #3d3d3d;
+      margin-bottom: 30px;
+      font: 1.25em 'PlayfairDisplay-Regular'; }
+    #wrapper div#special-offers-gallery div.container {
+      display: flex;
+      margin-top: 20px;
+      padding: 0 25px 0;
+      flex-direction: row;
+      justify-content: center; }
+      @media (max-width: 750px) {
+        #wrapper div#special-offers-gallery div.container {
+          flex-wrap: wrap; } }
+      #wrapper div#special-offers-gallery div.container div.gallery-item {
+        width: 220px;
+        height: 290px;
+        margin: 0 4px; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item.item1 div.bg-img {
+          background: url("../images/special-offers-item1.png") no-repeat center; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item.item2 div.bg-img {
+          background: url("../images/special-offers-item2.png") no-repeat center; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item.item3 div.bg-img {
+          background: url("../images/special-offers-item3.png") no-repeat center; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item.item4 div.bg-img {
+          background: url("../images/special-offers-item4.png") no-repeat center; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item div.bg-img {
+          width: 100%;
+          height: 210px;
+          max-width: 220px; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text {
+          text-align: center;
+          padding: 25px 35px; }
+          #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p {
+            color: #3d3d3d;
+            margin-bottom: 10px; }
+            #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:first-child {
+              font: 0.938em 'PlayfairDisplay-Regular'; }
+            #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:last-child {
+              font: 0.813em 'Roboto-Light'; }
 
 /*# sourceMappingURL=style.css.map */

@@ -233,4 +233,45 @@
       }
     }
   }
+  div#special-offers-gallery {
+    margin-bottom: 115px;
+    h4 {
+      text-align: center;
+      color: $text-color;
+      margin-bottom: 30px;
+      font: 1.25em 'PlayfairDisplay-Regular';
+    }
+    div.container {
+      display: flex;
+      margin-top: 20px;
+      padding: 0 25px 0;
+      flex-direction: row;
+      justify-content: center;
+      @media (max-width: 750px) { flex-wrap: wrap; }
+      div.gallery-item {
+        width: 220px;
+        height: 290px;
+        margin: 0 4px;
+        &.item1 { div.bg-img { background: url("../images/special-offers-item1.png") no-repeat center; }}
+        &.item2 { div.bg-img { background: url("../images/special-offers-item2.png") no-repeat center; }}
+        &.item3 { div.bg-img { background: url("../images/special-offers-item3.png") no-repeat center; }}
+        &.item4 { div.bg-img { background: url("../images/special-offers-item4.png") no-repeat center; }}
+        div.bg-img {
+          width: 100%;
+          height: 210px;
+          max-width: 220px;
+        }
+        div.center-text {
+          text-align: center;
+          padding: 25px 35px;
+          p {
+            color: $text-color;
+            margin-bottom: 10px;
+            &:first-child { font: 0.938em 'PlayfairDisplay-Regular'; }
+            &:last-child { @extend .uppercase; font: 0.813em 'Roboto-Light'; }
+          }
+        }
+      }
+    }
+  }
 }
