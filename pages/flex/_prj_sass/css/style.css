@@ -1,4 +1,4 @@
-.uppercase, .gallery-container, #wrapper header div.container #profile-data div#register a:nth-child(1), #wrapper header div.container #profile-data div#register a:nth-child(2), #wrapper header div.container #profile-data div#register a:nth-child(4), #wrapper header div.container #profile-data div#register span, #wrapper div#nav div.container ul li a, #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:last-child {
+.uppercase, .gallery-container, #wrapper header div.container #profile-data div#register a:nth-child(1), #wrapper header div.container #profile-data div#register a:nth-child(2), #wrapper header div.container #profile-data div#register a:nth-child(4), #wrapper header div.container #profile-data div#register span, #wrapper div#nav div.container ul li a, #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:last-child, #wrapper div#follow-us div.container div#follow {
   text-transform: uppercase; }
 
 * {
@@ -14,6 +14,14 @@ html, body {
 a, a:hover {
   text-decoration: none;
   color: inherit; }
+
+hr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  display: block;
+  color: #eae9e8;
+  background: #eae9e8; }
 
 .container {
   display: flex;
@@ -57,7 +65,7 @@ a, a:hover {
       color: #252525;
       background-color: #fff; }
 
-.nav-ul-li, #wrapper nav div.container ul li a, #wrapper nav div.container #call-us {
+.nav-ul-li, #wrapper nav div.container ul li a, #wrapper nav div.container #call-us, #wrapper footer div.container ul li a, #wrapper footer div#copyright p {
   letter-spacing: 1px;
   font: 0.75em 'Roboto-Light'; }
 
@@ -181,7 +189,6 @@ a, a:hover {
           letter-spacing: 1px;
           font: 0.875em 'Roboto-Light'; }
   #wrapper div#row1 div.container {
-    display: flex;
     margin-top: 20px;
     padding: 0 25px 0;
     justify-content: center; }
@@ -199,7 +206,6 @@ a, a:hover {
       background: url("../images/gallery-image2.png") no-repeat center;
       background-size: cover; }
   #wrapper div#row2 div.container {
-    display: flex;
     margin-top: 20px;
     padding: 0 25px 0;
     justify-content: center; }
@@ -221,7 +227,6 @@ a, a:hover {
   #wrapper div#row3 {
     margin-bottom: 70px; }
     #wrapper div#row3 div.container {
-      display: flex;
       margin-top: 20px;
       padding: 0 25px 0;
       justify-content: center; }
@@ -280,7 +285,6 @@ a, a:hover {
       margin-bottom: 30px;
       font: 1.25em 'PlayfairDisplay-Regular'; }
     #wrapper div#special-offers-gallery div.container {
-      display: flex;
       margin-top: 20px;
       padding: 0 25px 0;
       flex-direction: row;
@@ -291,7 +295,10 @@ a, a:hover {
       #wrapper div#special-offers-gallery div.container div.gallery-item {
         width: 220px;
         height: 290px;
-        margin: 0 4px; }
+        margin: 0 4px;
+        border: 1px solid #e5e4e2; }
+        #wrapper div#special-offers-gallery div.container div.gallery-item:hover div.center-text {
+          background-color: #e5e4e2; }
         #wrapper div#special-offers-gallery div.container div.gallery-item.item1 div.bg-img {
           background: url("../images/special-offers-item1.png") no-repeat center; }
         #wrapper div#special-offers-gallery div.container div.gallery-item.item2 div.bg-img {
@@ -306,7 +313,7 @@ a, a:hover {
           max-width: 220px; }
         #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text {
           text-align: center;
-          padding: 25px 35px; }
+          padding: 15px 30px; }
           #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p {
             color: #3d3d3d;
             margin-bottom: 10px; }
@@ -314,5 +321,105 @@ a, a:hover {
               font: 0.938em 'PlayfairDisplay-Regular'; }
             #wrapper div#special-offers-gallery div.container div.gallery-item div.center-text p:last-child {
               font: 0.813em 'Roboto-Light'; }
+  #wrapper div#follow-us {
+    padding: 35px 0; }
+    #wrapper div#follow-us div.container {
+      padding: 0 25px 0;
+      justify-content: space-between; }
+      @media (max-width: 810px) {
+        #wrapper div#follow-us div.container {
+          justify-content: center;
+          flex-direction: column; } }
+      #wrapper div#follow-us div.container div#follow {
+        display: flex;
+        color: #3d3d3d;
+        align-items: center;
+        justify-content: flex-start;
+        font: 0.875em 'Roboto-Regular'; }
+        @media (max-width: 810px) {
+          #wrapper div#follow-us div.container div#follow {
+            margin-bottom: 20px;
+            justify-content: center; } }
+        #wrapper div#follow-us div.container div#follow div#social {
+          align-items: center;
+          display: inline-flex; }
+          #wrapper div#follow-us div.container div#follow div#social a {
+            margin: auto 5px;
+            display: inline-flex; }
+            #wrapper div#follow-us div.container div#follow div#social a:nth-child(1) {
+              width: 13px;
+              height: 25px;
+              background: url("../images/facebook-icon.png") no-repeat center; }
+            #wrapper div#follow-us div.container div#follow div#social a:nth-child(2) {
+              width: 25px;
+              height: 21px;
+              background: url("../images/twitter-icon.png") no-repeat center; }
+            #wrapper div#follow-us div.container div#follow div#social a:nth-child(3) {
+              width: 25px;
+              height: 21px;
+              background: url("../images/google-icon.png") no-repeat center; }
+            #wrapper div#follow-us div.container div#follow div#social a:nth-child(4) {
+              width: 25px;
+              height: 25px;
+              background: url("../images/instagram-icon.png") no-repeat center; }
+            #wrapper div#follow-us div.container div#follow div#social a:nth-child(5) {
+              width: 26px;
+              height: 26px;
+              background: url("../images/pinterest-icon.png") no-repeat center; }
+      #wrapper div#follow-us div.container div#join {
+        display: inline-flex;
+        justify-content: center; }
+        #wrapper div#follow-us div.container div#join input {
+          width: 350px;
+          padding: 15px 30px;
+          border: 1px solid #dfdfdf; }
+          @media (max-width: 810px) {
+            #wrapper div#follow-us div.container div#join input {
+              width: 180px; } }
+          #wrapper div#follow-us div.container div#join input::placeholder {
+            color: #515151;
+            font: 0.875em 'Roboto-Light'; }
+        #wrapper div#follow-us div.container div#join a {
+          margin-right: 0;
+          padding: 1em 2em;
+          background-color: #000;
+          color: #fff;
+          letter-spacing: 1px;
+          font: 0.875em 'Roboto-Light'; }
+  #wrapper footer div.container {
+    margin: 55px auto;
+    padding: 0 25px 0;
+    color: #3d3d3d; }
+    @media (max-width: 810px) {
+      #wrapper footer div.container {
+        flex-wrap: wrap; } }
+    #wrapper footer div.container div[class^="item"] {
+      margin-right: 50px; }
+    @media (max-width: 810px) {
+      #wrapper footer div.container div[class="item4"] {
+        margin-top: 20px; } }
+    #wrapper footer div.container div[class="item4"] a#map::before {
+      content: url("../images/map-icon.png"); }
+    #wrapper footer div.container div[class="item4"] a#phone::before {
+      content: url("../images/telephone-icon.png"); }
+    #wrapper footer div.container div[class="item4"] a#email-icon::before {
+      content: url("../images/email-icon.png"); }
+    #wrapper footer div.container h5 {
+      margin-bottom: 25px;
+      font: 0.938em 'PlayfairDisplay-Regular'; }
+    #wrapper footer div.container ul {
+      justify-self: flex-start; }
+      #wrapper footer div.container ul li {
+        list-style: none;
+        margin-bottom: 15px; }
+  #wrapper footer div#copyright {
+    display: flex; }
+    #wrapper footer div#copyright div.container {
+      margin: 0 auto 55px; }
+    #wrapper footer div#copyright p {
+      margin-right: 60px; }
+      #wrapper footer div#copyright p:first-child {
+        font-size: 0.813em;
+        justify-content: flex-start; }
 
 /*# sourceMappingURL=style.css.map */
