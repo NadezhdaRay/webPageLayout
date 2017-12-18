@@ -1,0 +1,71 @@
+@import "general";
+
+.container {
+  max-width: 1170px;
+  margin: $zero auto;
+  padding: $zero 20px;
+}
+
+header {
+  width: 100%;
+  padding-bottom: 130px;
+  background: url("../images/bg-header.png") no-repeat center;
+  background-size: cover;
+  nav {
+    margin-left: 155px;
+    ul {
+      display: grid;
+      grid-column-gap: 2em;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, 150px);
+      li {
+        padding: 60px 10px 0;
+        display: inline-grid;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        a {
+          color: $white-color;
+          font: 26.72px 'Majesti-Banner-Medium';
+        }
+      }
+    }
+  }
+  div#header-logo {
+    width: 50%;
+    display: grid;
+    margin-top: 130px;
+    padding: 170px 0 85px 35px;
+    background: url("../images/bg-logo.png") no-repeat;
+    grid-template-columns: 100px repeat(auto-fit, minmax(250px, 1fr));
+    div:first-child {
+      padding-left: 5px;
+      a {
+        display: block;
+        margin-bottom: 15px;
+        &:nth-child(1) {
+          width: 34px;
+          height: 35px;
+          background: url("../images/facebook-icon.png") no-repeat center;
+        }
+        &:nth-child(2) {
+          width: 36px;
+          height: 37px;
+          background: url("../images/twitter-icon.png") no-repeat center;
+        }
+        &:nth-child(3) {
+          width: 34px;
+          height: 35px;
+          background: url("../images/pinterest-icon.png") no-repeat center;
+        }
+        &:nth-child(4) {
+          width: 35px;
+          height: 36px;
+          background: url("../images/twitter-icon2.png") no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+@import "import-fonts";

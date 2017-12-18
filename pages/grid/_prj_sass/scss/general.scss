@@ -1,0 +1,51 @@
+$zero: 0;
+$none: none;
+$white-color: #fff;
+
+* {
+  padding: $zero;
+  margin: $zero;
+  outline: $none;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+html, body {
+  height: 100%;
+  background: #ccc;
+}
+
+a, a:hover {
+  text-decoration: $none;
+  color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@mixin button($color, $case, $font) {
+  color: $color;
+  text-transform: $case;
+  font: $font;
+}
+
+h1#logo {
+  @extend .uppercase;
+  color: $white-color;
+  margin-bottom: 100px;
+  font: 71.58px/1em 'Majesti-Banner-Bold';
+}
+
+p.category {
+  margin-bottom: 40px;
+  color: $white-color;
+  font: 18.83px 'Majesti-Banner-Bold';
+}
+
+a.button {
+  @include button($white-color, uppercase, 18.13px 'Majesti-Banner-Bold');
+  border: 2px solid $white-color;
+  padding: 5px 17px;
+  border-radius: 15px;
+}
