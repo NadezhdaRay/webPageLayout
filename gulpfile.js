@@ -17,12 +17,12 @@ let less = require('gulp-less');
 
 /* Add browsers' prefixes */
 gulp.task('autoprefixer', () =>
-  gulp.src('./app/pages/flex/_prj_less/css/style.css')
+  gulp.src('./pages/flex/_prj_sass/css/style.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('./app/pages/flex/_prj_less/css'))
+    .pipe(gulp.dest('./pages/flex/_prj_sass/css'))
 );
 
 /* Clean the assembly */
@@ -32,9 +32,9 @@ gulp.task('clean', function (cb) {
 
 /* Compress *.css files */
 gulp.task('css-min', () => {
-  return gulp.src('./app/css/style.css')
+  return gulp.src('./pages/flex/_prj_sass/css/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./app/css/v1'));
+    .pipe(gulp.dest('./pages/flex/_prj_sass/css/v1'));
 });
 
 /* Compress *.jpeg/*.png files */
