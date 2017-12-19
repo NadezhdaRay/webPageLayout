@@ -106,6 +106,123 @@ header {
           height: 36px;
           background: url("../images/twitter-icon2.png") no-repeat center; }
 
+div#about-us {
+  padding-top: 30px;
+  padding-bottom: 167px;
+  background-color: #faf6f6; }
+  div#about-us div.container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1470px;
+    grid-gap: 2em;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 1100px) {
+      div#about-us div.container {
+        grid-template-columns: 1fr; } }
+    div#about-us div.container h2 {
+      color: #3b3b3b;
+      font: 3em 'Majesti-Banner-Bold'; }
+    div#about-us div.container p.category {
+      margin-bottom: 40px;
+      color: #858585;
+      font: 1.7em 'Majesti-Banner-Bold'; }
+    div#about-us div.container p.description {
+      max-width: 550px;
+      margin: 40px 0 100px;
+      color: #858585;
+      font: 1.2em/1.5em 'Majesti-Banner-Medium'; }
+      @media (max-width: 1100px) {
+        div#about-us div.container p.description {
+          margin-bottom: 50px; } }
+    div#about-us div.container a.button {
+      color: #a7a7a7;
+      text-transform: capitalize;
+      font: 18.13px "Majesti-Banner-Medium";
+      border: 2px solid #858585;
+      padding: 5px 17px;
+      border-radius: 15px; }
+    div#about-us div.container div:first-child {
+      width: 100%;
+      background: url("../images/about-us-img.png") no-repeat center;
+      background-size: contain; }
+      @media (max-width: 1100px) {
+        div#about-us div.container div:first-child {
+          height: 350px; } }
+    div#about-us div.container div:last-child {
+      justify-self: center; }
+  div#about-us div.upcoming-event h2 {
+    color: #181818;
+    margin-top: 167px;
+    text-align: center;
+    font: 3em 'Majesti-Banner-Bold'; }
+    @media (max-width: 1000px) {
+      div#about-us div.upcoming-event h2 {
+        margin-top: 70px; } }
+  div#about-us div.upcoming-event p.category {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a7a7a7;
+    font: 0.9em 'Majesti-Banner-Bold'; }
+  div#about-us div.upcoming-event div#next-event {
+    width: 100%;
+    display: grid;
+    max-width: 1200px;
+    justify-items: center;
+    margin: 80px auto 0;
+    grid-template-columns: 350px repeat(4, 1fr); }
+    @media (max-width: 1000px) {
+      div#about-us div.upcoming-event div#next-event {
+        grid-gap: 2em;
+        margin-top: 0;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); } }
+    div#about-us div.upcoming-event div#next-event div[class^="item"] {
+      display: inline-grid;
+      justify-items: center; }
+    div#about-us div.upcoming-event div#next-event p {
+      font-family: 'Majesti-Banner-Bold', sans-serif; }
+      div#about-us div.upcoming-event div#next-event p.row1 {
+        font-size: 3em;
+        color: #3b3b3b; }
+      div#about-us div.upcoming-event div#next-event p.row2 {
+        font-size: 1em;
+        color: #858585; }
+
+div#anderson {
+  padding: 0 170px;
+  background: url("../images/anderson.png") no-repeat top center;
+  background-size: cover; }
+  @media (max-width: 1100px) {
+    div#anderson {
+      padding: 0 30px; } }
+  div#anderson div.container {
+    margin: 0 auto;
+    color: #fff; }
+    div#anderson div.container h2 {
+      font: 3em 'Majesti-Banner-Bold'; }
+      div#anderson div.container h2:first-child {
+        padding-top: 167px; }
+    div#anderson div.container h4 {
+      margin-bottom: 40px;
+      font: 1.5em 'Majesti-Banner-Bold'; }
+      div#anderson div.container h4::before {
+        content: url("../images/white-line.png"); }
+    div#anderson div.container a {
+      display: inline-block;
+      margin-bottom: 170px;
+      border-color: #a7a7a7;
+      color: #a7a7a7;
+      text-transform: capitalize;
+      font: 1em "Majesti-Banner-Bold"; }
+    div#anderson div.container p {
+      width: 50%;
+      margin-bottom: 40px;
+      color: #a7a7a7;
+      font: 1em/1.5em 'Majesti-Banner-Bold'; }
+      @media (max-width: 1100px) {
+        div#anderson div.container p {
+          width: 65%; } }
+
 @font-face {
   font-family: 'Majesti-Banner-Bold';
   src: url("../fonts/Majesti-Banner-Bold.otf"); }

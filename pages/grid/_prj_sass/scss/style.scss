@@ -86,4 +86,134 @@ header {
   }
 }
 
+div#about-us {
+  padding-top: 30px;
+  padding-bottom: 167px;
+  background-color: #faf6f6;
+  div.container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1470px;
+    grid-gap: 2em;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr;
+    }
+    h2 {
+      color: $dark-gray-text-color;
+      font: 3em 'Majesti-Banner-Bold';
+    }
+    p {
+      &.category {
+        margin-bottom: 40px;
+        color: $light-gray-text-color;
+        font: 1.7em 'Majesti-Banner-Bold';
+      }
+      &.description {
+        max-width: 550px;
+        margin: 40px 0 100px;
+        color: $light-gray-text-color;
+        font: 1.2em/1.5em 'Majesti-Banner-Medium';
+        @media (max-width: 1100px) { margin-bottom: 50px; }
+      }
+    }
+    a.button {
+      @include button($gray-text-color, capitalize, 18.13px 'Majesti-Banner-Medium');
+      border: 2px solid $light-gray-text-color;
+      padding: 5px 17px;
+      border-radius: 15px;
+    }
+    div:first-child {
+      width: 100%;
+      background: url("../images/about-us-img.png") no-repeat center;
+      background-size: contain;
+      @media (max-width: 1100px) { height: 350px; }
+    }
+    div:last-child { justify-self: center; }
+  }
+  div.upcoming-event {
+    h2 {
+      color: #181818;
+      margin-top: 167px;
+      text-align: center;
+      font: 3em 'Majesti-Banner-Bold';
+      @media (max-width: 1000px) { margin-top: 70px; }
+    }
+    p.category {
+      text-align: center;
+      margin-bottom: 40px;
+      color: $gray-text-color;
+      font: 0.9em 'Majesti-Banner-Bold';
+    }
+    div#next-event {
+      width: 100%;
+      display: grid;
+      max-width: 1200px;
+      justify-items: center;
+      margin: 80px auto 0;
+      grid-template-columns: 350px repeat(4, 1fr);
+      @media (max-width: 1000px) {
+        grid-gap: 2em;
+        margin-top: 0;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+      div[class^="item"] {
+        display: inline-grid;
+        justify-items: center;
+      }
+      p {
+        font-family: 'Majesti-Banner-Bold', sans-serif;
+        &.row1 {
+          font-size: 3em;
+          color: $dark-gray-text-color;
+        }
+        &.row2 {
+          font-size: 1em;
+          color: $light-gray-text-color;
+        }
+      }
+    }
+  }
+}
+
+div#anderson {
+  padding: 0 170px;
+  background: url("../images/anderson.png") no-repeat top center;
+  background-size: cover;
+  @media (max-width: 1100px) {
+    padding: 0 30px;
+  }
+  div.container {
+    margin: 0 auto;
+    color: $white-color;
+    h2 {
+      font: 3em 'Majesti-Banner-Bold';
+      &:first-child { padding-top: 167px; }
+    }
+    h4 {
+      margin-bottom: 40px;
+      font: 1.5em 'Majesti-Banner-Bold';
+      &::before {
+        content: url("../images/white-line.png");
+      }
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 170px;
+      border-color: $gray-text-color;
+      @include button($gray-text-color, capitalize, 1em 'Majesti-Banner-Bold');
+    }
+    p {
+      width: 50%;
+      margin-bottom: 40px;
+      color: $gray-text-color;
+      font: 1em/1.5em 'Majesti-Banner-Bold';
+      @media (max-width: 1100px) {
+        width: 65%;
+      }
+    }
+  }
+}
+
 @import "import-fonts";
