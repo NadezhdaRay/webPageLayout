@@ -216,4 +216,130 @@ div#anderson {
   }
 }
 
+div#singers {
+  padding: 100px 0;
+  background-color: #faf6f6;
+  div.container {
+    margin: 0 auto;
+    max-width: 1470px;
+    text-align: center;
+    h2 {
+      color: $almost-black-text-color;
+      font: 3em 'Majesti-Banner-Bold';
+    }
+    p {
+      &.category {
+        margin-bottom: 0;
+        color: $almost-black-text-color;
+        font: 1.2em 'Majesti-Banner-Bold';
+      }
+      &.description {
+        max-width: 550px;
+        margin: 20px auto 80px;
+        color: $light-gray-text-color;
+        font: 1.2em/1.5em 'Majesti-Banner-Medium';
+        @media (max-width: 1100px) { margin-bottom: 50px; }
+      }
+    }
+    div#singer-gallery {
+      margin: 0 auto;
+      max-width: 1470px;
+      div.container {
+        display: grid;
+        grid-gap: 2em;
+        margin-bottom: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        @media (min-width: 911px) and (max-width: 1193px) {
+          display: inline-grid;
+        }
+      }
+      p {
+        margin: 5px auto;
+        font-family: 'Majesti-Banner-Medium', sans-serif;
+        &.name {
+          color: #2b2b2b;
+          font-size: 1.7em;
+        }
+        &.title {
+          color: #2b2b2b;
+          font-size: 0.7em;
+          @extend .uppercase;
+        }
+      }
+    }
+  }
+}
+
+div#latest-albums {
+  background: url("../images/bg-latest-album.png") no-repeat top center;
+  div.container {
+    padding: 147px 30px;
+    h2 {
+      color: $white-color;
+      font: 4em 'Majesti-Banner-Medium';
+    }
+  }
+}
+
+div#next-tours {
+  padding: 60px 0;
+  background-color: #faf6f6;
+  div.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    h2 {
+      color: $almost-black-text-color;
+      font: 4em 'Majesti-Banner-Medium';
+    }
+    p.description {
+      color: #4a4a4a;
+      margin-bottom: 80px;
+      font: 1.2em/1.5em 'Majesti-Banner-Medium';
+    }
+    div.schedule-tours {
+      display: grid;
+      grid-row-gap: 3em;
+      div.tour-line {
+        display: grid;
+        justify-content: space-evenly;
+        background-color: $white-color;
+        box-shadow: -1px 0px 31px -1px rgba(0,0,0,0.25);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        div.tour-item {
+          padding: 20px 10px;
+          display: inline-grid;
+          justify-content: center;
+          a.button {
+            color: #5a5a5a;
+            border-radius: 30px;
+            align-self: center;
+            border-color: #eee;
+            justify-self: center;
+          }
+          p {
+            margin: 5px auto;
+            font-family: 'Majesti-Banner-Bold', sans-serif;
+            &.row1 {
+              color: #4a4a4a;
+              font-size: 1.3em;
+            }
+            &.row2 {
+              color: #7c7c7c;
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+div#musician {
+  width: 100%;
+  min-height: 400px;
+  background: url("../images/musician.png") no-repeat top center;
+  background-size: cover;
+}
+
 @import "import-fonts";
