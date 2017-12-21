@@ -12,7 +12,7 @@ a, a:hover {
   text-decoration: none;
   color: inherit; }
 
-.uppercase, h1#logo, div#singers div.container div#singer-gallery p.title {
+.uppercase, h1#logo, div#singers div.container div#singer-gallery p.title, div#feature-news div.container div#news div.container div.item1 div.container1 p.name, div#feature-news div.container div#news div.container div.item2 div.container2 p.name {
   text-transform: uppercase; }
 
 h1#logo {
@@ -323,6 +323,163 @@ div#musician {
   background: url("../images/musician.png") no-repeat top center;
   background-size: cover; }
 
+div#feature-news {
+  padding: 100px 0;
+  background-color: #faf6f6; }
+  div#feature-news div.container {
+    margin: 0 auto;
+    max-width: 1470px;
+    text-align: center; }
+    div#feature-news div.container h2 {
+      color: #202020;
+      font: 3em 'Majesti-Banner-Bold'; }
+    div#feature-news div.container p.description {
+      max-width: 550px;
+      margin: 20px auto 80px;
+      color: #858585;
+      font: 1.2em/1.5em 'Majesti-Banner-Medium'; }
+      @media (max-width: 1100px) {
+        div#feature-news div.container p.description {
+          margin-bottom: 50px; } }
+    div#feature-news div.container div#news div.container {
+      display: grid;
+      grid-gap: 2em;
+      max-width: 1200px;
+      grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 1250px) {
+        div#feature-news div.container div#news div.container {
+          justify-items: center;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); } }
+      div#feature-news div.container div#news div.container div.item1 {
+        width: 566px;
+        box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
+        background: #fff url("../images/model.png") no-repeat left center;
+        background-size: 60% 100%; }
+        @media (max-width: 555px) {
+          div#feature-news div.container div#news div.container div.item1 {
+            width: 100%; } }
+        div#feature-news div.container div#news div.container div.item1 div.container1 {
+          width: 40%;
+          padding: 30px;
+          display: grid;
+          margin-left: 335px;
+          justify-items: start;
+          grid-auto-columns: 1fr; }
+          @media (max-width: 555px) {
+            div#feature-news div.container div#news div.container div.item1 div.container1 {
+              width: 45%;
+              margin-left: 250px; } }
+          div#feature-news div.container div#news div.container div.item1 div.container1 p {
+            font-family: 'Majesti-Banner-Medium', sans-serif; }
+            div#feature-news div.container div#news div.container div.item1 div.container1 p.admin {
+              font-size: 0.8em;
+              margin-bottom: 20px;
+              color: #858585; }
+              div#feature-news div.container div#news div.container div.item1 div.container1 p.admin:before {
+                content: url("../images/admin.png"); }
+            div#feature-news div.container div#news div.container div.item1 div.container1 p.name {
+              text-align: left;
+              font-size: 1.4em;
+              margin-bottom: 251px;
+              color: #202020; }
+              @media (max-width: 555px) {
+                div#feature-news div.container div#news div.container div.item1 div.container1 p.name {
+                  margin-bottom: 160px; } }
+            div#feature-news div.container div#news div.container div.item1 div.container1 p.date {
+              font: 1.2em 'Majesti-Banner-MediumItalic';
+              color: #858585; }
+              div#feature-news div.container div#news div.container div.item1 div.container1 p.date:before {
+                content: url("../images/clock.png"); }
+      div#feature-news div.container div#news div.container div.item2 {
+        display: grid;
+        grid-gap: 2em;
+        grid-template-rows: repeat(2, 1fr); }
+        div#feature-news div.container div#news div.container div.item2 div.container1 {
+          box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
+          background: #fff url("../images/model.png") no-repeat left center;
+          background-size: 31% 100%; }
+          @media (max-width: 555px) {
+            div#feature-news div.container div#news div.container div.item2 div.container1 {
+              background-size: 41% 100%; } }
+        div#feature-news div.container div#news div.container div.item2 div.container2 {
+          padding: 30px;
+          display: grid;
+          margin-left: 171px;
+          justify-items: start;
+          grid-auto-columns: 1fr; }
+          div#feature-news div.container div#news div.container div.item2 div.container2 p {
+            font-family: 'Majesti-Banner-Medium', sans-serif; }
+            div#feature-news div.container div#news div.container div.item2 div.container2 p.admin {
+              font-size: 0.8em;
+              margin-bottom: 7px;
+              color: #858585; }
+              div#feature-news div.container div#news div.container div.item2 div.container2 p.admin:before {
+                content: url("../images/admin.png"); }
+            div#feature-news div.container div#news div.container div.item2 div.container2 p.name {
+              text-align: left;
+              font-size: 1.4em;
+              margin-bottom: 47px;
+              color: #202020; }
+            div#feature-news div.container div#news div.container div.item2 div.container2 p.date {
+              font: 1.2em 'Majesti-Banner-MediumItalic';
+              color: #858585; }
+              div#feature-news div.container div#news div.container div.item2 div.container2 p.date:before {
+                content: url("../images/clock.png"); }
+
+div#subscribe {
+  padding: 130px 0;
+  min-height: 370px;
+  background: url("../images/bg-keyboard.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 50px; }
+  div#subscribe div.container {
+    display: grid;
+    grid-gap: 2em;
+    margin: 0 auto;
+    max-width: 1234px;
+    grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 800px) {
+      div#subscribe div.container {
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(355px, 1fr)); } }
+    div#subscribe div.container div.item1 {
+      color: #fff; }
+      div#subscribe div.container div.item1 h4 {
+        letter-spacing: 4px;
+        font: 1.375em 'Majesti-Banner-Medium'; }
+      div#subscribe div.container div.item1 h2 {
+        font: 3.125em 'Majesti-Banner-Medium'; }
+    div#subscribe div.container div.item2 {
+      max-width: 355px;
+      min-height: 60px;
+      overflow: hidden;
+      border-radius: 50px;
+      align-self: center;
+      border: 1px solid #000;
+      background: #fff; }
+      div#subscribe div.container div.item2 input[type="search"] {
+        border: none;
+        height: 100%;
+        width: 239px;
+        outline: none;
+        padding-left: 40px;
+        vertical-align: middle; }
+        div#subscribe div.container div.item2 input[type="search"]::placeholder {
+          color: #858585;
+          font: 1em 'Majesti-Banner-Book'; }
+      div#subscribe div.container div.item2 input[type="submit"] {
+        width: 110px;
+        border: none;
+        height: 70px;
+        color: #fff;
+        background: #202020;
+        font: 1.375em 'Majesti-Banner-Medium'; }
+
+footer {
+  height: 653px;
+  background: url("../images/footer.png") no-repeat top center;
+  background-size: 100%; }
+
 @font-face {
   font-family: 'Majesti-Banner-Bold';
   src: url("../fonts/Majesti-Banner-Bold.otf"); }
@@ -332,5 +489,8 @@ div#musician {
 @font-face {
   font-family: 'Majesti-Banner-MediumItalic';
   src: url("../fonts/Majesti-Banner-MediumItalic.otf"); }
+@font-face {
+  font-family: 'Majesti-Banner-Book';
+  src: url("../fonts/Majesti-Banner-Book.otf"); }
 
 /*# sourceMappingURL=style.css.map */

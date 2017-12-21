@@ -342,4 +342,201 @@ div#musician {
   background-size: cover;
 }
 
+div#feature-news {
+  padding: 100px 0;
+  background-color: #faf6f6;
+  div.container {
+    margin: 0 auto;
+    max-width: 1470px;
+    text-align: center;
+    h2 {
+      color: $almost-black-text-color;
+      font: 3em 'Majesti-Banner-Bold';
+    }
+    p {
+      &.description {
+        max-width: 550px;
+        margin: 20px auto 80px;
+        color: $light-gray-text-color;
+        font: 1.2em/1.5em 'Majesti-Banner-Medium';
+        @media (max-width: 1100px) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    div#news {
+      div.container {
+        display: grid;
+        grid-gap: 2em;
+        max-width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 1250px) {
+          justify-items: center;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        div.item1 {
+          width: 566px;
+          box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
+          background: $white-color url("../images/model.png") no-repeat left center;
+          background-size: 60% 100%;
+          @media (max-width: 555px) {
+            width: 100%;
+          }
+          div.container1 {
+            width: 40%;
+            padding: 30px;
+            display: grid;
+            margin-left: 335px;
+            justify-items: start;
+            grid-auto-columns: 1fr;
+            @media (max-width: 555px) {
+              width: 45%;
+              margin-left: 250px;
+            }
+            p {
+              font-family: 'Majesti-Banner-Medium', sans-serif;
+              &.admin {
+                font-size: 0.8em;
+                margin-bottom: 20px;
+                color: $light-gray-text-color;
+                &:before {
+                  content: url("../images/admin.png");
+                }
+              }
+              &.name {
+                text-align: left;
+                font-size: 1.4em;
+                @extend .uppercase;
+                margin-bottom: 251px;
+                color: $almost-black-text-color;
+                @media (max-width: 555px) {
+                  margin-bottom: 160px;
+                }
+              }
+              &.date {
+                font: 1.2em 'Majesti-Banner-MediumItalic';
+                color: $light-gray-text-color;
+                &:before {
+                  content: url("../images/clock.png");
+                }
+              }
+            }
+          }
+        }
+        div.item2 {
+          display: grid;
+          grid-gap: 2em;
+          grid-template-rows: repeat(2, 1fr);
+          div.container1 {
+            box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
+            background: $white-color url("../images/model.png") no-repeat left center;
+            background-size: 31% 100%;
+            @media (max-width: 555px) {
+              background-size: 41% 100%;
+            }
+          }
+          div.container2 {
+            padding: 30px;
+            display: grid;
+            margin-left: 171px;
+            justify-items: start;
+            grid-auto-columns: 1fr;
+            p {
+              font-family: 'Majesti-Banner-Medium', sans-serif;
+              &.admin {
+                font-size: 0.8em;
+                margin-bottom: 7px;
+                color: $light-gray-text-color;
+                &:before {
+                  content: url("../images/admin.png");
+                }
+              }
+              &.name {
+                text-align: left;
+                font-size: 1.4em;
+                @extend .uppercase;
+                margin-bottom: 47px;
+                color: $almost-black-text-color;
+              }
+              &.date {
+                font: 1.2em 'Majesti-Banner-MediumItalic';
+                color: $light-gray-text-color;
+                &:before {
+                  content: url("../images/clock.png");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+div#subscribe {
+  padding: 130px 0;
+  min-height: 370px;
+  background: url("../images/bg-keyboard.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 50px;
+  div.container {
+    display: grid;
+    grid-gap: 2em;
+    margin: 0 auto;
+    max-width: 1234px;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 800px) {
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    }
+    div.item1 {
+      color: $white-color;
+      h4 {
+        letter-spacing: 4px;
+        font: 1.375em 'Majesti-Banner-Medium';
+      }
+      h2 {
+        font: 3.125em 'Majesti-Banner-Medium';
+      }
+    }
+    div.item2 {
+      max-width: 355px;
+      min-height: 60px;
+      overflow: hidden;
+      border-radius: 50px;
+      align-self: center;
+      border: 1px solid #000;
+      background: $white-color;
+      input {
+        &[type="search"] {
+          border: none;
+          height: 100%;
+          width: 239px;
+          outline: none;
+          padding-left: 40px;
+          vertical-align: middle;
+          &::placeholder {
+            color: $light-gray-text-color;
+            font: 1em 'Majesti-Banner-Book';
+          }
+        }
+        &[type="submit"] {
+          width: 110px;
+          border: none;
+          height: 70px;
+          color: $white-color;
+          background: $almost-black-text-color;
+          font: 1.375em 'Majesti-Banner-Medium';
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 653px;
+  background: url("../images/footer.png") no-repeat top center;
+  background-size: 100%;
+}
+
 @import "import-fonts";
