@@ -39,14 +39,14 @@ gulp.task('css-min', () => {
 
 /* Compress *.jpeg/*.png files */
 gulp.task('image-min', () =>
-  gulp.src('./app/pages/flex/_prj_less/images/*')
+  gulp.src('./pages/grid/_prj_sass/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
       interlaced: true
     }))
-    .pipe(gulp.dest('./app/pages/flex/_prj_less/images/v1'))
+    .pipe(gulp.dest('./pages/grid/_prj_sass/images/v1'))
 );
 
 /* Sass/SCSS -> CSS */
