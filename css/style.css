@@ -83,6 +83,11 @@ div.block10 {
   background-size: cover;
 }
 
+div.block11 {
+  background: url("../images/grid-stylus2.png") no-repeat top center;
+  background-size: cover;
+}
+
 div.main-block:hover a.hover-effect {
   opacity: 0.2;
 }
