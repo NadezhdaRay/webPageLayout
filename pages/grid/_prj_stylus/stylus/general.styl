@@ -7,10 +7,22 @@ $dark-gray-color = #282828
 uppercase(text-transform = uppercase)
   text-transform uppercase
 
+h2-title()
+  uppercase()
+  font: 52px 'Montserrat-Bold'
+
+h4-title()
+  uppercase()
+  color #1a1a1a
+  font: 24px 'Montserrat-Bold'
+
 button-decorate()
-  uppercase();
+  uppercase()
   border $none
   width: 300px
   padding 10px 20px
   border-radius 30px
   font-family 'Montserrat-Bold', sans-serif
+
+h2
+  h2-title()
