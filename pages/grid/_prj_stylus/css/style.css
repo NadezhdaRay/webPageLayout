@@ -1,0 +1,166 @@
+/* General */
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper {
+  min-width: 550px;
+}
+html,
+body {
+  height: 100%;
+  background: #fff;
+}
+html .container,
+body .container {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+html a,
+body a,
+html a:hover,
+body a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+html header,
+body header {
+  margin: auto;
+  color: #fff;
+  background: url("../images/bg-header.png") no-repeat top center;
+  background-size: cover;
+}
+html header div.container,
+body header div.container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+}
+html header div.container nav,
+body header div.container nav {
+  padding: 20px;
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  grid-template-columns: 250px 1fr;
+}
+@media (max-width: 830px) {
+  html header div.container nav,
+  body header div.container nav {
+    align-items: start;
+  }
+}
+html header div.container nav div.logo,
+body header div.container nav div.logo {
+  font: 52px 'Olivier';
+  justify-self: center;
+}
+@media (max-width: 830px) {
+  html header div.container nav ul.nav,
+  body header div.container nav ul.nav {
+    display: grid;
+  }
+}
+html header div.container nav ul.nav li,
+body header div.container nav ul.nav li {
+  text-transform: uppercase;
+  list-style: none;
+  display: inline-grid;
+  padding: 0 10px;
+}
+html header div.container nav ul.nav li:hover,
+body header div.container nav ul.nav li:hover {
+  border-bottom: 2px solid #fff;
+}
+@media (max-width: 830px) {
+  html header div.container nav ul.nav li:hover,
+  body header div.container nav ul.nav li:hover {
+    border: none;
+  }
+}
+html header div.container nav ul.nav li a,
+body header div.container nav ul.nav li a {
+  padding-bottom: 20px;
+  font: 16px 'Montserrat-Bold';
+}
+html header div.container div.app,
+body header div.container div.app {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 830px) {
+  html header div.container div.app,
+  body header div.container div.app {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+  }
+}
+html header div.container div.app div.app-info,
+body header div.container div.app div.app-info {
+  display: grid;
+  grid-gap: 2rem;
+}
+html header div.container div.app div.app-info h1,
+body header div.container div.app div.app-info h1 {
+  font: 52px 'Montserrat-Bold';
+}
+html header div.container div.app div.app-info p,
+body header div.container div.app div.app-info p {
+  font: 36px 'HelveticaNeue-Thin';
+}
+html header div.container div.app div.app-info button,
+body header div.container div.app div.app-info button {
+  text-transform: uppercase;
+  border: none;
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: 'Montserrat-Bold', sans-serif;
+  margin-bottom: 50px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #282828;
+}
+html header div.container div.app div.app-info button span,
+body header div.container div.app div.app-info button span {
+  vertical-align: middle;
+  content: url("../images/header-button-before.png");
+}
+html header div.container div.app div.app-pic,
+body header div.container div.app div.app-pic {
+  display: grid;
+  background: url("../images/header-phone.png") no-repeat right top;
+  background-size: 310px;
+}
+@media (max-width: 830px) {
+  html header div.container div.app div.app-pic,
+  body header div.container div.app div.app-pic {
+    height: 665px;
+    background-position: center;
+  }
+}
+@font-face {
+  font-family: 'Olivier';
+  src: url("../fonts/Olivier.ttf");
+}
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url("../fonts/HelveticaNeue-Light.otf");
+}
+@font-face {
+  font-family: 'HelveticaNeue-Thin';
+  src: url("../fonts/HelveticaNeue-Thin.otf");
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("../fonts/Montserrat-Bold.otf");
+}
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url("../fonts/OpenSans-Italic.ttf");
+}

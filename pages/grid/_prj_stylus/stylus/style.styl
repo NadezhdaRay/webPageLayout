@@ -1,0 +1,93 @@
+@import "general.styl"
+
+/* General */
+*
+  margin: $zero
+  outline: $none
+  padding: $zero
+  box-sizing: border-box
+  //transition: all .3s ease-in-out
+
+#wrapper
+  min-width 550px
+
+html, body
+  height 100%
+  background $white-color
+
+  .container
+    max-width 1136px
+    margin $zero auto
+    padding $zero 20px
+
+  a, a:hover
+    text-decoration $none
+    color inherit
+
+  header
+    margin auto
+    color $white-color
+    background url("../images/bg-header.png") no-repeat top center
+    background-size: cover;
+    div.container
+      display grid
+      grid-gap 2rem
+      grid-template-columns 1fr
+      nav
+        padding 20px
+        display grid
+        align-items: end;
+        justify-items: end;
+        grid-template-columns 250px 1fr
+        @media (max-width 830px)
+          align-items start
+        div.logo
+          font 52px 'Olivier'
+          justify-self center
+        ul.nav
+          @media (max-width 830px)
+            display grid
+          li
+            uppercase()
+            list-style $none
+            display inline-grid
+            padding $zero 10px
+            &:hover
+              border-bottom 2px solid $white-color
+              @media (max-width 830px)
+                border $none
+            a
+              padding-bottom 20px
+              font 16px 'Montserrat-Bold'
+      div.app
+        display grid
+        grid-gap 2rem
+        margin-top 100px
+        grid-template-columns 1fr 1fr
+        @media (max-width 830px)
+          margin-top 0
+          grid-template-columns 1fr
+        div.app-info
+          display grid
+          grid-gap 2rem
+          h1
+            font: 52px 'Montserrat-Bold'
+          p
+            font: 36px 'HelveticaNeue-Thin';
+          button
+            button-decorate()
+            margin-bottom 50px
+            color: $white-color
+            vertical-align middle
+            background-color $dark-gray-color
+            span
+              vertical-align middle
+              content: url("../images/header-button-before.png")
+        div.app-pic
+          display grid
+          background url("../images/header-phone.png") no-repeat right top
+          background-size 310px
+          @media (max-width 830px)
+            height 665px
+            background-position center
+@import "import-fonts.styl"
