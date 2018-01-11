@@ -1,170 +1,179 @@
-@import "general.styl"
 @import "import-fonts.styl"
+@import "general.styl"
 
-/* General */
-*
-  margin: $zero
-  outline: $none
-  padding: $zero
-  box-sizing: border-box
-  //transition: all .3s ease-in-out
-
-#wrapper
-  min-width 550px
-
-html, body
-  height 100%
-  background $white-color
-
-  .container
-    max-width 1136px
-    margin $zero auto
-    padding $zero 20px
-
-  a, a:hover
-    text-decoration $none
-    color inherit
-
-  header
-    margin auto
-    color $white-color
-    background url("../images/bg-header.png") no-repeat top center
-    background-size cover
-    div.container
+header
+  margin auto
+  color $white-color
+  background url("../images/bg-header.png") no-repeat top center
+  background-size cover
+  div.container
+    nav
+      padding 20px
       display grid
-      grid-gap 2rem
-      grid-template-columns 1fr
-      nav
-        padding 20px
-        display grid
-        align-items: end;
-        justify-items: end;
-        grid-template-columns 250px 1fr
+      align-items: end;
+      justify-items: end;
+      grid-template-columns 250px 1fr
+      @media (max-width 830px)
+        align-items start
+      div.logo
+        font 52px 'Olivier'
+        justify-self center
+      ul.nav
         @media (max-width 830px)
-          align-items start
-        div.logo
-          font 52px 'Olivier'
-          justify-self center
-        ul.nav
-          @media (max-width 830px)
-            display grid
-          li
-            uppercase()
-            list-style $none
-            display inline-grid
-            padding $zero 10px
-            &:hover
-              border-bottom 2px solid $white-color
-              @media (max-width 830px)
-                border $none
-            a
-              padding-bottom 20px
-              font 16px 'Montserrat-Bold'
-      div.app
-        display grid
-        grid-gap 2rem
-        margin-top 100px
-        grid-template-columns 1fr 1fr
-        @media (max-width 830px)
-          margin-top 0
-          grid-template-columns 1fr
-        div.app-info
           display grid
-          grid-gap 2rem
-          p
-            font: 36px 'HelveticaNeue-Thin';
-          button
-            button-decorate()
-            margin-bottom 50px
-            color: $white-color
-            vertical-align middle
-            background-color $dark-gray-color
-            span
-              vertical-align middle
-              content: url("../images/header-button-before.png")
-        div.app-pic
-          display grid
-          background url("../images/header-phone.png") no-repeat right top
-          background-size 310px
-          @media (max-width 830px)
-            height 665px
-            background-position center
-  main
-    padding 90px 0 110px
-    background-color $white-color
-    div.container
-      display grid
-      grid-gap 2rem
-      text-align center
-      justify-items center
-      h2
-        color #8a8a8a
-      p
-        color #3a3a3a
-        max-width 830px
-        font lighter 22px/32px 'HelveticaNeue-Light'
-      div.app-features
-        display grid
-        grid-gap 2rem
-        margin-top 67px
-        grid-template-columns repeat(3, 1fr)
-        @media (max-width 830px)
-          margin-top $zero
-          justify-items center
-          grid-template-columns 1fr
-        div.app-features-item
-          grid-gap 1.5rem
+        li
+          uppercase()
+          list-style $none
           display inline-grid
-          h4
-            h4-title()
-            padding-top: 230px;
-          p
-            color #646464
-            max-width 500px
-            font lighter 18px/28px 'HelveticaNeue-Light'
-          &:nth-child(1)
-            background url("../images/main-app-features-item1.png") no-repeat top center
-            background-size 200px
-          &:nth-child(2)
-            background url("../images/main-app-features-item2.png") no-repeat top center
-            background-size 200px
-          &:nth-child(3)
-            background url("../images/main-app-features-item3.png") no-repeat top center
-            background-size 200px
-  section
-    background-color: #d7dedc
-    @media (min-width 1170px)
-      background #d7dedc url("../images/pennywise.png") no-repeat center right
-      background-size auto 100%
-    div.container
+          padding $zero 10px
+          &:hover
+            border-bottom 2px solid $white-color
+            @media (max-width 830px)
+              border $none
+          a
+            padding-bottom 20px
+            font 16px 'Montserrat-Bold'
+    div.app
       display grid
       grid-gap 2rem
-      padding 200px 30px 170px
-      h2
-        color $white-color
-        span
-          color: #f55150
-      p
-        color #585858
-        font: 24px/34px 'HelveticaNeue-Light';
-      button
-        button-decorate()
-        width: 150px
-        margin 50px 10px
-        color: $white-color
-        vertical-align middle
-        background-color #d9332d
-  div.opinion
-    background-color $white-color
-    div.container
-      text-align center
-      padding 88px 30px
-      p
-        color #787878
-        font 34px/44px 'HelveticaNeue-Thin'
+      margin-top 80px
+      grid-template-columns 1fr 1fr
+      @media (max-width 830px)
+        margin-top 0
+        grid-template-columns 1fr
+      div.app-info
+        display grid
+        grid-gap 2rem
+        p
+          font: 36px 'HelveticaNeue-Thin';
+        button
+          button-decorate()
+          margin-bottom 50px
+          color: $white-color
+          vertical-align middle
+          background-color $dark-gray-color
+          span
+            vertical-align middle
+            content: url("../images/header-button-before.png")
+      div.app-pic
+        display grid
+        background url("../images/header-phone.png") no-repeat right top
+        background-size 310px
+        @media (max-width 830px)
+          height 665px
+          background-position center
+main
+  padding 90px 0 110px
+  background-color $white-color
+  div.container
+    text-align center
+    justify-items center
+    h2
+      color #8a8a8a
+    p
+      color #3a3a3a
+      max-width 830px
+      font lighter 22px/32px 'HelveticaNeue-Light'
+    div.app-features
+      display grid
+      grid-gap 2rem
+      margin-top 67px
+      grid-template-columns repeat(3, 1fr)
+      @media (max-width 830px)
+        margin-top $zero
+        justify-items center
+        grid-template-columns 1fr
+      div.app-features-item
+        grid-gap 1.5rem
+        display inline-grid
+        h4
+          h4-title()
+          padding-top: 230px;
+        p
+          color #646464
+          max-width 500px
+          font lighter 18px/28px 'HelveticaNeue-Light'
+        &:nth-child(1)
+          background url("../images/main-app-features-item1.png") no-repeat top center
+          background-size 200px
+        &:nth-child(2)
+          background url("../images/main-app-features-item2.png") no-repeat top center
+          background-size 200px
+        &:nth-child(3)
+          background url("../images/main-app-features-item3.png") no-repeat top center
+          background-size 200px
+section
+  background-color: #d7dedc
+  @media (min-width 1170px)
+    background #d7dedc url("../images/pennywise.png") no-repeat center right
+    background-size auto 100%
+  div.container
+    padding 200px 30px 170px
+    h2
+      color $white-color
       span
-        uppercase();
-        color #d9332d
-        display block
-        margin-top 50px
-        font 20px 'Montserrat-Bold'
+        color: #f55150
+    p
+      color #585858
+      font: 24px/34px 'HelveticaNeue-Light';
+    button
+      button-decorate()
+      width: 150px
+      margin 50px 10px
+      color: $white-color
+      vertical-align middle
+      background-color #d9332d
+div.opinion
+  background-color $white-color
+  div.container
+    text-align center
+    padding 88px 30px
+    p
+      color #787878
+      font 34px/44px 'HelveticaNeue-Thin'
+    span
+      uppercase();
+      color #d9332d
+      display block
+      margin-top 50px
+      font 20px 'Montserrat-Bold'
+footer
+  color: $white-color
+  background-color #2e2e38
+  div.container
+    padding 0 65px 170px
+    div.logo
+      justify-self left
+      font 52px 'Olivier'
+      margin 120px $zero 45px
+    div.footer-info
+      display grid
+      grid-gap 2rem
+      grid-template-columns repeat(3, 1fr)
+      @media (max-width 1000px)
+        grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
+      div.footer-info-item
+        @media (max-width 688px)
+          padding-left 60px
+        h4
+          h4-title()
+          font-size 20px
+          color inherit
+        P
+          font 15px 'Montserrat-Regular'
+          &.italic
+            margin-top 20px
+            font 15px 'OpenSans-Italic'
+        div.comment
+          display grid
+          margin 20px auto
+          grid-template-columns 70px 1fr
+          p
+            span.time
+              background transparent
+              font 11px 'OpenSans-Regular'
+          span
+            width: 52px
+            height: 42px
+            background url("../images/avatar1.png") no-repeat center
+            background-size contain

@@ -4,6 +4,24 @@ $white-color = #fff
 $black-color = #000
 $dark-gray-color = #282828
 
+*
+  margin: $zero
+  outline: $none
+  padding: $zero
+  box-sizing: border-box
+#wrapper
+  min-width 550px
+html, body
+  height 100%
+  background $white-color
+.container
+  max-width 1136px
+  margin $zero auto
+  padding $zero 20px
+a, a:hover
+  text-decoration $none
+  color inherit
+
 uppercase(text-transform = uppercase)
   text-transform uppercase
 
@@ -26,3 +44,8 @@ button-decorate()
 
 h2
   h2-title()
+
+div.container
+  display grid
+  grid-gap 2rem
+  grid-template-columns 1fr

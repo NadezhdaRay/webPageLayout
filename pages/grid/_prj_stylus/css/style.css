@@ -1,7 +1,3 @@
-h2 {
-  text-transform: uppercase;
-  font: 52px 'Montserrat-Bold';
-}
 @font-face {
   font-family: 'Olivier';
   src: url("../fonts/Olivier.ttf");
@@ -19,14 +15,22 @@ h2 {
   src: url("../fonts/Montserrat-Bold.otf");
 }
 @font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+@font-face {
   font-family: 'OpenSans-Italic';
   src: url("../fonts/OpenSans-Italic.ttf");
 }
-/* General */
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
 * {
   margin: 0;
   outline: none;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #wrapper {
@@ -37,104 +41,94 @@ body {
   height: 100%;
   background: #fff;
 }
-html .container,
-body .container {
+.container {
   max-width: 1136px;
   margin: 0 auto;
   padding: 0 20px;
 }
-html a,
-body a,
-html a:hover,
-body a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
-html header,
-body header {
+h2 {
+  text-transform: uppercase;
+  font: 52px 'Montserrat-Bold';
+}
+div.container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+}
+header {
   margin: auto;
   color: #fff;
   background: url("../images/bg-header.png") no-repeat top center;
   background-size: cover;
 }
-html header div.container,
-body header div.container {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr;
-}
-html header div.container nav,
-body header div.container nav {
+header div.container nav {
   padding: 20px;
   display: grid;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: end;
   justify-items: end;
   grid-template-columns: 250px 1fr;
 }
 @media (max-width: 830px) {
-  html header div.container nav,
-  body header div.container nav {
+  header div.container nav {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
   }
 }
-html header div.container nav div.logo,
-body header div.container nav div.logo {
+header div.container nav div.logo {
   font: 52px 'Olivier';
   justify-self: center;
 }
 @media (max-width: 830px) {
-  html header div.container nav ul.nav,
-  body header div.container nav ul.nav {
+  header div.container nav ul.nav {
     display: grid;
   }
 }
-html header div.container nav ul.nav li,
-body header div.container nav ul.nav li {
+header div.container nav ul.nav li {
   text-transform: uppercase;
   list-style: none;
   display: inline-grid;
   padding: 0 10px;
 }
-html header div.container nav ul.nav li:hover,
-body header div.container nav ul.nav li:hover {
+header div.container nav ul.nav li:hover {
   border-bottom: 2px solid #fff;
 }
 @media (max-width: 830px) {
-  html header div.container nav ul.nav li:hover,
-  body header div.container nav ul.nav li:hover {
+  header div.container nav ul.nav li:hover {
     border: none;
   }
 }
-html header div.container nav ul.nav li a,
-body header div.container nav ul.nav li a {
+header div.container nav ul.nav li a {
   padding-bottom: 20px;
   font: 16px 'Montserrat-Bold';
 }
-html header div.container div.app,
-body header div.container div.app {
+header div.container div.app {
   display: grid;
   grid-gap: 2rem;
-  margin-top: 100px;
+  margin-top: 80px;
   grid-template-columns: 1fr 1fr;
 }
 @media (max-width: 830px) {
-  html header div.container div.app,
-  body header div.container div.app {
+  header div.container div.app {
     margin-top: 0;
     grid-template-columns: 1fr;
   }
 }
-html header div.container div.app div.app-info,
-body header div.container div.app div.app-info {
+header div.container div.app div.app-info {
   display: grid;
   grid-gap: 2rem;
 }
-html header div.container div.app div.app-info p,
-body header div.container div.app div.app-info p {
+header div.container div.app div.app-info p {
   font: 36px 'HelveticaNeue-Thin';
 }
-html header div.container div.app div.app-info button,
-body header div.container div.app div.app-info button {
+header div.container div.app div.app-info button {
   text-transform: uppercase;
   border: none;
   width: 300px;
@@ -146,126 +140,100 @@ body header div.container div.app div.app-info button {
   vertical-align: middle;
   background-color: #282828;
 }
-html header div.container div.app div.app-info button span,
-body header div.container div.app div.app-info button span {
+header div.container div.app div.app-info button span {
   vertical-align: middle;
   content: url("../images/header-button-before.png");
 }
-html header div.container div.app div.app-pic,
-body header div.container div.app div.app-pic {
+header div.container div.app div.app-pic {
   display: grid;
   background: url("../images/header-phone.png") no-repeat right top;
   background-size: 310px;
 }
 @media (max-width: 830px) {
-  html header div.container div.app div.app-pic,
-  body header div.container div.app div.app-pic {
+  header div.container div.app div.app-pic {
     height: 665px;
     background-position: center;
   }
 }
-html main,
-body main {
+main {
   padding: 90px 0 110px;
   background-color: #fff;
 }
-html main div.container,
-body main div.container {
-  display: grid;
-  grid-gap: 2rem;
+main div.container {
   text-align: center;
   justify-items: center;
 }
-html main div.container h2,
-body main div.container h2 {
+main div.container h2 {
   color: #8a8a8a;
 }
-html main div.container p,
-body main div.container p {
+main div.container p {
   color: #3a3a3a;
   max-width: 830px;
   font: lighter 22px/32px 'HelveticaNeue-Light';
 }
-html main div.container div.app-features,
-body main div.container div.app-features {
+main div.container div.app-features {
   display: grid;
   grid-gap: 2rem;
   margin-top: 67px;
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 830px) {
-  html main div.container div.app-features,
-  body main div.container div.app-features {
+  main div.container div.app-features {
     margin-top: 0;
     justify-items: center;
     grid-template-columns: 1fr;
   }
 }
-html main div.container div.app-features div.app-features-item,
-body main div.container div.app-features div.app-features-item {
+main div.container div.app-features div.app-features-item {
   grid-gap: 1.5rem;
   display: inline-grid;
 }
-html main div.container div.app-features div.app-features-item h4,
-body main div.container div.app-features div.app-features-item h4 {
+main div.container div.app-features div.app-features-item h4 {
   text-transform: uppercase;
   color: #1a1a1a;
   font: 24px 'Montserrat-Bold';
   padding-top: 230px;
 }
-html main div.container div.app-features div.app-features-item p,
-body main div.container div.app-features div.app-features-item p {
+main div.container div.app-features div.app-features-item p {
   color: #646464;
   max-width: 500px;
   font: lighter 18px/28px 'HelveticaNeue-Light';
 }
-html main div.container div.app-features div.app-features-item:nth-child(1),
-body main div.container div.app-features div.app-features-item:nth-child(1) {
+main div.container div.app-features div.app-features-item:nth-child(1) {
   background: url("../images/main-app-features-item1.png") no-repeat top center;
   background-size: 200px;
 }
-html main div.container div.app-features div.app-features-item:nth-child(2),
-body main div.container div.app-features div.app-features-item:nth-child(2) {
+main div.container div.app-features div.app-features-item:nth-child(2) {
   background: url("../images/main-app-features-item2.png") no-repeat top center;
   background-size: 200px;
 }
-html main div.container div.app-features div.app-features-item:nth-child(3),
-body main div.container div.app-features div.app-features-item:nth-child(3) {
+main div.container div.app-features div.app-features-item:nth-child(3) {
   background: url("../images/main-app-features-item3.png") no-repeat top center;
   background-size: 200px;
 }
-html section,
-body section {
+section {
   background-color: #d7dedc;
 }
 @media (min-width: 1170px) {
-  html section,
-  body section {
+  section {
     background: #d7dedc url("../images/pennywise.png") no-repeat center right;
     background-size: auto 100%;
   }
 }
-html section div.container,
-body section div.container {
-  display: grid;
-  grid-gap: 2rem;
+section div.container {
   padding: 200px 30px 170px;
 }
-html section div.container h2,
-body section div.container h2 {
+section div.container h2 {
   color: #fff;
 }
-html section div.container h2 span,
-body section div.container h2 span {
+section div.container h2 span {
   color: #f55150;
 }
-html section div.container p,
-body section div.container p {
+section div.container p {
   color: #585858;
   font: 24px/34px 'HelveticaNeue-Light';
 }
-html section div.container button,
-body section div.container button {
+section div.container button {
   text-transform: uppercase;
   border: none;
   width: 300px;
@@ -278,25 +246,77 @@ body section div.container button {
   vertical-align: middle;
   background-color: #d9332d;
 }
-html div.opinion,
-body div.opinion {
+div.opinion {
   background-color: #fff;
 }
-html div.opinion div.container,
-body div.opinion div.container {
+div.opinion div.container {
   text-align: center;
   padding: 88px 30px;
 }
-html div.opinion div.container p,
-body div.opinion div.container p {
+div.opinion div.container p {
   color: #787878;
   font: 34px/44px 'HelveticaNeue-Thin';
 }
-html div.opinion div.container span,
-body div.opinion div.container span {
+div.opinion div.container span {
   text-transform: uppercase;
   color: #d9332d;
   display: block;
   margin-top: 50px;
   font: 20px 'Montserrat-Bold';
+}
+footer {
+  color: #fff;
+  background-color: #2e2e38;
+}
+footer div.container {
+  padding: 0 65px 170px;
+}
+footer div.container div.logo {
+  justify-self: left;
+  font: 52px 'Olivier';
+  margin: 120px 0 45px;
+}
+footer div.container div.footer-info {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1000px) {
+  footer div.container div.footer-info {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 688px) {
+  footer div.container div.footer-info div.footer-info-item {
+    padding-left: 60px;
+  }
+}
+footer div.container div.footer-info div.footer-info-item h4 {
+  text-transform: uppercase;
+  color: #1a1a1a;
+  font: 24px 'Montserrat-Bold';
+  font-size: 20px;
+  color: inherit;
+}
+footer div.container div.footer-info div.footer-info-item P {
+  font: 15px 'Montserrat-Regular';
+}
+footer div.container div.footer-info div.footer-info-item P.italic {
+  margin-top: 20px;
+  font: 15px 'OpenSans-Italic';
+}
+footer div.container div.footer-info div.footer-info-item div.comment {
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: 70px 1fr;
+}
+footer div.container div.footer-info div.footer-info-item div.comment p span.time {
+  background: transparent;
+  font: 11px 'OpenSans-Regular';
+}
+footer div.container div.footer-info div.footer-info-item div.comment span {
+  width: 52px;
+  height: 42px;
+  background: url("../images/avatar1.png") no-repeat center;
+  background-size: contain;
 }
