@@ -1,0 +1,59 @@
+@import "import-fonts.styl"
+@import "general.styl"
+
+header
+  nav
+    background-color #1d2126
+    div.container
+      display flex
+      padding 30px
+      align-items center
+      flex-flow row nowrap
+      justify-content space-between
+      div.logo
+        flex-grow 3
+        width: 99px
+        height: 19px
+        background url("../images/modest-logo.png") no-repeat left center
+      ul.nav
+        flex-grow 2
+        display flex
+        flex-flow row nowrap
+        justify-content space-around
+        @media (max-width: 720px)
+          flex-grow 1
+          align-items center
+          flex-flow column wrap
+        li
+          padding 5px
+          color #a4aead
+          list-style $none
+          border-radius 4px
+          border 2px solid transparent
+          &:hover
+            border-color #a4aead
+          &:first-child
+            color $turquoise
+            border 2px solid $turquoise
+          a
+            uppercase()
+            font 14px 'OpenSans-SemiBold'
+  div.app
+    background url("../images/bg-header.png") no-repeat center
+    div.container
+      padding 220px 30px
+      @media (max-width 615px)
+        padding 205px 30px
+      div.app-info
+        height 200px
+        display flex
+        flex-flow column wrap
+        justify-content space-between
+        @media (max-width 615px)
+          height 250px
+        button
+          flex $none
+        h2
+          color $white-color
+        p
+          color #bfc2ca

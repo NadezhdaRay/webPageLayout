@@ -1,0 +1,67 @@
+$zero = 0
+$none = none
+$white-color = #fff
+$black-color = #000
+$turquoise = #23b7a4
+$gray-color = #8d8f92
+$dark-blue-color = #292f36
+
+*
+  margin: $zero
+  outline: $none
+  padding: $zero
+  box-sizing: border-box
+
+#wrapper
+  min-width 450px
+
+html, body
+  height 100%
+  background $white-color
+
+.container
+  max-width 1136px
+  margin $zero auto
+  padding $zero 20px
+
+a, a:hover
+  text-decoration $none
+  color inherit
+
+uppercase(text-transform = uppercase)
+  text-transform uppercase
+
+div.container
+  display flex
+
+h2-title()
+  uppercase()
+  font 36px 'QuattrocentoSans-Regular'
+
+p-text()
+  font 16px/26px 'OpenSans-Regular'
+
+button-decorate(color, bg, border = $none)
+  uppercase()
+  margin-right 10px
+  border-radius 6px
+  font 14px 'QuattrocentoSans-Regular'
+  color color
+  background-color bg
+  border border
+
+button
+  &.green
+    padding 15px 20px
+    button-decorate($white-color, $turquoise)
+
+  &.transparent
+    padding 13px 17px
+    button-decorate(#c1c3c9, transparent)
+    border 2px solid $white-color
+
+h2
+  h2-title()
+
+p
+  p-text()
