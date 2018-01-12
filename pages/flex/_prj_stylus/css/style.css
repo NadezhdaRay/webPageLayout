@@ -18,6 +18,10 @@
   font-family: 'QuattrocentoSans-Regular';
   src: url("../fonts/QuattrocentoSans-Regular.ttf");
 }
+@font-face {
+  font-family: 'Socialico';
+  src: url("../fonts/Socialico.ttf");
+}
 * {
   margin: 0;
   outline: none;
@@ -33,7 +37,7 @@ body {
   background: #fff;
 }
 .container {
-  max-width: 1136px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -45,8 +49,11 @@ a:hover {
 div.container {
   display: flex;
 }
-button.green {
+button {
+  cursor: pointer;
   padding: 15px 20px;
+}
+button.green {
   text-transform: uppercase;
   margin-right: 10px;
   border-radius: 6px;
@@ -54,9 +61,9 @@ button.green {
   color: #fff;
   background-color: #23b7a4;
   border: none;
+  border: 2px solid #23b7a4;
 }
 button.transparent {
-  padding: 13px 17px;
   text-transform: uppercase;
   margin-right: 10px;
   border-radius: 6px;
@@ -65,6 +72,14 @@ button.transparent {
   background-color: transparent;
   border: none;
   border: 2px solid #fff;
+}
+hr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  display: block;
+  color: #dde1e4;
+  background: #dde1e4;
 }
 h2 {
   text-transform: uppercase;
@@ -145,9 +160,98 @@ header div.app div.container div.app-info {
 header div.app div.container div.app-info button {
   flex: none;
 }
+header div.app div.container div.app-info button.green:hover {
+  text-transform: uppercase;
+  margin-right: 10px;
+  border-radius: 6px;
+  font: 14px 'QuattrocentoSans-Regular';
+  color: #c1c3c9;
+  background-color: transparent;
+  border: none;
+  border: 2px solid #fff;
+}
+header div.app div.container div.app-info button.transparent:hover {
+  text-transform: uppercase;
+  margin-right: 10px;
+  border-radius: 6px;
+  font: 14px 'QuattrocentoSans-Regular';
+  color: #fff;
+  background-color: #23b7a4;
+  border: none;
+  border: 2px solid #23b7a4;
+}
 header div.app div.container div.app-info h2 {
   color: #fff;
 }
 header div.app div.container div.app-info p {
   color: #bfc2ca;
+}
+div.about-us div.container:only-child {
+  flex-flow: column wrap;
+  padding: 80px 30px 100px;
+}
+div.about-us div.container:only-child h2 {
+  margin-bottom: 70px;
+  color: #292f36;
+}
+div.about-us div.container:only-child h2:before {
+  vertical-align: middle;
+  content: url("../images/border-left-light.png");
+}
+div.about-us div.container:only-child div.container {
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+@media (max-width: 900px) {
+  div.about-us div.container:only-child div.container {
+    flex-direction: column-reverse;
+  }
+}
+div.about-us div.container:only-child div.container div.item1 {
+  margin-right: 20px;
+  color: #8d8f92;
+  flex-basis: 1590px;
+  flex-direction: column;
+}
+div.about-us div.container:only-child div.container div.item1 p {
+  margin-bottom: 30px;
+}
+div.about-us div.container:only-child div.container div.item1 p span {
+  font-family: 'QuattrocentoSans-Bold', sans-serif;
+}
+div.about-us div.container:only-child div.container div.item1 div.social a {
+  padding: 15px;
+  color: #fff;
+  font: 46px 'Socialico';
+  background-color: #d0d5d9;
+}
+div.about-us div.container:only-child div.container div.item2 {
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+div.about-us div.container:only-child div.container div.item2 div.feature-item {
+  display: flex;
+  align-items: flex-start;
+}
+div.about-us div.container:only-child div.container div.item2 div.feature-item span {
+  flex: none;
+  padding: 15px;
+  color: #fff;
+  background-color: #23b7a4;
+  font: 20px 'QuattrocentoSans-Regular';
+}
+div.about-us div.container:only-child div.container div.item2 div.feature-item div {
+  flex: auto;
+  padding-left: 20px;
+}
+div.about-us div.container:only-child div.container div.item2 div.feature-item div p {
+  color: #8d8f92;
+  margin-bottom: 30px;
+}
+div.about-us div.container:only-child div.container div.item2 div.feature-item div h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #292f36;
+  font: 18px 'QuattrocentoSans-Bold';
 }

@@ -12,8 +12,8 @@ header
       justify-content space-between
       div.logo
         flex-grow 3
-        width: 99px
-        height: 19px
+        width 99px
+        height 19px
         background url("../images/modest-logo.png") no-repeat left center
       ul.nav
         flex-grow 2
@@ -53,7 +53,70 @@ header
           height 250px
         button
           flex $none
+          &.green:hover
+            button-decorate(#c1c3c9, transparent)
+            border 2px solid $white-color
+          &.transparent:hover
+            button-decorate($white-color, $turquoise)
+            border 2px solid $turquoise
         h2
           color $white-color
         p
           color #bfc2ca
+
+div
+  &.about-us
+    div.container:only-child
+      flex-flow column wrap
+      padding 80px 30px 100px
+      h2
+        margin-bottom 70px
+        color $dark-blue-color
+        &:before
+          vertical-align middle
+          content url("../images/border-left-light.png")
+      div.container
+        padding 0
+        display flex
+        flex-flow row nowrap
+        @media (max-width 900px)
+          flex-direction column-reverse
+        div
+          &.item1
+            margin-right 20px
+            color $gray-color
+            flex-basis 1590px
+            flex-direction column
+            p
+              margin-bottom 30px
+              span
+                font-family 'QuattrocentoSans-Bold', sans-serif
+            div.social
+              a
+                padding 15px
+                color $white-color
+                font 46px 'Socialico'
+                background-color #d0d5d9
+          &.item2
+            flex-flow column nowrap
+            justify-content space-evenly
+            div.feature-item
+              display flex
+              align-items flex-start
+              span
+                flex $none
+                padding 15px
+                color $white-color
+                background-color $turquoise
+                font 20px 'QuattrocentoSans-Regular'
+              div
+                flex auto
+                padding-left 20px
+                p
+                  color $gray-color
+                  margin-bottom 30px
+                h3
+                  uppercase()
+                  margin-bottom 10px
+                  color $dark-blue-color
+                  font 18px 'QuattrocentoSans-Bold'
