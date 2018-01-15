@@ -137,6 +137,7 @@ header nav div.container ul.nav li a {
 }
 header div.app {
   background: url("../images/bg-header.png") no-repeat center;
+  background-size: cover;
 }
 header div.app div.container {
   padding: 220px 30px;
@@ -200,7 +201,6 @@ div.about-us div.container:only-child h2:before {
 }
 div.about-us div.container:only-child div.container {
   padding: 0;
-  display: flex;
   flex-flow: row nowrap;
 }
 @media (max-width: 900px) {
@@ -213,6 +213,11 @@ div.about-us div.container:only-child div.container div.item1 {
   color: #8d8f92;
   flex-basis: 1590px;
   flex-direction: column;
+}
+@media (max-width: 900px) {
+  div.about-us div.container:only-child div.container div.item1 {
+    flex-basis: auto;
+  }
 }
 div.about-us div.container:only-child div.container div.item1 p {
   margin-bottom: 30px;
@@ -254,4 +259,74 @@ div.about-us div.container:only-child div.container div.item2 div.feature-item d
   margin-bottom: 10px;
   color: #292f36;
   font: 18px 'QuattrocentoSans-Bold';
+}
+div.team div.container:only-child {
+  flex-flow: column wrap;
+  padding: 80px 30px 100px;
+}
+div.team div.container:only-child h2 {
+  margin-bottom: 70px;
+  color: #292f36;
+}
+div.team div.container:only-child h2:before {
+  vertical-align: middle;
+  content: url("../images/border-left-light.png");
+}
+div.team div.container:only-child div.container {
+  padding: 0;
+}
+div.team div.container:only-child div.container div.team-gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+@media (max-width: 1170px) {
+  div.team div.container:only-child div.container div.team-gallery {
+    flex-wrap: wrap;
+  }
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item {
+  margin: 7px;
+  position: relative;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item:hover {
+  cursor: pointer;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item:hover figcaption {
+  background-color: #3a454d;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item:hover figcaption h3,
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item:hover figcaption p {
+  color: #d7d8d9;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item:hover .social {
+  display: block;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item figure img {
+  padding: 0;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item figure figcaption {
+  padding: 20px;
+  margin-top: -4px;
+  background-color: #e1e6ea;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item figure figcaption h3 {
+  text-transform: uppercase;
+  color: #292f36;
+  font: 16px 'QuattrocentoSans-Bold';
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item figure figcaption p {
+  color: #8d8f92;
+  font: 14px 'OpenSans-Regular';
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item div.social {
+  display: none;
+  margin: 50% 20%;
+  position: absolute;
+}
+div.team div.container:only-child div.container div.team-gallery div.team-gallery-item div.social a {
+  padding: 15px;
+  color: #fff;
+  font: 28px 'Socialico';
+  background-color: #3a454d;
 }
