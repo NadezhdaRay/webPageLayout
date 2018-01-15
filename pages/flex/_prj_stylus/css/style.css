@@ -447,7 +447,7 @@ div.we-do div.container:only-child h2 {
 }
 div.we-do div.container:only-child h2:before {
   vertical-align: middle;
-  content: url("../images/border-left-dark.png");
+  content: url("../images/border-left-light.png");
 }
 div.we-do div.container:only-child div.container {
   padding: 0;
@@ -563,4 +563,123 @@ div.features-gallery div.container:only-child div.container div.feature-gallery 
 }
 div.features-gallery div.container:only-child div.container div.feature-gallery div.features-gallery-item figure figcaption p {
   font: 14px/24px 'OpenSans-Regular';
+}
+div.feedback div.container1 {
+  display: flex;
+  max-width: 1140px;
+  margin: 0 auto;
+  flex-flow: column wrap;
+  padding: 80px 30px 65px;
+}
+div.feedback div.container1 h2 {
+  color: #292f36;
+  font-family: 'QuattrocentoSans-Bold', serif;
+}
+div.feedback div.container1 h2:before {
+  vertical-align: middle;
+  content: url("../images/border-left-light.png");
+}
+div.feedback div.map {
+  height: 346px;
+  background: url("../images/map.png") no-repeat center;
+  background-size: cover;
+}
+div.feedback div.container {
+  flex-flow: row nowrap;
+  padding: 65px 30px 100px;
+  justify-content: space-between;
+}
+@media (max-width: 1110px) {
+  div.feedback div.container {
+    align-items: center;
+    flex-flow: column wrap;
+  }
+}
+div.feedback div.container div.info h3 {
+  text-transform: uppercase;
+  margin: 0 0 40px;
+  color: #292f36;
+  font: 20px/30px 'QuattrocentoSans-Bold';
+}
+div.feedback div.container div.info p {
+  color: #8d8f92;
+  margin-bottom: 35px;
+  font: 16px/26px 'OpenSans-Regular';
+}
+div.feedback div.container div.info p span {
+  font-family: 'OpenSans-Bold', sans-serif;
+}
+div.feedback div.container div.contact {
+  width: 60%;
+  padding: 30px;
+  margin-left: 30px;
+  margin-top: -210px;
+  background-color: #fff;
+}
+@media (max-width: 1110px) {
+  div.feedback div.container div.contact {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+div.feedback div.container div.contact div {
+  display: inline-flex;
+  margin: 0 15px 30px 0;
+  flex-flow: column nowrap;
+}
+div.feedback div.container div.contact input {
+  width: 270px;
+  border: none;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #eaeef1;
+  font: 14px/24px 'QuattrocentoSans-Bold';
+}
+div.feedback div.container div.contact label {
+  text-transform: uppercase;
+  color: #8d8f92;
+  font: 14px/24px 'QuattrocentoSans-Bold';
+}
+div.feedback div.container div.contact button {
+  display: flex;
+}
+div.feedback div.container div.contact textarea {
+  width: 560px;
+  height: 160px;
+  padding: 20px;
+  resize: none;
+  border: none;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #eaeef1;
+  font: 14px/24px 'QuattrocentoSans-Bold';
+}
+@media (max-width: 635px) {
+  div.feedback div.container div.contact textarea {
+    width: 270px;
+  }
+}
+footer {
+  background-color: #3a454d;
+}
+footer div.container {
+  padding: 30px;
+  color: #fff;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+footer div.container p.copyright {
+  align-self: center;
+  font: 14px 'OpenSans-Regular';
+}
+footer div.container div.social {
+  display: flex;
+  flex-flow: row wrap;
+}
+footer div.container div.social p.social {
+  margin: 0 10px;
+  font: 28px 'Socialico';
 }

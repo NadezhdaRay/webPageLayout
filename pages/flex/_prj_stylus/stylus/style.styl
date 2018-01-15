@@ -260,7 +260,7 @@ div
         color $dark-blue-color
         &:before
           vertical-align middle
-          content url("../images/border-left-dark.png")
+          content url("../images/border-left-light.png")
       div.container
         padding 0
         flex-flow column nowrap
@@ -340,3 +340,96 @@ div
                   font: 18px/28px 'QuattrocentoSans-Bold';
                 p
                   font: 14px/24px 'OpenSans-Regular';
+  &.feedback
+    div.container1
+      display flex
+      max-width 1140px
+      margin $zero auto
+      flex-flow column wrap
+      padding 80px 30px 65px
+      h2
+        color $dark-blue-color
+        font-family 'QuattrocentoSans-Bold', serif
+        &:before
+          vertical-align middle
+          content url("../images/border-left-light.png")
+    div.map
+      height: 346px
+      background url("../images/map.png") no-repeat center
+      background-size cover
+    div.container
+      flex-flow row nowrap
+      padding 65px 30px 100px
+      justify-content space-between
+      @media (max-width 1110px)
+        align-items center
+        flex-flow column wrap
+      div.info
+        h3
+          uppercase()
+          margin 0 0 40px
+          color $dark-blue-color
+          font: 20px/30px 'QuattrocentoSans-Bold';
+        p
+          color $gray-color
+          margin-bottom 35px
+          font: 16px/26px 'OpenSans-Regular';
+          span
+            font-family: 'OpenSans-Bold', sans-serif
+      div.contact
+        width 60%
+        padding 30px
+        margin-left 30px
+        margin-top -210px
+        background-color $white-color
+        @media (max-width 1110px)
+          margin 0
+          padding 0
+          width 100%
+        div
+          display inline-flex
+          margin 0 15px 30px 0
+          flex-flow column nowrap
+        input
+          width 270px
+          border $none
+          padding 20px
+          margin-top 5px
+          border-radius 10px
+          background-color #eaeef1
+          font 14px/24px 'QuattrocentoSans-Bold'
+        label
+          uppercase()
+          color $gray-color
+          font 14px/24px 'QuattrocentoSans-Bold'
+        button
+          display flex
+        textarea
+          width 560px
+          height 160px
+          padding 20px
+          resize $none
+          border $none
+          margin-top 5px
+          border-radius 10px
+          background-color #eaeef1
+          font 14px/24px 'QuattrocentoSans-Bold'
+          @media (max-width 635px)
+            width 270px
+footer
+  background-color #3a454d
+  div.container
+    padding 30px
+    color $white-color
+    flex-flow row wrap
+    align-content center
+    justify-content space-between
+    p.copyright
+      align-self center
+      font 14px 'OpenSans-Regular'
+    div.social
+      display flex
+      flex-flow row wrap
+      p.social
+        margin 0 10px
+        font 28px 'Socialico'
