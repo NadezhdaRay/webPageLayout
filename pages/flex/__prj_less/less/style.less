@@ -1,0 +1,103 @@
+@import "general";
+@import "import-fonts";
+
+nav {
+  width: 100%;
+  &.black {
+    background-color: @bg-color;
+    div.container {
+      padding: 15px 30px;
+      align-items: center;
+      justify-content: flex-end;
+      p {
+        margin-left: 20px;
+        color: @white-color;
+        font: 15px 'Lato-Light';
+        &.social {
+          a { font: 26px 'Socialico'; }
+        }
+      }
+    }
+  }
+  &.white {
+    background-color: @white-color;
+    border-bottom: 1px solid #b4a89e;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    div.container {
+      align-items: center;
+      padding: 20px 30px 30px;
+      justify-content: space-between;
+      @media (max-width: 610px) {
+        padding: 10px 20px;
+      }
+      div#logo {
+        min-width: 140px;
+        p.logo {
+          .uppercase;
+          color: @bg-color;
+          font: 24px 'Lato-Black';
+          &:last-child { margin-top: -10px; }
+          span {
+            &#amp { font: 38px 'PlayfairDisplay-Bold'; }
+            &#line {
+              vertical-align: middle;
+              content: url("../images/orange-line.png");
+            }
+          }
+        }
+      }
+      ul.nav {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        @media (max-width: 610px) {
+          flex-flow: column nowrap;
+        }
+        li {
+          padding: 7px 0;
+          margin-left: 30px;
+          list-style: @none;
+          border-bottom: 2px solid transparent;
+          &:hover {
+            border-color: @yellow-color;
+          }
+          a {
+            .uppercase;
+            color: #2c3e50;
+            font: bold 15px 'Raleway-Medium';
+            &#loop {
+              content: url("../images/search-icon.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  background: url("../images/bg-header.png") no-repeat left center;
+  background-size: cover;
+  div.container {
+    flex-flow: column wrap;
+    padding: 190px 30px 130px;
+    h1 {
+      .uppercase;
+      color: #444546;
+      max-width: 390px;
+      margin: 0 0 45px;
+      font: 50px 'Lato-Light';
+      span {
+        font-family: 'Lato-Bold', serif;
+      }
+    }
+    a {
+      .uppercase;
+      width: 130px;
+      padding: 18px;
+      color: @white-color;
+      font: 20px 'Raleway-Bold';
+      background-color: @yellow-color;
+    }
+  }
+}
