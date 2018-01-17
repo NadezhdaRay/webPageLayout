@@ -2,7 +2,9 @@
 @none: none;
 @white-color: #fff;
 @bg-color: #3d3c3a;
+@black-color: #000;
 @yellow-color: #ffa800;
+@light-orange-color: #fca477;
 
 * {
   margin: @zero;
@@ -25,34 +27,32 @@ a, a:hover {
 .uppercase() {
   text-transform: uppercase;
 }
-
-h4.title {
-  .uppercase;
-  margin: 40px auto;
-  text-align: center;
-  letter-spacing: 2px;
-  font: 1.125em/1.5em 'Lato-Bold';
+a.yellow-link {
+  display: inline-flex;
+  align-items: center;
+  color: @black-color;
+  margin: 45px auto @zero;
+  font: 20px "Raleway-Medium";
+  &:before {
+    padding-right: 10px;
+    vertical-align: middle;
+    content: url("../images/arrow-right-yellow.png");
+  }
 }
 p {
-  &.title-icon {
-    text-align: center;
-    margin: 100px auto 0;
-    span {
-      margin: auto;
-      display: block;
-    }
-  }
-  &.description {
-    text-align: center;
-    font: 1.125em/2em 'Lato-Regular';
+  &.under-title {
+    width: 100%;
+    height: 14px;
+    margin-bottom: 40px;
+    background: url("../images/under-title-gray.png") no-repeat center;
   }
 }
-hr {
-  width: 20%;
-  height: 2px;
-  border: @none;
-  display: block;
-  margin: 45px auto 70px;
+h2.title {
+  .uppercase;
+  color: #4c4749;
+  text-align: center;
+  margin: @zero auto 25px;
+  font: 28px 'Raleway-ExtraBold';
 }
 div.container {
   display: flex;
