@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   outline: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -115,6 +116,8 @@ div#about-us {
     margin: 0 auto;
     max-width: 1470px;
     grid-gap: 2em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr); }
     @media (max-width: 1100px) {
@@ -293,17 +296,23 @@ div#next-tours {
       grid-row-gap: 3em; }
       div#next-tours div.container div.schedule-tours div.tour-line {
         display: grid;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
         background-color: #fff;
+        -webkit-box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
         box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
         div#next-tours div.container div.schedule-tours div.tour-line div.tour-item {
           padding: 20px 10px;
           display: inline-grid;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center; }
           div#next-tours div.container div.schedule-tours div.tour-line div.tour-item a.button {
             color: #5a5a5a;
             border-radius: 30px;
+            -ms-flex-item-align: center;
             align-self: center;
             border-color: #eee;
             justify-self: center; }
@@ -352,6 +361,7 @@ div#feature-news {
           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); } }
       div#feature-news div.container div#news div.container div.item1 {
         width: 566px;
+        -webkit-box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
         box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
         background: #fff url("../images/model.png") no-repeat left center;
         background-size: 60% 100%; }
@@ -395,6 +405,7 @@ div#feature-news {
         grid-gap: 2em;
         grid-template-rows: repeat(2, 1fr); }
         div#feature-news div.container div#news div.container div.item2 div.container1 {
+          -webkit-box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
           box-shadow: -1px 0px 31px -1px rgba(0, 0, 0, 0.25);
           background: #fff url("../images/model.png") no-repeat left center;
           background-size: 31% 100%; }
@@ -454,6 +465,7 @@ div#subscribe {
       min-height: 60px;
       overflow: hidden;
       border-radius: 50px;
+      -ms-flex-item-align: center;
       align-self: center;
       border: 1px solid #000;
       background: #fff; }
@@ -464,6 +476,15 @@ div#subscribe {
         outline: none;
         padding-left: 40px;
         vertical-align: middle; }
+        div#subscribe div.container div.item2 input[type="search"]::-webkit-input-placeholder {
+          color: #858585;
+          font: 1em 'Majesti-Banner-Book'; }
+        div#subscribe div.container div.item2 input[type="search"]:-ms-input-placeholder {
+          color: #858585;
+          font: 1em 'Majesti-Banner-Book'; }
+        div#subscribe div.container div.item2 input[type="search"]:-ms-input-placeholder {
+          color: #858585;
+          font: 1em 'Majesti-Banner-Book'; }
         div#subscribe div.container div.item2 input[type="search"]::placeholder {
           color: #858585;
           font: 1em 'Majesti-Banner-Book'; }
@@ -492,5 +513,3 @@ footer {
 @font-face {
   font-family: 'Majesti-Banner-Book';
   src: url("../fonts/Majesti-Banner-Book.otf"); }
-
-/*# sourceMappingURL=style.css.map */

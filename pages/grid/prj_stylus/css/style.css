@@ -4,12 +4,8 @@
   margin: 0;
   outline: none;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 html,
@@ -100,10 +96,8 @@ main section article {
   display: grid;
   grid-gap: 2rem;
   -webkit-box-pack: center;
-  -moz-box-pack: center;
   -o-box-pack: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -146,8 +140,6 @@ main section article div {
 main section article div#photoshop {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-adobe-photoshop.png");
@@ -155,8 +147,6 @@ main section article div#photoshop {
 main section article div#illustrator {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-adobe-illustrator.png");
@@ -164,8 +154,6 @@ main section article div#illustrator {
 main section article div#muse {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-adobe-muse.png");
@@ -173,8 +161,6 @@ main section article div#muse {
 main section article div#indesign {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-adobe-indesign.png");
@@ -182,8 +168,6 @@ main section article div#indesign {
 main section article div#dreamviewer {
   width: 150px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-adobe-dreamviewer.png");
@@ -191,8 +175,6 @@ main section article div#dreamviewer {
 main section article div#html {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-code-html.png");
@@ -200,8 +182,6 @@ main section article div#html {
 main section article div#css {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-code-css.png");
@@ -209,8 +189,6 @@ main section article div#css {
 main section article div#javacript {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-code-javascript.png");
@@ -218,8 +196,6 @@ main section article div#javacript {
 main section article div#php {
   width: 130px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-code-php.png");
@@ -227,8 +203,6 @@ main section article div#php {
 main section article div#python {
   width: 150px;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/icon-code-python.png");
@@ -245,8 +219,6 @@ main section article div#personal-skills {
 main section article div#personal-skills p:nth-child(1) {
   width: 500px;
   height: 50px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/progress-bar-creativity.png");
@@ -259,8 +231,6 @@ main section article div#personal-skills p:nth-child(1) {
 main section article div#personal-skills p:nth-child(2) {
   width: 500px;
   height: 50px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/progress-bar-social.png");
@@ -273,8 +243,6 @@ main section article div#personal-skills p:nth-child(2) {
 main section article div#personal-skills p:nth-child(3) {
   width: 500px;
   height: 50px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/progress-bar-leadership.png");
@@ -287,8 +255,6 @@ main section article div#personal-skills p:nth-child(3) {
 main section article div#personal-skills p:nth-child(4) {
   width: 500px;
   height: 50px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../images/progress-bar-passion.png");
@@ -301,12 +267,8 @@ main section article div#personal-skills p:nth-child(4) {
 main section article div#facebook {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-facebook.png");
@@ -314,12 +276,8 @@ main section article div#facebook {
 main section article div#twitter {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-twitter.png");
@@ -327,12 +285,8 @@ main section article div#twitter {
 main section article div#instagram {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-instagram.png");
@@ -340,12 +294,8 @@ main section article div#instagram {
 main section article div#behance {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-behance.png");
@@ -353,12 +303,8 @@ main section article div#behance {
 main section article div#dribble {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-dribble.png");
@@ -366,12 +312,8 @@ main section article div#dribble {
 main section article div#pinterest {
   width: 100%;
   height: 100px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-background-size: 50px 60px;
-  -moz-background-size: 50px 60px;
   background-size: 50px 60px;
   background-position: top center;
   background-image: url("../images/icon-pinterest.png");
@@ -382,10 +324,8 @@ main section article div.last-child {
 @media all and (max-width: 909px) {
   main section article {
     -webkit-box-pack: left;
-    -moz-box-pack: left;
     -o-box-pack: left;
     -ms-flex-pack: left;
-    -webkit-justify-content: left;
     justify-content: left;
     justify-items: left;
     padding-left: 0;
