@@ -1,7 +1,7 @@
 @zero: 0;
 @none: none;
 @white-color: #fff;
-@text-color: #a4a9ae;
+@text-color: #8c9398;
 @title-color: #353535;
 @green-color: #3dc9b3;
 @uppercase: .uppercase;
@@ -25,21 +25,42 @@ a, a:hover {
 .uppercase() {
   text-transform: uppercase;
 }
-div.container {
-  display: grid;
-  max-width: 1140px;
-  margin: @zero auto;
-}
 span.sep {
+  width: 100%;
   height: 13px;
   display: block;
   margin: 25px auto 65px;
   background: url("../images/separator.png") no-repeat center;
-  background-size: 450px;
+  background-size: 550px;
+}
+span.green-sep {
+  width: 100%;
+  height: 3px;
+  display: block;
+  margin: 30px auto;
+  background: url("../images/green-sep.png") no-repeat center;
+  background-size: 40px;
 }
 h2.title {
   .uppercase;
   color: @title-color;
-  margin: 110px 0 0;
   font: 15px/25px 'GothamRounded-Medium';
+}
+ul#switch {
+  margin-top: 130px;
+  li {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    list-style: none;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid @text-color;
+    &:hover { cursor: pointer; }
+    &:first-child { background-color: #000; }
+  }
+}
+p {
+  color: @text-color;
+  font: 14px/20px 'GothamRounded-Medium';
 }

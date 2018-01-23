@@ -17,23 +17,48 @@ a:hover {
 #wrapper {
   min-width: 450px;
 }
-div.container {
-  display: grid;
-  max-width: 1140px;
-  margin: 0 auto;
-}
 span.sep {
+  width: 100%;
   height: 13px;
   display: block;
   margin: 25px auto 65px;
   background: url("../images/separator.png") no-repeat center;
-  background-size: 450px;
+  background-size: 550px;
+}
+span.green-sep {
+  width: 100%;
+  height: 3px;
+  display: block;
+  margin: 30px auto;
+  background: url("../images/green-sep.png") no-repeat center;
+  background-size: 40px;
 }
 h2.title {
   text-transform: uppercase;
   color: #353535;
-  margin: 110px 0 0;
   font: 15px/25px 'GothamRounded-Medium';
+}
+ul#switch {
+  margin-top: 130px;
+}
+ul#switch li {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  list-style: none;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #8c9398;
+}
+ul#switch li:hover {
+  cursor: pointer;
+}
+ul#switch li:first-child {
+  background-color: #000;
+}
+p {
+  color: #8c9398;
+  font: 14px/20px 'GothamRounded-Medium';
 }
 @font-face {
   font-family: 'GothamRounded-Book';
@@ -78,8 +103,7 @@ header nav:hover {
 }
 @media (max-width: 600px) {
   header nav {
-    left: 460px;
-    position: relative;
+    display: none;
   }
 }
 header h1 {
@@ -90,7 +114,7 @@ header h1 {
   font: 40px/50px 'GothamRounded-Book';
 }
 header h1 span {
-  color: #a4a9ae;
+  color: #8c9398;
 }
 @media (max-width: 600px) {
   header h1 {
@@ -98,7 +122,7 @@ header h1 span {
   }
 }
 header p {
-  color: #a4a9ae;
+  color: #8c9398;
   letter-spacing: 4px;
   font: 15px/25px 'GothamRounded-Book';
 }
@@ -117,20 +141,127 @@ header a {
   font: 15px 'GothamRounded-Medium';
   box-shadow: 0 4px 0 0 #309383;
 }
-div#intro {
+header a:hover {
+  color: #fff;
+}
+main {
+  grid-column: span 8;
+}
+main section#intro {
   text-align: center;
   justify-items: center;
   justify-content: center;
-  grid-column: span 8;
-  padding: 0 30px 130px;
   background-color: #f3f5f8;
+  padding: 7em 1.875em 8.125em;
 }
-div#intro p {
+main section#intro p {
   max-width: 735px;
-  color: #a4a9ae;
+  color: #8c9398;
   margin: 0 auto;
   font: 14px/30px 'GothamRounded-Medium';
 }
-div#intro p span {
+main section#intro p span {
   color: #353535;
+}
+main section#services-generic {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  padding: 7em 1.875em 8.125em;
+  background-color: #fff;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+}
+main section#services-generic h2,
+main section#services-generic span {
+  grid-column: 2 / span 2;
+}
+main section#services-generic ul#services-gallery {
+  display: grid;
+  grid-gap: 2em;
+  grid-column: 2 / span 2;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+@media (max-width: 900px) {
+  main section#services-generic ul#services-gallery {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+  }
+}
+main section#services-generic ul#services-gallery li {
+  text-align: center;
+  list-style-type: none;
+}
+main section#services-generic ul#services-gallery li h3 {
+  text-transform: uppercase;
+  color: #353535;
+  font: 15px 'GothamRounded-Medium';
+}
+main section#services-iphone {
+  display: grid;
+  justify-content: center;
+  background-color: #fff;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+}
+@media (max-width: 900px) {
+  main section#services-iphone {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+main section#services-iphone div#bg-services-iphone {
+  grid-column: 1 / span 2;
+  background: url("../images/services-iphone.png") no-repeat right center;
+  background-size: cover;
+}
+main section#services-iphone div.description {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  grid-column: 3 / span 2;
+  padding: 7em 6em 8.125em;
+}
+@media (max-width: 900px) {
+  main section#services-iphone div.description {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+main section#services-iphone div.description p {
+  margin-bottom: 30px;
+  text-align: justify;
+  line-height: 1.7em;
+}
+main section#counter {
+  text-transform: uppercase;
+  display: grid;
+  color: #fff;
+  justify-items: center;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  background: url("../images/bg-counter.png") no-repeat center;
+  background-size: cover;
+}
+main section#counter h1 {
+  margin: 80px 0 30px;
+  letter-spacing: 15px;
+  grid-column: 2 / span 2;
+  font: 40px/50px 'GothamRounded-Book';
+}
+main section#counter h3 {
+  margin-bottom: 45px;
+  letter-spacing: 15px;
+  grid-column: 2 / span 2;
+  font: 25px/35px 'GothamRounded-Book';
+}
+main section#counter h3 span {
+  font-family: 'GothamRounded-MediumItalic', sans-serif;
+}
+main section#counter a {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin-bottom: 55px;
+  grid-column: 2 / span 2;
+  background: url("../images/green-arrow-down.png") no-repeat center;
 }
