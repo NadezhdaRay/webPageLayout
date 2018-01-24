@@ -38,10 +38,10 @@ h2.title {
   color: #353535;
   font: 15px/25px 'GothamRounded-Medium';
 }
-ul#switch {
+ul.switch {
   margin-top: 130px;
 }
-ul#switch li {
+ul.switch li {
   width: 15px;
   height: 15px;
   margin: 0 5px;
@@ -50,10 +50,10 @@ ul#switch li {
   display: inline-block;
   border: 2px solid #8c9398;
 }
-ul#switch li:hover {
+ul.switch li:hover {
   cursor: pointer;
 }
-ul#switch li:first-child {
+ul.switch li:first-child {
   background-color: #000;
 }
 p {
@@ -236,6 +236,8 @@ main section#services-iphone div.description p {
 main section#counter {
   text-transform: uppercase;
   display: grid;
+  padding: 0 30px;
+  text-align: center;
   color: #fff;
   justify-items: center;
   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
@@ -264,4 +266,71 @@ main section#counter a {
   margin-bottom: 55px;
   grid-column: 2 / span 2;
   background: url("../images/green-arrow-down.png") no-repeat center;
+}
+main section#portfolio {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  padding: 7em 1.875em 8.125em;
+  background-color: #fff;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+}
+main section#portfolio ul.switch {
+  grid-column: 2 / span 2;
+}
+main section#portfolio ul#portfolio-gallery {
+  display: grid;
+  grid-gap: 2em;
+  grid-column: 2 / span 2;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+@media (max-width: 1200px) {
+  main section#portfolio ul#portfolio-gallery {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+main section#portfolio ul#portfolio-gallery li {
+  text-align: center;
+  list-style-type: none;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item {
+  width: 360px;
+  height: 200px;
+  margin: 0 auto 45px;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item span {
+  opacity: 0;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  height: inherit;
+  padding-top: 110px;
+  color: #fff;
+  transition: all 0.3s ease-out;
+  font: 15px 'GothamRounded-Medium';
+  background: rgba(61, 201, 179, 0.7) url("../images/search-icon.png") no-repeat center 40%;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item:hover span {
+  opacity: 1;
+  cursor: pointer;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item.item1 {
+  background: url("../images/portfolio-gallery-item1.png") no-repeat center;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item.item2 {
+  background: url("../images/portfolio-gallery-item2.png") no-repeat center;
+}
+main section#portfolio ul#portfolio-gallery li .p-gallery-item.item3 {
+  background: url("../images/portfolio-gallery-item3.png") no-repeat center;
+}
+main section#portfolio ul#portfolio-gallery li h3 {
+  text-transform: uppercase;
+  color: #353535;
+  letter-spacing: 4px;
+  font: 15px 'GothamRounded-Medium';
+}
+main section#portfolio ul#portfolio-gallery li p {
+  line-height: 1.7em;
 }
