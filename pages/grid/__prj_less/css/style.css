@@ -36,6 +36,7 @@ span.green-sep {
 h2.title {
   text-transform: uppercase;
   color: #353535;
+  letter-spacing: 2px;
   font: 15px/25px 'GothamRounded-Medium';
 }
 ul.switch {
@@ -103,6 +104,7 @@ p {
   grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
 }
 header {
+  grid-row: 1 / span 1;
   text-align: center;
   grid-column: span 8;
   padding: 0 30px 340px;
@@ -167,6 +169,7 @@ header a:hover {
 }
 main {
   grid-column: span 8;
+  grid-row: 2 / span 1;
 }
 main section#intro {
   text-align: center;
@@ -212,6 +215,11 @@ main section#services-generic ul#services-gallery {
 main section#services-generic ul#services-gallery li {
   text-align: center;
   list-style-type: none;
+}
+@media (min-width: 829px) and (max-width: 900px) {
+  main section#services-generic ul#services-gallery li:last-child {
+    grid-column: 1 / span 2;
+  }
 }
 main section#services-generic ul#services-gallery li h3 {
   text-transform: uppercase;
@@ -316,6 +324,11 @@ main section#portfolio ul#portfolio-gallery li {
   text-align: center;
   list-style-type: none;
 }
+@media (min-width: 829px) and (max-width: 1200px) {
+  main section#portfolio ul#portfolio-gallery li:last-child {
+    grid-column: 1 / span 2;
+  }
+}
 main section#portfolio ul#portfolio-gallery li .p-gallery-item {
   width: 360px;
   height: 200px;
@@ -379,6 +392,10 @@ main section#team {
   background-color: #fff;
   grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
 }
+main section#team h2,
+main section#team span {
+  grid-column: 2 / span 2;
+}
 main section#team ul.switch {
   grid-column: 2 / span 2;
 }
@@ -398,6 +415,11 @@ main section#team ul#team-gallery {
 main section#team ul#team-gallery li {
   text-align: center;
   list-style-type: none;
+}
+@media (min-width: 829px) and (max-width: 1200px) {
+  main section#team ul#team-gallery li:last-child {
+    grid-column: 1 / span 2;
+  }
 }
 main section#team ul#team-gallery li .team-item {
   width: 360px;
@@ -421,4 +443,163 @@ main section#team ul#team-gallery li h3 {
 }
 main section#team ul#team-gallery li p {
   line-height: 1.7em;
+}
+main section#subscribe {
+  display: grid;
+  height: 453px;
+  justify-items: center;
+  align-content: center;
+  background: url("../images/bg-subscribe.png") no-repeat center;
+  background-size: cover;
+}
+main section#subscribe h2 {
+  color: #fff;
+  margin-bottom: 45px;
+}
+main section#subscribe span#plane {
+  width: 25px;
+  height: 26px;
+  display: block;
+  margin-bottom: 20px;
+  background: url("../images/plane-icon.png") no-repeat center;
+}
+main section#subscribe input {
+  display: inline-block;
+}
+main section#subscribe input[type=text] {
+  width: 350px;
+  height: 65px;
+  padding: 10px;
+  margin-right: 5px;
+  color: #fff;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #fff;
+  font: 18px 'GothamRounded-Book';
+}
+main section#subscribe input[type=submit] {
+  text-transform: uppercase;
+  height: 65px;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  background-color: #3dc9b3;
+  font: 15px/25px 'GothamRounded-Medium';
+}
+main section#contacts {
+  display: grid;
+  text-align: center;
+  grid-column: span 8;
+  justify-content: center;
+  padding: 7em 1.875em 8.125em;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+  background: #fff url("../images/bg-footer.png") no-repeat center;
+  background-size: cover;
+}
+main section#contacts h2,
+main section#contacts span,
+main section#contacts ul.social {
+  grid-column: 2 / span 2;
+}
+main section#contacts ul.social {
+  margin-top: 100px;
+}
+main section#contacts ul#contact {
+  display: grid;
+  grid-gap: 2em;
+  grid-column: 2 / span 2;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+@media (max-width: 1200px) {
+  main section#contacts ul#contact {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+main section#contacts ul#contact li {
+  padding: 30px;
+  text-align: center;
+  list-style-type: none;
+  background: #fff;
+}
+@media (min-width: 829px) and (max-width: 1200px) {
+  main section#contacts ul#contact li:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+main section#contacts ul#contact li span {
+  width: 15px;
+  height: 18px;
+  margin: auto;
+  display: block;
+}
+main section#contacts ul#contact li span#map {
+  background: url("../images/footer-pos-icon.png") no-repeat center;
+}
+main section#contacts ul#contact li span#mail {
+  background: url("../images/footer-plane-icon.png") no-repeat center;
+}
+main section#contacts ul#contact li span#phone {
+  background: url("../images/footer-phone-icon.png") no-repeat center;
+}
+main section#contacts ul#contact li h3 {
+  text-transform: uppercase;
+  color: #3dc9b3;
+  letter-spacing: 4px;
+  margin: 15px auto 25px;
+  font: 15px 'GothamRounded-Medium';
+}
+main section#contacts ul#contact li p {
+  line-height: 1.7em;
+}
+footer {
+  height: 120px;
+  display: grid;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  grid-column: span 8;
+  grid-row: 3 / span 2;
+  justify-items: center;
+  background-color: #242830;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+}
+@media (max-width: 1000px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+footer p {
+  color: #f5f5f5;
+  font: 14px/24px 'GothamRounded-Book';
+}
+footer p.copy {
+  justify-self: start;
+  grid-column: 2 / span 1;
+}
+@media (max-width: 1000px) {
+  footer p.copy {
+    grid-column: 1;
+    justify-self: center;
+  }
+}
+footer p.rights {
+  justify-self: end;
+  grid-column: 3 / span 1;
+}
+@media (max-width: 1000px) {
+  footer p.rights {
+    justify-self: center;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+}
+footer p span {
+  color: #8e959c;
+}
+footer p span#italic {
+  font-style: italic;
 }
