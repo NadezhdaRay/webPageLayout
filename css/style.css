@@ -98,6 +98,11 @@ div.block13 {
   background-size: cover;
 }
 
+div.block14 {
+  background: url("../images/grid-less3.png") no-repeat top center;
+  background-size: cover;
+}
+
 div.main-block:hover a.hover-effect {
   opacity: 0.2;
 }
