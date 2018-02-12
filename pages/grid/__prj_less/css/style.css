@@ -56,6 +56,27 @@ ul.switch li:hover {
 ul.switch li:first-child {
   background-color: #000;
 }
+ul.social {
+  margin-top: 40px;
+}
+ul.social li {
+  margin: 0 5px;
+  display: inline-block;
+}
+ul.social li a {
+  width: 40px;
+  height: 41px;
+  display: block;
+}
+ul.social li a.dr {
+  background: url("../images/dribble-icon.png") no-repeat center;
+}
+ul.social li a.tw {
+  background: url("../images/twitter-icon.png") no-repeat center;
+}
+ul.social li a.mail {
+  background: url("../images/mail-icon.png") no-repeat center;
+}
 p {
   color: #8c9398;
   font: 14px/20px 'GothamRounded-Medium';
@@ -332,5 +353,72 @@ main section#portfolio ul#portfolio-gallery li h3 {
   font: 15px 'GothamRounded-Medium';
 }
 main section#portfolio ul#portfolio-gallery li p {
+  line-height: 1.7em;
+}
+main section#ignite {
+  display: grid;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  background-color: #242830;
+}
+main section#ignite a {
+  text-transform: uppercase;
+  width: 300px;
+  padding: 15px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  font: 15px 'GothamRounded-Medium';
+}
+main section#team {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  padding: 7em 1.875em 8.125em;
+  background-color: #fff;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+}
+main section#team ul.switch {
+  grid-column: 2 / span 2;
+}
+main section#team ul#team-gallery {
+  display: grid;
+  grid-gap: 2em;
+  grid-column: 2 / span 2;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+@media (max-width: 1200px) {
+  main section#team ul#team-gallery {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+main section#team ul#team-gallery li {
+  text-align: center;
+  list-style-type: none;
+}
+main section#team ul#team-gallery li .team-item {
+  width: 360px;
+  height: 200px;
+  margin: 0 auto 45px;
+}
+main section#team ul#team-gallery li .team-item.item1 {
+  background: url("../images/team-gallery-item1.png") no-repeat center;
+}
+main section#team ul#team-gallery li .team-item.item2 {
+  background: url("../images/team-gallery-item2.png") no-repeat center;
+}
+main section#team ul#team-gallery li .team-item.item3 {
+  background: url("../images/team-gallery-item3.png") no-repeat center;
+}
+main section#team ul#team-gallery li h3 {
+  text-transform: uppercase;
+  color: #353535;
+  letter-spacing: 4px;
+  font: 15px 'GothamRounded-Medium';
+}
+main section#team ul#team-gallery li p {
   line-height: 1.7em;
 }

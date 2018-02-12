@@ -227,5 +227,64 @@ main {
         }
       }
     }
+    &#ignite {
+      display: grid;
+      height: 200px;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+      background-color: #242830;
+      a {
+        .uppercase;
+        width: 300px;
+        padding: 15px 20px;
+        color: @white-color;
+        border: 1px solid @white-color;
+        font: 15px 'GothamRounded-Medium';
+      }
+    }
+    &#team {
+      display: grid;
+      text-align: center;
+      justify-content: center;
+      padding: 7em 1.875em 8.125em;
+      background-color: @white-color;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+      ul {
+        &.switch {
+          grid-column: 2 / span 2;
+        }
+        &#team-gallery {
+          display: grid;
+          grid-gap: 2em;
+          grid-column: 2 / span 2;
+          justify-content: space-between;
+          grid-template-columns: repeat(3, minmax(auto, 1fr));
+          @media (max-width: 1200px) {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+          }
+          li {
+            text-align: center;
+            list-style-type: none;
+            .team-item {
+              width: 360px;
+              height: 200px;
+              margin: 0 auto 45px;
+              &.item1 { background: url("../images/team-gallery-item1.png") no-repeat center; }
+              &.item2 { background: url("../images/team-gallery-item2.png") no-repeat center; }
+              &.item3 { background: url("../images/team-gallery-item3.png") no-repeat center; }
+            }
+            h3 {
+              .uppercase;
+              color: @title-color;
+              letter-spacing: 4px;
+              font: 15px 'GothamRounded-Medium';
+            }
+            p { line-height: 1.7em; }
+          }
+        }
+      }
+    }
   }
 }

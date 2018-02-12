@@ -46,18 +46,39 @@ h2.title {
   color: @title-color;
   font: 15px/25px 'GothamRounded-Medium';
 }
-ul.switch {
-  margin-top: 130px;
-  li {
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    list-style: none;
-    border-radius: 50%;
-    display: inline-block;
-    border: 2px solid @text-color;
-    &:hover { cursor: pointer; }
-    &:first-child { background-color: #000; }
+ul {
+  &.switch {
+    margin-top: 130px;
+    li {
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      list-style: none;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid @text-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &:first-child {
+        background-color: #000;
+      }
+    }
+  }
+  &.social {
+    margin-top: 40px;
+    li {
+      margin: 0 5px;
+      display: inline-block;
+      a {
+        width: 40px;
+        height: 41px;
+        display: block;
+        &.dr { background: url("../images/dribble-icon.png") no-repeat center; }
+        &.tw { background: url("../images/twitter-icon.png") no-repeat center; }
+        &.mail { background: url("../images/mail-icon.png") no-repeat center; }
+      }
+    }
   }
 }
 p {
